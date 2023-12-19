@@ -1,0 +1,27 @@
+name: Build and deploy site
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - labeled
+
+permissions:
+  contents: read
+  deployments: write
+  pull-requests: write
+
+jobs:
+  build-and-deploy:
+    name: Build and deploy site
+    uses: CompuTec/computec-docs-workflow/.github/workflows/deploy.yml@main
+    secrets: inherit
+    with:
+      CLOUDFLARE_PROJECT_NAME: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+      PRODUCTION_URL: ${{ vars.PRODUCTION_URL }}

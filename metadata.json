@@ -1,0 +1,7 @@
+{
+  "label": "AppEngine",
+  "pluginId": "appengine",
+  "routeBasePath": "/appengine",
+  "order": 5,
+  "currentVersion": "1.0"
+}
