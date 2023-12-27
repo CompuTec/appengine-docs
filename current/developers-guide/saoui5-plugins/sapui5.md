@@ -54,7 +54,7 @@ To run plugins without a plugin installation procedure, AppEngine needs to be in
 
     d. As Start Action, select Start External Program and set up the path to CompuTec.AppEngine.Host.ConsoleApp.exe in the installation directory. In case of the default install, this file will be located in Program Files\CompuTec\CompuTec AppEngine\CompuTec.AppEngine.Host.ConsoleApp.exe
 
-    ![Launch Profiles](./media/sapui5/Lunch_profiles.png)
+    ![Launch Profiles](./media/sapui5/launch-profiles.png)
 
     e. Make sure that AppEngine service is stopped. You can check this in System Services. 
 
