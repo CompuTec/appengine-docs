@@ -16,7 +16,7 @@ CompuTc AppEngine provides a mechanism for encapsulating complex database querie
 
 - The CustomViews folder is available in the AE installation directory, and ProgramData/CompuTec/AppEngine.
 
-![Custom View](./media/custom-views/)
+![Custom View](./media/custom-views/core-odata.png)
 
 :::note
 Note that the Custom View ID will be extended with the plugin ID during plugin initialization

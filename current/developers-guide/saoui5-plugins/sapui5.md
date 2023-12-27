@@ -98,7 +98,7 @@ To run plugins without a plugin installation procedure, AppEngine needs to be in
 
   f. Start CompuTec.AppEngine.Host.ConsoleApp.exe, and you can verify your settings in the console.
 
-  ![Console Settings](./media/console-settings.png)
+  ![Console Settings](./media/sapui5/console-settings.png)
 
 ## Results
 

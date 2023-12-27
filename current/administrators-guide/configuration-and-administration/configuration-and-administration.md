@@ -20,7 +20,7 @@ Password: 12qw!@QW
 
 (The default password can be changed in the System section <!-- TODO: Link -->)
 
-![AppEngine Main View](./media/configuration-and-administration.md/appengine-main-view.png)
+![AppEngine Main View](./media/configuration-and-administration/appengine-main-view.png)
 
 ## SLD Servers
 
@@ -36,11 +36,11 @@ Companies - specific databases.
 
 Click the plus icon in the upper-right corner to add a new connection.
 
-![SLD Server](./media/configuration-and-administration.md/adding-sld-server.png)
+![SLD Server](./media/configuration-and-administration/adding-sld-server.png)
 
 SLD Address – SLD server address. You can find it in SAP Business One, License Administration.
 
-![License Administration](./media/configuration-and-administration.md/license-administration.png)
+![License Administration](./media/configuration-and-administration/license-administration.png)
 
 Description – any description of the current configuration
 
@@ -50,7 +50,7 @@ Database Type – choose your database type (HANA or a specific MS SQL version)
 
 CT License Server – CompuTec License Server address. You can check it in SAP Business One with ProcessForce installed, ProcesForce License administration form.
 
-![Administration](./media/configuration-and-administration.md/processforce-license-administration.png)
+![Administration](./media/configuration-and-administration/processforce-license-administration.png)
 
 CT License Server Status – status of the connection to CompuTec License Server
 
@@ -60,7 +60,7 @@ Discover – checking this checkbox adds two fields: SAP Business One username a
 
 Click the save button to save the settings. Click the added line in the SLD Servers section to display related servers. Click any server line in the Servers section to display related companies:
 
-![AppEngine Main View](./media/configuration-and-administration.md/appengine-main-view.png)
+![AppEngine Main View](./media/configuration-and-administration/appengine-main-view.png)
 
 Once the configuration is finished, you can log in to the Launchpad <!-- TODO: Link -->.
 
@@ -72,7 +72,7 @@ AppEngine plugins are designed to be used on users' actions: e.g. a user opens i
 
 Switch the switch in the Background Processing State column in the SLD Servers tab (please check the previous screenshot on this page) and log in using SAP Business One credentials. The following message will be displayed upon the first activation:
 
-![Background](./media/configuration-and-administration.md/)
+![Background](./media/configuration-and-administration/background-processing-message.png)
 
 Perform the procedure described in the message.
 
@@ -96,7 +96,7 @@ In the User column, add a user on which the Background Processing will be operat
 
 ### Configuration
 
-![Plugins](./media/configuration-and-administration.md/plugins-configuration.png)
+![Plugins](./media/configuration-and-administration/plugins-configuration.png)
 
 Send Events Job – this job is always present, it is installed with AppEngine (the other jobs from the example screenshot above comes from the installed plugins). It checks the designated table in a database every 10 seconds for new events and sends them to the right plugin-related jobs.
 
@@ -108,7 +108,7 @@ Clicking a job tile leads to its details. Here you can check:
   
 - logs: log files, also available in the Trace tab <!-- TODO: Link -->.
 
-![Send Events Job](./media/configuration-and-administration.md/send-events-job.png)
+![Send Events Job](./media/configuration-and-administration/send-events-job.png)
 
 ### Jobs description
 
@@ -142,7 +142,7 @@ The preview of all current events from all checked databases.
 
 ## Plugins
 
-![Administration](./media/configuration-and-administration.md/administration-panel-plugins.png)
+![Administration](./media/configuration-and-administration/administration-panel-plugins.png)
 
 To install a new plugin, click the Install plugin button in the upper-right corner of the form and load a plugin file (e.g. any from the Plugins page <!-- TODO: Link -->). Note that the plugin files are always delivered as zip files – load them in this form, do not unzip them before loading.
 
@@ -156,13 +156,13 @@ For the Download SAP WebClient Extension function description, click here <!-- T
 
 Clicking one of the tiles in the Plugins section leads to the following view:
 
-![Active Plugin](./media/configuration-and-administration.md/activate-plugin.png)
+![Active Plugin](./media/configuration-and-administration/activate-plugin.png)
 
 Here you can activate the plugin for a specific database by switching the switch in the Activate column. If the plugin requires the installation of some object on the database (e.g. user-defined objects, tables), the Update button will appear upon switching in on on a database. Click it to complete the installation (logging in with SAP Business One database credentials is required).
 
 Now the plugin is available in the Launchpad:
 
-![Installed Plugins](./media/configuration-and-administration.md/installed-plugin.png)
+![Installed Plugins](./media/configuration-and-administration/installed-plugin.png)
 
 ### SAP Business One settings
 
@@ -172,7 +172,7 @@ SAP Business One (with ProcessForce installed) main menu → Administration → 
 
 :::
 
-![SAP B1 Settings](./media/configuration-and-administration.md/appengine-sapb1-settings.png)
+![SAP B1 Settings](./media/configuration-and-administration/appengine-sapb1-settings.png)
 
 After activating a plugin, go to SAP Business One for further configuration.
 
@@ -184,7 +184,7 @@ Click the Save button and Restart SAP Business One.
 
 ### Settings
 
-![Plugin Settings](./media/configuration-and-administration.md/plugins-settings.png)
+![Plugin Settings](./media/configuration-and-administration/plugins-settings.png)
 
 On a plugin development level, it is possible to create a set of settings for it. If it was created during plugin development, they are available here <!-- TODO: Link -->.
 
@@ -194,7 +194,7 @@ Here you can check plugin performance related events, search the log and filter 
 
 ## Settings
 
-![AppEngine Settings](./media/configuration-and-administration.md/app-engine-settings.png)
+![AppEngine Settings](./media/configuration-and-administration/app-engine-settings.png)
 
 This section holds information on the whole AppEngine installation configuration with a possibility to edit some of the values.
 
@@ -218,7 +218,7 @@ Here you can set other then the default error logging level. The levels are as f
 
 ### Trace
 
-![AppEngine Trace](./media/configuration-and-administration.md/appengine-trace.png)
+![AppEngine Trace](./media/configuration-and-administration/appengine-trace.png)
 
 Here you can find the exceptions log. You can filter it by a time range and by type:
 
@@ -230,7 +230,7 @@ Here you can find the exceptions log. You can filter it by a time range and by t
 
 Click a required log file to check its content. Then you can filter it by message type – Errors, Warnings, or Info – (1) and download the log file (2):
 
-![Download trace](./media/configuration-and-administration.md/trace-download.png)
+![Download trace](./media/configuration-and-administration/trace-download.png)
 
 ## System
 
@@ -242,6 +242,6 @@ You can also generate and download a configuration file – a log file with a lo
 
 ### Active Connections
 
-![Active Connections](./media/configuration-and-administration.md/active-connections.png)
+![Active Connections](./media/configuration-and-administration/active-connections.png)
 
 A list of currently active sessions. Click a connection in the Active sessions table to see the Details of it. You can log out any session by clicking the Log Out button.
