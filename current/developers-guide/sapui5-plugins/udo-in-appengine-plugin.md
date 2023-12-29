@@ -1029,11 +1029,12 @@ Finally we can run CompuTec AppEngine Plugin Code Generator. Base on defined int
 
 ![References](./media/udo-in-appengine-plugin/references.png)
 
-8. After that, we can rebuild our solution. 
+8. After that, we can rebuild our solution.
 
 :::warning
 It is important to add to set correct assemblies in manifest.json. Below you can see example manifest.json with added assemblies:
 
+```json
 "CompuTec.AppEngine.FirstPlugin",
 "CompuTec.AppEngine.FirstPlugin.Models",
 "CompuTec.AppEngine.FirstPlugin.Serializer",
@@ -1083,6 +1084,8 @@ It is important to add to set correct assemblies in manifest.json. Below you can
     ]
   }
 }
+```
+
 :::
 
 ### Results

@@ -65,7 +65,7 @@ ln_Turkish_Tr
 ln_Ukrainian
 ```
 
-- date (Translation adding date) – Date of adding translations in XSD DateTime format <YYYY-MM-DDThh:mm:ss>
+- date (Translation adding date) – Date of adding translations in XSD DateTime format `<YYYY-MM-DDThh:mm:ss>`
 
 2. Definition of TranslationStreamDelegate in PluginInitializer.
 
@@ -89,7 +89,7 @@ ln_Ukrainian
 
 If you created a Plugin Project from the, you can already check translations on Home.view.xml. The following screenshot shows how it works.
 
-- In Home.view.xml file we defined binding for header of Generic Tile to {i18n>todoTileHeader} and subheder o {i18n>todoTileSubheader}. This is the standard way of defining translations in UI5.
+- In Home.view.xml file we defined binding for header of Generic Tile to `{i18n>todoTileHeader}` and subheder o `{i18n>todoTileSubheader}`. This is the standard way of defining translations in UI5.
 
 - Translations IDs (todoTileHeader, todoTileSubheader) can be found in messages.xml. Based on the selected language (English in this example), the correct text is returned by AppEngine.
 
@@ -108,11 +108,9 @@ In this example, we will add translations to our example from Creating a Custom 
 3. 
 To do this we just need to bind this properties to i18n and provide id. We will change
 
-- <Title text="Sales Orders List"/> to <Title text="{i18n>salesOrderTableTitle}"/>
-
-- <Text text="Document Number"/> to <Text text="{i18n>salesOrderDocumentNumberColumnLabel}"/>
-
-- <Text text="Busines Partner"/> to <Text text="{i18n>salesOrderBusinessPartnerColumnLabel}"/>
+- `<Title text="Sales Orders List"/>` to `<Title text="{i18n>salesOrderTableTitle}"/>`
+- `<Text text="Document Number"/>` to `<Text text="{i18n>salesOrderDocumentNumberColumnLabel}"/>`
+- `<Text text="Busines Partner"/>` to `<Text text="{i18n>salesOrderBusinessPartnerColumnLabel}"/>`
 
 ![Bind Properties](./media/translations-from-backend/bind-properties.png)
 
