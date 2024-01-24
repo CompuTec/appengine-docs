@@ -644,7 +644,7 @@ onOpenAddAttachmentDialog: async function (data) {
 },
 ```
 
-- onAddAttachmentSubmit – event handler for Add Attachment button on SalesOrderAttachmentsDialogAdd Dialog. If file was specified it will upload it and send it to backend using Attachement controller POST metod /api/Attachments/SetAttachment/{isPicture}/{overwrite}. Then we will add a file name to the attachments view, just to see this file on the list. Download won't work on it at this moment.
+- onAddAttachmentSubmit – event handler for Add Attachment button on SalesOrderAttachmentsDialogAdd Dialog. If file was specified it will upload it and send it to backend using Attachement controller POST metod `/api/Attachments/SetAttachment/{isPicture}/{overwrite}`. Then we will add a file name to the attachments view, just to see this file on the list. Download won't work on it at this moment.
 
 ```
 onAddAttachmentSubmit: async function () {
