@@ -4,11 +4,11 @@
 
 AppEngine comes with built-in, handy controllers for managing attachments in SAP Business One. If you open Documentation (swagger)...
 
-![Attachment](./media/attachments/attachments-01.png)
+![Attachment](./media/attachments/attachments-01.webp)
 
-...you can find description of the controllers. 
+...you can find description of the controllers.
 
-![Attachments](./media/attachments/attachments-endpoints.png)
+![Attachments](./media/attachments/attachments-endpoints.webp)
 
 Below is an example of receiving and adding attachments from and to Sales Orders.
 
@@ -20,7 +20,7 @@ We will extend the Sales Orders list example that we have used so far. We will a
 
 1. Open SalesOrder.view.xml
 
-![Attachment](./media/attachments/attachments-02.png)
+![Attachment](./media/attachments/attachments-02.webp)
 
 2. Add new column Attachments.
 
@@ -42,9 +42,9 @@ We will extend the Sales Orders list example that we have used so far. We will a
 
 4. To make it a little bit more interesting, let's add the GenericTag control with ObjectNumber that will display number of attachments for each of orders.
 
-    - First, we need to add information about attachments in our custom view that is used to list Sales Orders:
+   - First, we need to add information about attachments in our custom view that is used to list Sales Orders:
 
-![Attachment](./media/attachments/attachments-03.png)
+![Attachment](./media/attachments/attachments-03.webp)
 
 - Let's modify this custom view to add NumberOfAttachments to it. More details about Custom Views can be found here: here.
 
@@ -134,43 +134,44 @@ SalesOrder.view.xml
 
 For Sales Orders with attachments GenericTag will be visible with numbers of Attachments
 
-![Attachments](./media/attachments/sales-orders-list-preview-with-attachments.png)
+![Attachments](./media/attachments/sales-orders-list-preview-with-attachments.webp)
 
 ### Creating Dialog for Attachments
 
 #### Creating controller for Sales Orders view
 
-To handle onAttachmentsButtonPress event that will be triggered from GenericTag on user click, we need to create controller for Sales Orders view. 
+To handle onAttachmentsButtonPress event that will be triggered from GenericTag on user click, we need to create controller for Sales Orders view.
 
-1. Create new file in controllers folder and name it SalesOrder.controller.js 
+1. Create new file in controllers folder and name it SalesOrder.controller.js
 
-![Explorer](./media/attachments/explorer-new-file-sales-order-controller.png)
+![Explorer](./media/attachments/explorer-new-file-sales-order-controller.webp)
 
 2. Implement simple controller:
 
 SalesOrder.controller.js
 
 ```js
-sap.ui.define([
-    "computec/appengine/core/BaseController"
-],
-    /**
-     *
-     * @param {typeof computec.appengine.core.BaseController} BaseController
-     * @returns
-     */
-    function (BaseController) {
-        "use strict";
- 
-        return BaseController.extend("computec.appengine.firstPlugin.controller.SalesOrder", {
- 
-            onInit: function () {
-                BaseController.prototype.onInit.call(this);
-                this.setPageName("Sales Orders");
-            }
- 
-        });
-    });
+sap.ui.define(
+  ["computec/appengine/core/BaseController"],
+  /**
+   *
+   * @param {typeof computec.appengine.core.BaseController} BaseController
+   * @returns
+   */
+  function (BaseController) {
+    "use strict";
+
+    return BaseController.extend(
+      "computec.appengine.firstPlugin.controller.SalesOrder",
+      {
+        onInit: function () {
+          BaseController.prototype.onInit.call(this);
+          this.setPageName("Sales Orders");
+        },
+      }
+    );
+  }
+);
 ```
 
 3. No we need to add controller information into our view.
@@ -190,7 +191,7 @@ Here we will create new view fragment that later will be used in our controller.
 
 1. Lets create new view fragment with our Attachments Dialog: SalesOrderAttachmentsDialog.fragment.xml. For simplicity we will create it directly in view folder.
 
-![Ales Order](./media/attachments/sales-order-attachment.png)
+![Ales Order](./media/attachments/sales-order-attachment.webp)
 
 2. We will create simple dialog with list of attachments for given Sales Order
 
@@ -261,7 +262,7 @@ Attachments.customview.json
 
 Attachments dialog will be opened after user click on GenericTag. Thus, we need to add implementation in SalesOrders.controller.js. Set in the SalesOrders.view.xml that press event is onAttachmentsButtonPress. Create function in our controller with exactly that name.
 
-![Sales Orders Attachment](./media/attachments/sales-orders-view-attachment-event-name.png)
+![Sales Orders Attachment](./media/attachments/sales-orders-view-attachment-event-name.webp)
 
 1. Open SalesOrders.controller.js and add sap.ui.core.Fragment, sap.ui.model.json.JSONModel, computec.appengine.ui.model.http.Http to sap.ui.define:
 
@@ -285,7 +286,7 @@ sap.ui.define([
 
 2. Now let's create the handler. In it, we need to retrieve attachments for given Order, load fragment, bind attachments to it and then open it.
 
-- _get – this function that sends GET request to backend:
+- \_get – this function that sends GET request to backend:
 
 ```
 _get: function (sUrl) {
@@ -310,9 +311,9 @@ getAttachmentsByDocEntry: function (sDocNum) {
             },
 ```
 
-- getCustomDataForElement – this function retrieves AtcEntry defined as custom attribute 
+- getCustomDataForElement – this function retrieves AtcEntry defined as custom attribute
 
-![Attachment](./media/attachments/atcentry-custom-data.png)
+![Attachment](./media/attachments/atcentry-custom-data.webp)
 
 ```
 getCustomDataForElement: function (oElement, sCustomDataCode) {
@@ -323,13 +324,13 @@ getCustomDataForElement: function (oElement, sCustomDataCode) {
             },
 ```
 
-- onOpenDialog – this function loads the  defined Attachments Dialog fragment, set attachments to it and opens it.
+- onOpenDialog – this function loads the defined Attachments Dialog fragment, set attachments to it and opens it.
 
 ```
 onOpenDialog: async function (data) {
                 const that = this;
                 const oView = this.getView();
- 
+
                 if (!this._attachmentsDialog) {
                     this._attachmentsDialog = await Fragment.load({
                         id: oView.getId(),
@@ -338,7 +339,7 @@ onOpenDialog: async function (data) {
                     });
                     oView.addDependent(this._attachmentsDialog);
                 }
- 
+
                 this._attachmentsDialog.setModel(new JSONModel(data), "AT");
                 this._attachmentsDialog.open();
             },
@@ -350,7 +351,7 @@ onOpenDialog: async function (data) {
 onAttachmentsButtonPress: async function (oEvent) {
     /** @type {sap.m.GenericTag} */
     const oGenericTag = oEvent.getSource();
- 
+
     const nAtcEntry = this.getCustomDataForElement(oGenericTag, "AtcEntry");
     const data = await this.getAttachmentsByDocEntry(nAtcEntry);
     this.onOpenDialog(data.value);
@@ -386,7 +387,7 @@ sap.ui.define([
      */
     function (BaseController, Fragment, JSONModel, Http) {
         "use strict";
- 
+
         return BaseController.extend("computec.appengine.firstPlugin.controller.SalesOrder", {
             _attachmentsDialog: null,
             onInit: function () {
@@ -396,17 +397,17 @@ sap.ui.define([
             onAttachmentsButtonPress: async function (oEvent) {
                 /** @type {sap.m.GenericTag} */
                 const oGenericTag = oEvent.getSource();
- 
+
                 const nAtcEntry = this.getCustomDataForElement(oGenericTag, "AtcEntry");
                 const data = await this.getAttachmentsByDocEntry(nAtcEntry);
                 this.onOpenDialog(data.value);
             },
- 
- 
+
+
             onOpenDialog: async function (data) {
                 const that = this;
                 const oView = this.getView();
- 
+
                 if (!this._attachmentsDialog) {
                     this._attachmentsDialog = await Fragment.load({
                         id: oView.getId(),
@@ -415,7 +416,7 @@ sap.ui.define([
                     });
                     oView.addDependent(this._attachmentsDialog);
                 }
- 
+
                 this._attachmentsDialog.setModel(new JSONModel(data), "AT");
                 this._attachmentsDialog.open();
             },
@@ -433,7 +434,7 @@ sap.ui.define([
                 const sUrl = encodeURIComponent(`odata/CustomViews/Views.CustomWithParameters(Id='FirstPlugin:Attachments',Parameters=["AbsEntry=${sDocNum}"],paramType=Default.ParamType'Custom')`);
                 return this._get(sUrl);
             },
- 
+
             _get: function (sUrl) {
                 return new Promise((resolve, reject) => {
                     Http.request({
@@ -445,9 +446,9 @@ sap.ui.define([
                     });
                 });
             },
- 
+
             //#endregion
- 
+
         });
     });
 ```
@@ -456,7 +457,7 @@ sap.ui.define([
 
 At this moment we are able to show number of attachments on the sales orders list and display attachments.
 
-![Dialog](./media/attachments/sales-orders-attachment-dialog-preview.png)
+![Dialog](./media/attachments/sales-orders-attachment-dialog-preview.webp)
 
 #### Downloading Attachment
 
@@ -470,7 +471,7 @@ Open SalesOrder.controller.js.
 
 Add new function named onAttachmentsDialogDownloadInNewTab – this is the same name as declared in the press attribute of Download button in Attachments Dialog.
 
-![Press](./media/attachments/attachments-dialog-press-event-name.png)
+![Press](./media/attachments/attachments-dialog-press-event-name.webp)
 
 ```
 onAttachmentsDialogDownloadInNewTab: function (oEvent) {
@@ -498,11 +499,11 @@ As you can see in this method we are preparing URL that consists of 5 parameters
 
 When user click on download button, file will be download using our REST API Attachment controller.
 
-![Nog](./media/attachments/nog.png)
+![Nog](./media/attachments/nog.webp)
 
 ### Adding attachments
 
-Finally, we can finish the example with possibility to add attachments. Below is a step-by-step description how to achieve this. 
+Finally, we can finish the example with possibility to add attachments. Below is a step-by-step description how to achieve this.
 
 #### Adding new File Upload Dialog
 
@@ -659,7 +660,7 @@ onAddAttachmentSubmit: async function () {
     const fromData = new FormData();
     fromData.append("file", file);
     const sUrl = `${window.location.origin}/api/Attachments/SetAttachment/false/false`;
-     
+
     try {
         const response = await fetch(sUrl, {
             method: 'POST',
@@ -672,7 +673,7 @@ onAddAttachmentSubmit: async function () {
             FileName: file.name
         });
         oATModel.refresh();
-         
+
     } catch (oError) {
         console.log(oError);
     } finally {
@@ -710,7 +711,7 @@ sap.ui.define([
      */
     function (BaseController, Fragment, JSONModel, Http) {
         "use strict";
- 
+
         return BaseController.extend("computec.appengine.firstPlugin.controller.SalesOrder", {
             _attachmentsAddDialog: null,
             onInit: function () {
@@ -720,16 +721,16 @@ sap.ui.define([
             onAttachmentsButtonPress: async function (oEvent) {
                 /** @type {sap.m.GenericTag} */
                 const oGenericTag = oEvent.getSource();
- 
+
                 const nAtcEntry = this.getCustomDataForElement(oGenericTag, "AtcEntry");
                 const data = await this.getAttachmentsByDocEntry(nAtcEntry);
                 this.onOpenDialog(data.value);
             },
- 
- 
+
+
             onOpenDialog: async function (data) {
                 const oView = this.getView();
- 
+
                 if (!this._attachmentsDialog) {
                     this._attachmentsDialog = await Fragment.load({
                         id: oView.getId(),
@@ -738,7 +739,7 @@ sap.ui.define([
                     });
                     oView.addDependent(this._attachmentsDialog);
                 }
- 
+
                 this._attachmentsDialog.setModel(new JSONModel(data), "AT");
                 this._attachmentsDialog.open();
             },
@@ -752,8 +753,8 @@ sap.ui.define([
                 const sUrl = `${window.location.origin}/api/Attachments/GetAttachmentByCustomKey/ORDR/DocEntry/${AbsEntry}/null/${Line}`;
                 window.open(sUrl, '_blank');
             },
- 
- 
+
+
             //#region ADD ATTACHMENTS DIALOG
             onAttachmentDialogAddAttachment: async function (oEvent) {
                 await this.onOpenAddAttachmentDialog();
@@ -782,7 +783,7 @@ sap.ui.define([
                 const fromData = new FormData();
                 fromData.append("file", file);
                 const sUrl = `${window.location.origin}/api/Attachments/SetAttachment/false/false`;
- 
+
                 try {
                     const response = await fetch(sUrl, {
                         method: 'POST',
@@ -795,7 +796,7 @@ sap.ui.define([
                         FileName: file.name
                     });
                     oATModel.refresh();
- 
+
                 } catch (oError) {
                     console.log(oError);
                 } finally {
@@ -806,7 +807,7 @@ sap.ui.define([
                 this._attachmentsAddDialog.close();
             },
             //#endregion
- 
+
             // #region INTERNAL
             getCustomDataForElement: function (oElement, sCustomDataCode) {
                 let oCustomData = oElement.getCustomData().find(x => x.getKey() === sCustomDataCode);
@@ -827,7 +828,7 @@ sap.ui.define([
                 const sUrl = encodeURIComponent(`odata/CustomViews/Views.CustomWithParameters(Id='FirstPlugin:Attachments',Parameters=["AbsEntry=${sDocNum}"],paramType=Default.ParamType'Custom')`);
                 return this._get(sUrl);
             },
- 
+
             _get: function (sUrl) {
                 return new Promise((resolve, reject) => {
                     Http.request({
@@ -839,9 +840,9 @@ sap.ui.define([
                     });
                 });
             },
- 
+
             //#endregion
- 
+
         });
     });
 ```
@@ -850,7 +851,7 @@ sap.ui.define([
 
 Finally, the application not only displays the list of Attachments for the given Sales Order, but also allows user to add new attachments. Attachments in this example are uploaded to the backend into SAP attachments location:
 
-![Attachments](./media/attachments/attachments-path-sap-configuration.png)
+![Attachments](./media/attachments/attachments-path-sap-configuration.webp)
 
 :::note
 In this example we are only adding attachment to the backend. We are not linking this attachment to a Sales Order. This needs to be done in a custom controller. We are adding attachments from this example to Sales Orders in Custom controller tutorial.
@@ -858,6 +859,6 @@ In this example we are only adding attachment to the backend. We are not linking
 
 #### Final look of application
 
-![Add](./media/attachments/add-attachment-dialog.png)
+![Add](./media/attachments/add-attachment-dialog.webp)
 
-![Added](./media/attachments/added-attachment.png)
+![Added](./media/attachments/added-attachment.webp)

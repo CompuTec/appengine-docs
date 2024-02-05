@@ -5,39 +5,39 @@
 As part of AppEngine, there is custom control provided, named computec.appengine.ui.controls.link that works as "yellow arrows" in SAP Business One. Using this control you allow users to easily navigate to referenced Master Data/Document. Below you can find an example of the usage of this control.
 
 :::warning
-AppEngine Link Control works only when plugin is started from SAP Business One. 
+AppEngine Link Control works only when plugin is started from SAP Business One.
 :::
 
 ## Adding link to Sales Orders and Business Partners
 
 1. Open SalesOrder.view.xml:
 
-![Sales Order](./media/using-ae-link/salesorder-view-xml.png)
+![Sales Order](./media/using-ae-link/salesorder-view-xml.webp)
 
 2. Add a namespace for AppEngine controls:
 
-```xmlns:ae="computec.appengine.ui.controls"```
+`xmlns:ae="computec.appengine.ui.controls"`
 
-![AppEngine](./media/using-ae-link/appengine-controls-namespace.png)
+![AppEngine](./media/using-ae-link/appengine-controls-namespace.webp)
 
 3. Add a Link to the Document Number column. Change ObjectIdentifier to AppEngine Link.
 
-    - text – text that will be displayed. Use DocNum and in curly brackets DocEntry
+   - text – text that will be displayed. Use DocNum and in curly brackets DocEntry
 
-    - objectType – in case of SAP object, this needs to be BoFormObjectEnum (or ObjectType). BoFormObjectEnum can be found in SAP Business ne SDK.  In this case this will be fo_Order:
+   - objectType – in case of SAP object, this needs to be BoFormObjectEnum (or ObjectType). BoFormObjectEnum can be found in SAP Business ne SDK. In this case this will be fo_Order:
 
-    ![Order](./media/using-ae-link/fo-Order.png)
+   ![Order](./media/using-ae-link/fo-Order.webp)
 
-    - objectSubType – only needed when opening ProcessForce objects. In this example, leave it empty
+   - objectSubType – only needed when opening ProcessForce objects. In this example, leave it empty
 
-    - key – a key of an object we would like to open. In this case this will be Sales Order DocEntry.
+   - key – a key of an object we would like to open. In this case this will be Sales Order DocEntry.
 
-    ```<ae:Link
-    text="{path: 'AE>DocNum', type: 'sap.ui.model.odata.type.Int32'} ({path: 'AE>DocEntry', type: 'sap.ui.model.odata.type.Int32'})"
-    objectType="fo_Order"
-    objectSubType=""
-    key="{path: 'AE>DocEntry', type: 'sap.ui.model.odata.type.Int32'}"/>
-    ```
+   ```<ae:Link
+   text="{path: 'AE>DocNum', type: 'sap.ui.model.odata.type.Int32'} ({path: 'AE>DocEntry', type: 'sap.ui.model.odata.type.Int32'})"
+   objectType="fo_Order"
+   objectSubType=""
+   key="{path: 'AE>DocEntry', type: 'sap.ui.model.odata.type.Int32'}"/>
+   ```
 
 4. Do the same thing for a Business Partner. This time instead of replacing ObjectIdentifier, add link next to it using HBox control. Link text property is empty.
 
@@ -108,4 +108,4 @@ SalesOrder.view.xml
 
 After restarting SAP Business One, you can see changes and you are able to use the Links as shown below.
 
-![AE Link](./media/using-ae-link/aelink-results.png)
+![AE Link](./media/using-ae-link/aelink-results.webp)

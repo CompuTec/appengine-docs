@@ -26,4 +26,4 @@ It is required to run hdbsetup.exe installation for proper work of CompuTec AppE
 
 The file is available in the b1_shf\SAP_HANA_CLIENT_x64 folder on a machine where SAP Business One is installed:
 
-![Setup](./media/requirements/hdbsetup.png)
+![Setup](./media/requirements/hdbsetup.webp)

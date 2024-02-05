@@ -16,23 +16,23 @@ The following steps present examples of the creation of User Defined Tables, Fie
 
 2. Right-click on the solution and select Add → New Project...
 
-![New Project](./media/udo-in-appengine-plugin/new-project.png)
+![New Project](./media/udo-in-appengine-plugin/new-project.webp)
 
 3. Choose Class Library (.NET Framework).
 
-![Class Library](./media/udo-in-appengine-plugin/class-library.png)
+![Class Library](./media/udo-in-appengine-plugin/class-library.webp)
 
 4. Specify name and location. In our case, this will be CompuTec.AppEngine.FirstPlugin.Setup.
 
-![Configure New Project](./media/udo-in-appengine-plugin/configure-new-project.png)
+![Configure New Project](./media/udo-in-appengine-plugin/configure-new-project.webp)
 
 5. After adding a new project, it is necessary to set up the configuration.
 
-![Choose Configuration Manager](./media/udo-in-appengine-plugin/choose-configuration-manager.png)
+![Choose Configuration Manager](./media/udo-in-appengine-plugin/choose-configuration-manager.webp)
 
-![Debug](./media/udo-in-appengine-plugin/debug.png)
+![Debug](./media/udo-in-appengine-plugin/debug.webp)
 
-![CPU](./media/udo-in-appengine-plugin/CPU.png)
+![CPU](./media/udo-in-appengine-plugin/CPU.webp)
 
 ### Adding UDO definitions
 
@@ -44,13 +44,13 @@ The following steps present examples of the creation of User Defined Tables, Fie
 
 3. In the Table folder, add a new Folder named ToDo and add a new class to its ToDoTable.
 
-![To Do Folder](./media/udo-in-appengine-plugin/to-do-folder.png)
+![To Do Folder](./media/udo-in-appengine-plugin/to-do-folder.webp)
 
-4. Our ToDoTable class needs to extend CompuTec.Core2.DI.Setup.UDO.Model.UDOManger class and annotate it with CompuTec.Core2.DI.Setup.Attributes.TableInstall. First, we will need to add Computec.Core2 to our project. 
+4. Our ToDoTable class needs to extend CompuTec.Core2.DI.Setup.UDO.Model.UDOManger class and annotate it with CompuTec.Core2.DI.Setup.Attributes.TableInstall. First, we will need to add Computec.Core2 to our project.
 
 5. To do this, we will Open NuGet Manager for the Setup project.
 
-![Manage Nuget Packages](./media/udo-in-appengine-plugin/manage-nuget-packages.png)
+![Manage Nuget Packages](./media/udo-in-appengine-plugin/manage-nuget-packages.webp)
 
 6. Now, we need to search for CompuTec.Core2 and install it.
 
@@ -66,144 +66,143 @@ The following steps present examples of the creation of User Defined Tables, Fie
 
 - Implement the CreateUDOTable method that will return the definition of our custom table. Here we define:
 
- - Object Code
-   
- - Table Name
+- Object Code
+- Table Name
 
- - Fields (CreateFieldsForHeaderTable)
+- Fields (CreateFieldsForHeaderTable)
 
- - Table Type
+- Table Type
 
- - Details regarding UDO.
+- Details regarding UDO.
 
- ToDoTable.cs
+ToDoTable.cs
 
- ```c#
- using CompuTec.BaseLayer.Connection;
+```c#
+using CompuTec.BaseLayer.Connection;
 using CompuTec.BaseLayer.DI;
 using CompuTec.Core2.DI.Setup.Attributes;
 using CompuTec.Core2.DI.Setup.UDO.Model;
 using System;
 using System.Collections.Generic;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.Setup.Tables.ToDo
 {
-    [TableInstall]
-    public class ToDoTable : UDOManager
-    {  
-        public const String OBJECT_CODE = "SAMPLE_TO_DO";
-        public const String TABLE_NAME = "SAMPLE_OTDO";
-        public const String TABLE_DESCRIPTION = "Sample To Do"; // max 30 characters
-        public const String ARCHIVE_TABLE_NAME = "SAMPLE_ATDO";  
- 
-        public ToDoTable(IDIConnection connection) : base(connection) { }
- 
-        protected override IUDOTable CreateUDOTable()
-        {
-            List<IUDOField> fields = this.CreateFieldsForHeaderTable();
-            List<IUDOFindColumn> findColumns = this.CreateFindColumnsList();
-            var UdoTable = new UDOTable(fields, findColumns, TABLE_NAME, TABLE_DESCRIPTION, BoUTBTableType.bott_MasterData, this.CreateKeys())
-            {
-                RegisteredUDOName = TABLE_NAME,
-                RegisteredUDOCode = OBJECT_CODE,
-                CanArchive = BoYesNoEnum.tYES,
-                CanCancel = BoYesNoEnum.tNO,
-                CanClose = BoYesNoEnum.tYES,
-                CanCreateDefaultForm = BoYesNoEnum.tYES,
-                CanDelete = BoYesNoEnum.tYES,
-                CanFind = BoYesNoEnum.tYES,
-                CanLog = BoYesNoEnum.tYES,
-                CanYearTransfer = BoYesNoEnum.tYES,
-                ArchiveTableName = ARCHIVE_TABLE_NAME
-            };
-            return UdoTable;
-        }
- 
-        private List<IUDOFindColumn> CreateFindColumnsList()
-        {
-            List<IUDOFindColumn> findList = new List<IUDOFindColumn>();
- 
-            var taskName = new UDOFindColumn();
-            taskName.SetColumnAlias("U_TaskName");
-            taskName.SetColumnDescription("Task Name");
-            findList.Add(taskName);
- 
-            return findList;
-        }
- 
-        private List<IUDOField> CreateFieldsForHeaderTable()
-        {
-            var fields = new List<IUDOField>();
- 
-            //adding task name column
-            var TaskName = new UDOTableField();
-            TaskName.SetName("TaskName");
-            TaskName.SetDescription("Task Name"); // max 80 characters
-            TaskName.SetType(BoFieldTypes.db_Alpha);
-            TaskName.SetEditSize(100);
-            fields.Add(TaskName);
- 
- 
-            //description column
-            var TaskDescription = new UDOTableField();
-            TaskDescription.SetName("Description");
-            TaskDescription.SetDescription("Task description");
-            TaskDescription.SetType(BoFieldTypes.db_Alpha);
-            TaskDescription.SetEditSize(254);
-            fields.Add(TaskDescription);
- 
-            //priority column
-            var TaskPriority = new UDOTableField();
-            TaskPriority.SetName("Priority");
-            TaskPriority.SetDescription("Priority");
-            TaskPriority.SetType(BoFieldTypes.db_Alpha);
-            TaskPriority.ValidValuesMD = new Dictionary<string, string>()
-            {
-                { "L","Low Priority" },
-                { "M", "Medium Priority" },
-                { "H", "High Priority" }
-            };
-            TaskPriority.DefaultValue = "L";
-            TaskPriority.SetEditSize(1);
-            fields.Add(TaskPriority);
- 
- 
-            //deadline column
-            var TaskDeadline = new UDOTableField();
-            TaskDeadline.SetName("Deadline");
-            TaskDeadline.SetDescription("Deadline");
-            TaskDeadline.SetType(BoFieldTypes.db_Date);
-            TaskDeadline.SetEditSize(10);
-            fields.Add(TaskDeadline);  var Done = new UDOTableField();
- 
-            Done.SetName("Done");
-            Done.SetDescription("Done");
-            Done.SetType(BoFieldTypes.db_Alpha);
-            Done.ValidValuesMD = new Dictionary<string, string>()
-            {
-                { "Y","Yes" },
-                { "N", "No" }
-            };
-            Done.DefaultValue = "N";
-            Done.SetEditSize(1);
-            fields.Add(Done);
- 
-            return fields;
- 
-        }
-        private List<IUDOTableKey> CreateKeys()
-        {
-            List<IUDOTableKey> list = new List<IUDOTableKey>();
-            return list;
-        }
-        protected override void SetChildTables(){ }
-    }
-}   
- ```
+   [TableInstall]
+   public class ToDoTable : UDOManager
+   {
+       public const String OBJECT_CODE = "SAMPLE_TO_DO";
+       public const String TABLE_NAME = "SAMPLE_OTDO";
+       public const String TABLE_DESCRIPTION = "Sample To Do"; // max 30 characters
+       public const String ARCHIVE_TABLE_NAME = "SAMPLE_ATDO";
 
- :::note
- Make sure to use only uppercase letters and no spaces as Table Name – currently using lowercase letters will lead to the exception: "This entry already exists in following tables..."
- :::
+       public ToDoTable(IDIConnection connection) : base(connection) { }
+
+       protected override IUDOTable CreateUDOTable()
+       {
+           List<IUDOField> fields = this.CreateFieldsForHeaderTable();
+           List<IUDOFindColumn> findColumns = this.CreateFindColumnsList();
+           var UdoTable = new UDOTable(fields, findColumns, TABLE_NAME, TABLE_DESCRIPTION, BoUTBTableType.bott_MasterData, this.CreateKeys())
+           {
+               RegisteredUDOName = TABLE_NAME,
+               RegisteredUDOCode = OBJECT_CODE,
+               CanArchive = BoYesNoEnum.tYES,
+               CanCancel = BoYesNoEnum.tNO,
+               CanClose = BoYesNoEnum.tYES,
+               CanCreateDefaultForm = BoYesNoEnum.tYES,
+               CanDelete = BoYesNoEnum.tYES,
+               CanFind = BoYesNoEnum.tYES,
+               CanLog = BoYesNoEnum.tYES,
+               CanYearTransfer = BoYesNoEnum.tYES,
+               ArchiveTableName = ARCHIVE_TABLE_NAME
+           };
+           return UdoTable;
+       }
+
+       private List<IUDOFindColumn> CreateFindColumnsList()
+       {
+           List<IUDOFindColumn> findList = new List<IUDOFindColumn>();
+
+           var taskName = new UDOFindColumn();
+           taskName.SetColumnAlias("U_TaskName");
+           taskName.SetColumnDescription("Task Name");
+           findList.Add(taskName);
+
+           return findList;
+       }
+
+       private List<IUDOField> CreateFieldsForHeaderTable()
+       {
+           var fields = new List<IUDOField>();
+
+           //adding task name column
+           var TaskName = new UDOTableField();
+           TaskName.SetName("TaskName");
+           TaskName.SetDescription("Task Name"); // max 80 characters
+           TaskName.SetType(BoFieldTypes.db_Alpha);
+           TaskName.SetEditSize(100);
+           fields.Add(TaskName);
+
+
+           //description column
+           var TaskDescription = new UDOTableField();
+           TaskDescription.SetName("Description");
+           TaskDescription.SetDescription("Task description");
+           TaskDescription.SetType(BoFieldTypes.db_Alpha);
+           TaskDescription.SetEditSize(254);
+           fields.Add(TaskDescription);
+
+           //priority column
+           var TaskPriority = new UDOTableField();
+           TaskPriority.SetName("Priority");
+           TaskPriority.SetDescription("Priority");
+           TaskPriority.SetType(BoFieldTypes.db_Alpha);
+           TaskPriority.ValidValuesMD = new Dictionary<string, string>()
+           {
+               { "L","Low Priority" },
+               { "M", "Medium Priority" },
+               { "H", "High Priority" }
+           };
+           TaskPriority.DefaultValue = "L";
+           TaskPriority.SetEditSize(1);
+           fields.Add(TaskPriority);
+
+
+           //deadline column
+           var TaskDeadline = new UDOTableField();
+           TaskDeadline.SetName("Deadline");
+           TaskDeadline.SetDescription("Deadline");
+           TaskDeadline.SetType(BoFieldTypes.db_Date);
+           TaskDeadline.SetEditSize(10);
+           fields.Add(TaskDeadline);  var Done = new UDOTableField();
+
+           Done.SetName("Done");
+           Done.SetDescription("Done");
+           Done.SetType(BoFieldTypes.db_Alpha);
+           Done.ValidValuesMD = new Dictionary<string, string>()
+           {
+               { "Y","Yes" },
+               { "N", "No" }
+           };
+           Done.DefaultValue = "N";
+           Done.SetEditSize(1);
+           fields.Add(Done);
+
+           return fields;
+
+       }
+       private List<IUDOTableKey> CreateKeys()
+       {
+           List<IUDOTableKey> list = new List<IUDOTableKey>();
+           return list;
+       }
+       protected override void SetChildTables(){ }
+   }
+}
+```
+
+:::note
+Make sure to use only uppercase letters and no spaces as Table Name – currently using lowercase letters will lead to the exception: "This entry already exists in following tables..."
+:::
 
 9. In the same manner, we will add ToDoTableRequirementsTable:
 
@@ -216,7 +215,7 @@ using CompuTec.Core2.DI.Setup.Attributes;
 using CompuTec.Core2.DI.Setup.UDO.Model;
 using System;
 using System.Collections.Generic;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.Setup.Tables.ToDo
 {
     [TableInstall]
@@ -226,34 +225,34 @@ namespace CompuTec.AppEngine.FirstPlugin.Setup.Tables.ToDo
         public const String TABLE_NAME = "SAMPLE_TDO1";
         public const String TABLE_DESCRIPTION = "Sample To Do Requirements";
         public const String ARCHIVE_TABLE_NAME = "SAMPLE_ATDO1";
- 
+
         public ToDoTableRequirementsTable(IDIConnection connection) : base(connection) { }
- 
+
         protected override IUDOTable CreateUDOTable()
         {
             List<IUDOField> fields = this.DefineChildFields();
- 
+
             IUDOTable UdoTable = new UDOTable(fields, TABLE_NAME, TABLE_DESCRIPTION, BoUTBTableType.bott_MasterDataLines);
- 
+
             UdoTable.RegisteredUDOName = TABLE_NAME;
             UdoTable.RegisteredUDOCode = OBJECT_CODE;
             UdoTable.ArchiveTableName = ARCHIVE_TABLE_NAME;
- 
+
             return UdoTable;
         }
- 
+
         private List<IUDOField> DefineChildFields()
         {
             var fields = new List<IUDOField>();
- 
-            //adding task name column    
+
+            //adding task name column
             var Name = new UDOTableField();
             Name.SetName("Name");
             Name.SetDescription("Name");
             Name.SetType(BoFieldTypes.db_Alpha);
             Name.SetEditSize(100);
             fields.Add(Name);
- 
+
             //description column
             var Quantity = new UDOTableField();
             Quantity.SetName("Quantity");
@@ -261,14 +260,14 @@ namespace CompuTec.AppEngine.FirstPlugin.Setup.Tables.ToDo
             Quantity.SetType(BoFieldTypes.db_Numeric);
             Quantity.SetEditSize(11);
             fields.Add(Quantity);
- 
+
             return fields;
         }
- 
+
         protected override void SetChildTables()
         {
         }
- 
+
     }
 }
 ```
@@ -277,7 +276,7 @@ namespace CompuTec.AppEngine.FirstPlugin.Setup.Tables.ToDo
 
 ```c#
 protected override void SetChildTables()
-{  
+{
     ChildTablesClasses.AddRange(new string[] { "ToDoTableRequirementsTable" });
 }
 ```
@@ -293,12 +292,12 @@ CustomUDOFields.cs
 ```c#
 using CompuTec.Core2.DI.Setup.UDO.Model;
 using System.Collections.Generic;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.Setup.Tables
 {
     public class CustomUDOFields
     {
- 
+
         /// <summary>
         /// in this method, you can list all UDF fields that need to be installed with the plugin
         /// </summary>
@@ -314,7 +313,7 @@ namespace CompuTec.AppEngine.FirstPlugin.Setup.Tables
             udf.SetEditSize(20);
             udf.SetType(BaseLayer.DI.BoFieldTypes.db_Alpha);
             list.Add(udf);
- 
+
             return list;
         }
     }
@@ -325,27 +324,27 @@ namespace CompuTec.AppEngine.FirstPlugin.Setup.Tables
 
 To allow AppEngine to run this setup, we need to provide a Setup class in our plugin that extends CompuTec.AppEngine.Base.Infrastructure.Plugins.PluginSetup class. If you create a Plugin solution from our CompuTec AppEngine Plugin Template, then in the plugin project, you will already have boiler code that you can use.
 
-![Setup CS](./media/udo-in-appengine-plugin/setup-cs.png)
+![Setup CS](./media/udo-in-appengine-plugin/setup-cs.webp)
 
 1. The first step is to add a reference to our Setup project to the Plugin project. To do this, we need to open Add Reference on our Plugin project.
 
-![Add Reference](./media/udo-in-appengine-plugin/add-reference.png)
+![Add Reference](./media/udo-in-appengine-plugin/add-reference.webp)
 
 2. On the Projects Tab, select the Setup project and click OK.
 
-![CompuTec AppEngine](./media/udo-in-appengine-plugin/computec-appengine-firstplugin-setup.png)
+![CompuTec AppEngine](./media/udo-in-appengine-plugin/computec-appengine-firstplugin-setup.webp)
 
 3. Now we can add implementation to our Setup.cs:
 
-    - It needs to extend CompuTec.AppEngine.Base.Infrastructure.Plugins.PluginSetup
+   - It needs to extend CompuTec.AppEngine.Base.Infrastructure.Plugins.PluginSetup
 
-    - CheckUpdate method – if return true, then installation will be performed
+   - CheckUpdate method – if return true, then installation will be performed
 
-    - Update method – this method should run CompuTec.Core2.DI.Setup.UDO.Setup.Udate and return System.Version after successful update
+   - Update method – this method should run CompuTec.Core2.DI.Setup.UDO.Setup.Udate and return System.Version after successful update
 
-    - Version method – needs to return System.A version of plugin (not the installed version, but the current version of the run plugin)
+   - Version method – needs to return System.A version of plugin (not the installed version, but the current version of the run plugin)
 
-    Setup.cs
+   Setup.cs
 
 ```c#
     using System;
@@ -354,7 +353,7 @@ using System.Text;
 using CompuTec.AppEngine.Base.Infrastructure.Plugins;
 using CompuTec.AppEngine.FirstPlugin.API;
 using CompuTec.AppEngine.FirstPlugin.Setup.Tables;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.Plugin.AppStart
 {
     ///Plugin Setup Implementation
@@ -365,47 +364,47 @@ namespace CompuTec.AppEngine.FirstPlugin.Plugin.AppStart
         {
             return currentVersion < new Version(FirstPluginInfo.NameVersion);
         }
- 
+
         public override Version Update(string token)
         {
- 
+
             var info = new FirstPluginInfo();
- 
+
             Console.WriteLine("Update");
- 
+
             List<CompuTec.Core2.DI.Setup.UDO.Model.ICustomField> customUdoFieldList = CustomUDOFields.getCustomFields();
             CompuTec.Core2.DI.Setup.UDO.Setup setup = new CompuTec.Core2.DI.Setup.UDO.Setup(token, customUdoFieldList, false, System.Reflection.Assembly
                 .GetAssembly(typeof(FirstPlugin.Setup.Tables.ToDo.ToDoTable)), "CompuTec.AppEngine.FirstPlugin.Setup.Tables", "CompuTec.AppEngine.FirstPlugin.Setup.Tables",
                 "CompuTec.AppEngine.FirstPlugin.Setup.Tables", "CompuTec.AppEngine.FirstPlugin.Setup.Tables", "CompuTec.AppEngine.FirstPlugin.Setup.Tables");
- 
+
             setup.BaseLibInformation = info;
- 
+
             if (setup.IsUpdateRequiredNew(true))
             {
                 Console.WriteLine("Instaling...");
                 var updateResult = setup.Update();
- 
+
                 if (!updateResult.Success)
                 {
                     var message = new StringBuilder();
- 
+
                     updateResult.Errors.ForEach(e =>
                     {
                         message.Append(e.Message);
                     });
- 
+
                     throw new Exception(message.ToString());
                 }
- 
- 
+
+
                 Console.WriteLine(updateResult.ToString());
             }
- 
+
             Console.WriteLine("Install finish");
- 
+
             return Version;
         }
- 
+
         public override Version Version => new Version(FirstPluginInfo.NameVersion);
     }
 }
@@ -420,8 +419,8 @@ using CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo;
 using CompuTec.Core2;
 using System.Collections.Generic;
 namespace CompuTec.AppEngine.FirstPlugin.API {
-     
- 
+
+
     /// <summary>
     /// This is a CoreInfo Dependency loader.
     /// This class is responsible for registering all custom UDO Object implementation
@@ -433,9 +432,9 @@ namespace CompuTec.AppEngine.FirstPlugin.API {
         public const double DbVersion = 1.1d;
         //List of Business Object types that are implemented in this library
         private readonly List<string> implementedObjects = new List<string>();
- 
+
         public FirstPluginInfo() : base(Name, NameVersion, DbVersion) {}
- 
+
         /// <summary>
         /// Factory method that is used to create BusinessObjects based on type
         /// </summary>
@@ -457,7 +456,7 @@ namespace CompuTec.AppEngine.FirstPlugin.API {
         {
             return 1.0d;
         }
- 
+
         /// <summary>
         /// Indicates weather this library implements specific businessObject
         /// </summary>
@@ -474,7 +473,7 @@ namespace CompuTec.AppEngine.FirstPlugin.API {
 
 ### Results
 
-Now having the definition of User Defined Objects, we can test it by running the setup from CompuTec AppEngine Administration Panel. 
+Now having the definition of User Defined Objects, we can test it by running the setup from CompuTec AppEngine Administration Panel.
 
 1. Open Administration Panel in your browser and navigate to the Plugins tab.
 
@@ -484,20 +483,20 @@ Now having the definition of User Defined Objects, we can test it by running the
 
 4. Click Update to start the installation procedure.
 
-![Start Installation](./media/udo-in-appengine-plugin/start-installation.png)
+![Start Installation](./media/udo-in-appengine-plugin/start-installation.webp)
 
 5. In Dialog that will open you need to authenticate using SAP user credentials.
-After successful installation returned Version number is saved to the configuration file. This means that all defined objects were created in SAP.
+   After successful installation returned Version number is saved to the configuration file. This means that all defined objects were created in SAP.
 
 6. After successful installation returned Version number is saved to the configuration file. This means that all defined objects were created in SAP.
 
-![Version Number](./media/udo-in-appengine-plugin/version-number.png)
+![Version Number](./media/udo-in-appengine-plugin/version-number.webp)
 
 7. We can check created tables, fields, and registered objects in SAP.
 
-![To-Do](./media/udo-in-appengine-plugin/to-do-user-fields.png)
+![To-Do](./media/udo-in-appengine-plugin/to-do-user-fields.webp)
 
-![Sample To-Do](./media/udo-in-appengine-plugin/sample-to-do.png)
+![Sample To-Do](./media/udo-in-appengine-plugin/sample-to-do.webp)
 
 ## Exposing objects in API
 
@@ -505,11 +504,11 @@ CompuTec AppEngine Plugin Code Generator can generate controllers, models, and s
 
 ### Adding and configuring generator
 
-1. First, we will need to add Code Generator to our Plugin project. We can do this using NuGet Manager. 
+1. First, we will need to add Code Generator to our Plugin project. We can do this using NuGet Manager.
 
 2. Search for CompuTec.AppEngine.PluginCodeGenerator and install it.
 
-![CompuTec AppEngine](./media/udo-in-appengine-plugin/computec-appengine-plugincodegenerator.png)
+![CompuTec AppEngine](./media/udo-in-appengine-plugin/computec-appengine-plugincodegenerator.webp)
 
 3. After installation, ReadMe.txt file opens with description of how to configure T4 Text Template file.
 
@@ -521,15 +520,15 @@ CompuTec AppEngine Plugin Code Generator can generate controllers, models, and s
 
 7. Copy a template example from ReadMe.txt.
 
-![Template](./media/udo-in-appengine-plugin/templae-example.png)
+![Template](./media/udo-in-appengine-plugin/templae-example.webp)
 
 8. Paste it to the newly created RunCodeGenerator.tt
 
 9. Now we need to modify Generator Settings part accordingly to our solution. Only the following part will be changed:
 
-![Generator Settings](./media/udo-in-appengine-plugin/generator-settings-change.png)
+![Generator Settings](./media/udo-in-appengine-plugin/generator-settings-change.webp)
 
-10. First, remove not required elements: 
+10. First, remove not required elements:
 
 - CustomController,
 
@@ -559,27 +558,27 @@ CompuTec AppEngine Plugin Code Generator can generate controllers, models, and s
 <#@ output extension=".txt" #>
             <#@ template debug="false" hostspecific="true" language="C#" #>
             <#@ assembly name="$(ProjectDir)\CompuTec.AppEngine.PluginCodeGenerator.dll" #>
- 
+
             <#@ import namespace="System.Collections.Generic" #>
             <#@ import namespace="CompuTec.AppEngine.PluginCodeGenerator.Extrator" #>
             <#@ import namespace="CompuTec.AppEngine.PluginCodeGenerator.Tools" #>
             <#@ import namespace="CompuTec.AppEngine.PluginCodeGenerator.Generator" #>
- 
+
             <#
- 
+
                 var apiGenerator = new ApiGenerator(this.Host, new GeneratorSettings(){
                     CoreNamespace = "CompuTec.Core2.Beans",
                     TargetProjectName = "CompuTec.AppEngine.FirstPlugin",
                     TargeSerializersProjectName = "CompuTec.AppEngine.FirstPlugin.Serializer",
                     TargetModelProjectNames = new List<string>(){ "CompuTec.AppEngine.FirstPlugin.Models" },
                     SourceProjectName = "CompuTec.AppEngine.FirstPlugin.API",
-                     
+
                     DevMode = false
-                   
+
                 });
- 
-      
- 
+
+
+
                 var result = apiGenerator.Generate();
             #>
             <#
@@ -591,7 +590,7 @@ CompuTec AppEngine Plugin Code Generator can generate controllers, models, and s
             <#
                 });
             #>
- 
+
             <#
                 result.QueryGroups.ForEach(queryGroups => {
             #>
@@ -607,7 +606,7 @@ CompuTec AppEngine Plugin Code Generator can generate controllers, models, and s
 Saving T4 file will start generator.
 :::
 
-13. If you created a plugin solution from a wizard, then all this projects are already created, excluding Serializer. We need to add this project  the samee way as we did in case of our Setup project.
+13. If you created a plugin solution from a wizard, then all this projects are already created, excluding Serializer. We need to add this project the samee way as we did in case of our Setup project.
 
 a. Right-click on the Solution and choose Add new project,
 
@@ -623,9 +622,9 @@ d. After adding, set up configuration in the same way as in case of Setup projec
 
 2. The Generator use CompuTec.AppEngine.DataAnnotations so we will need to add this library to this project. We can do this using NuGet Manager sam way as previously.
 
-![Adding Library](./media/udo-in-appengine-plugin/adding-library-to-project.png)
+![Adding Library](./media/udo-in-appengine-plugin/adding-library-to-project.webp)
 
-3. In Business Object definition we will need Priority enumerator, so let's create it upfront. 
+3. In Business Object definition we will need Priority enumerator, so let's create it upfront.
 
 a. Add a new folder to the API project named Enum,
 
@@ -635,7 +634,7 @@ c. EnumType annotation allows Core2 to bind Enum to database values. So for this
 
 ```c#
 using CompuTec.Core2.DI.Attributes;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.API.Enums
 {
     [EnumType(new int[] { 1, 2, 3 }, new string[] { "L", "M", "H" }, 2)]
@@ -648,13 +647,13 @@ namespace CompuTec.AppEngine.FirstPlugin.API.Enums
 
 4. The same way, create a YesNoType.cs enum type that will be used to mark the Done property of the ToDo task.
 
-    a. Add a new file YesNoType.cs inside the Enum folder.
+   a. Add a new file YesNoType.cs inside the Enum folder.
 
-    b. Add the following code in it:
+   b. Add the following code in it:
 
 ```c#
   using CompuTec.Core2.DI.Attributes;
- 
+
   namespace CompuTec.AppEngine.FirstPlugin.API.Enums
   {
       [EnumType(new int[] { 1, 2 }, new string[] { "Y", "N" }, 2)]
@@ -670,15 +669,14 @@ namespace CompuTec.AppEngine.FirstPlugin.API.Enums
 
 8. Below you can find the definitions of IToDo.cs:
 
-  - the Interface need to be based on CompuTec.Core2.Beans.IUDOBean – this is required by Core2 to manage our object
-    
-  - For AppEngine we need to annote our interface with CompuTec.AppEngine.DataAnnotations.AppEngineUDOBean
-  
-       - Object Type needs to be the same as in ToDoTable.cs definition.
+- the Interface need to be based on CompuTec.Core2.Beans.IUDOBean – this is required by Core2 to manage our object
+- For AppEngine we need to annote our interface with CompuTec.AppEngine.DataAnnotations.AppEngineUDOBean
 
-       - TableName needs to be the same as in ToDoTable.cs with additional '@' prefix – this is real table name in datbase.
+  - Object Type needs to be the same as in ToDoTable.cs definition.
 
-       - [AppEngineProperty(IsMasterKey = true)] – this annotation should be specified on the key column (this will be key on all crud operations)
+  - TableName needs to be the same as in ToDoTable.cs with additional '@' prefix – this is real table name in datbase.
+
+  - [AppEngineProperty(IsMasterKey = true)] – this annotation should be specified on the key column (this will be key on all crud operations)
 
 IToDo.cs
 
@@ -688,7 +686,7 @@ using CompuTec.AppEngine.FirstPlugin.API.Enums;
 using CompuTec.Core2.Beans;
 using System;
 using System.ComponentModel;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo
 {
     /// <summary>
@@ -712,16 +710,16 @@ namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo
         YesNoType U_Done { get; set; }
         IToDoRequirement Requirements { get; set; }
     }
-}       
+}
 ```
 
 9. Below you can find the definition of IToDoRequirement.cs:
 
-    - Our child Interface needs to based on CompuTec.Core2.Beans.IUDOChildBean - this is required by Core2 to manage our object
+   - Our child Interface needs to based on CompuTec.Core2.Beans.IUDOChildBean - this is required by Core2 to manage our object
 
-    - Child interface also need to be Enumberable
+   - Child interface also need to be Enumberable
 
-    - [AppEngineUDOChildBean()] – this annotation mark this interface as child (lines):
+   - [AppEngineUDOChildBean()] – this annotation mark this interface as child (lines):
 
 IToDoRequirement
 
@@ -730,7 +728,7 @@ using CompuTec.AppEngine.DataAnnotations;
 using CompuTec.Core2.Beans;
 using System;
 using System.Collections.Generic;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo
 {
     [AppEngineUDOChildBean()]
@@ -747,7 +745,7 @@ namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo
 
 1. We will implement a ToDo class as a partial class to keep logic and field getter and setters separately. We will also add BusinessObjects class in BusinessObjects.
 
- - BusinessObjects.cs 
+- BusinessObjects.cs
 
 BusinessObjects.cs
 
@@ -757,16 +755,16 @@ namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects
    public  class BusinessObjects
     {
         public const string ToDoObjectCode = "SAMPLE_TO_DO";
- 
+
     }
 }
 ```
 
 - ToDo.cs – Business logic.
 
- - In constructor UDOCode and TableName needs to be set up accordingly to ToDoTable.cs properites
+- In constructor UDOCode and TableName needs to be set up accordingly to ToDoTable.cs properites
 
- - Children and ChildDictionaries needs to be initialized as shown below:
+- Children and ChildDictionaries needs to be initialized as shown below:
 
 ToDo.cs
 
@@ -774,7 +772,7 @@ ToDo.cs
 using CompuTec.Core2.Beans;
 using System;
 using System.Collections.Generic;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo
 {
     public partial class ToDo
@@ -783,29 +781,29 @@ namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo
         {
             this.UDOCode = BusinessObjects.ToDoObjectCode;
             this.TableName = "SAMPLE_OTDO";
- 
+
             this.Childs = new Dictionary<string, ChildBeans>();
             this.ChildDictionary = new Dictionary<string, string>();
- 
+
             this.Childs.Add("Requirements", new ToDoRequirement(true, this));
             this.ChildDictionary.Add("SAMPLE_TDO1", "Requirements");
- 
+
         }
- 
+
         protected override bool BeforeAdd()
         {
- 
+
             this.U_Deadline = DateTime.Today.AddDays(7);
             this.Code = Guid.NewGuid().ToString();
             return base.BeforeAdd();
         }
- 
+
         protected override bool BeforeUpdate()
         {
- 
+
             return base.BeforeUpdate();
         }
- 
+
     }
 }
 ```
@@ -818,7 +816,7 @@ ToDo.properties.cs
 using CompuTec.AppEngine.FirstPlugin.API.Enums;
 using CompuTec.Core2.Beans;
 using System;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo
 {
     public partial class ToDo : UDOBean, IToDo
@@ -868,7 +866,7 @@ namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo
             get => this.Childs["Requirements"].CurrentChild as IToDoRequirement;
             set { this.Childs["Requirements"].CurrentChild = value as IToDoRequirement; }
         }
-     
+
     }
 }
 ```
@@ -880,7 +878,7 @@ using CompuTec.Core2.Beans;
 using System;
 using System.Collections.Generic;
 using System.Collections;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo
 {
     public class ToDoRequirement : ChildBeans, IToDoRequirement
@@ -890,7 +888,7 @@ namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo
         }
         public ToDoRequirement(ChildBeans childBeans) : base(childBeans) { }
         public ToDoRequirement(bool master, UDOBean baseUDO) : base(master, baseUDO) { }
- 
+
         public String U_Name
         {
             get { return FieldDictionary["U_Name"].Value; }
@@ -915,7 +913,7 @@ namespace CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo
 
 2. Having implementation of our Business Objects ready, we can add information about implemented objects to FirstPluginInfo.cs.
 
- - We will add entry to implemented object list with the Code of our object.
+- We will add entry to implemented object list with the Code of our object.
 
 ```c#
 implementedObjects.Add(BusinessObjects.BusinessObjects.ToDoObjectCode);
@@ -940,8 +938,8 @@ using CompuTec.AppEngine.FirstPlugin.API.BusinessObjects.ToDo;
 using CompuTec.Core2;
 using System.Collections.Generic;
 namespace CompuTec.AppEngine.FirstPlugin.API {
-     
- 
+
+
     /// <summary>
     /// This is a CoreInfo Dependency loader.
     /// this class is responsible to register all custom UDO Object imlementation
@@ -953,14 +951,14 @@ namespace CompuTec.AppEngine.FirstPlugin.API {
         public const double DbVersion = 1.1d;
         //List of Busienss Object types that are implemented in this library
         private readonly List<string> implementedObjects = new List<string>();
- 
+
         public FirstPluginInfo() : base(Name, NameVersion, DbVersion)
         {
             ///Register UDO Object for Core2 repository
             implementedObjects.Add(BusinessObjects.BusinessObjects.ToDoObjectCode);
- 
+
         }
- 
+
         /// <summary>
         /// Factory method that is used to create BusinessObjects based on type
         /// </summary>
@@ -971,7 +969,7 @@ namespace CompuTec.AppEngine.FirstPlugin.API {
         /// </returns>
         public override dynamic CreateObject(string Token, string ObjectType)
         {
-         
+
             if (ObjectType.Equals(BusinessObjects.BusinessObjects.ToDoObjectCode))
             {
                 IToDo x = CoreManager.GetUDO<ToDo>(Token) as IToDo;
@@ -988,7 +986,7 @@ namespace CompuTec.AppEngine.FirstPlugin.API {
         {
             return 1.0d;
         }
- 
+
         /// <summary>
         /// Inidicates weather this library implements specific businessObject
         /// </summary>
@@ -1013,21 +1011,21 @@ Finally we can run CompuTec AppEngine Plugin Code Generator. Base on defined int
 
 3. Right-click on RunCodeGenerator.tt and select Run Custom Tool.
 
-![Run Code Generator](./media/udo-in-appengine-plugin/run-code-generator.png)
+![Run Code Generator](./media/udo-in-appengine-plugin/run-code-generator.webp)
 
 4. Depending on number of Interfaces this process can tak a while. After generation, choose Reload All.
 
-![Reload](./media/udo-in-appengine-plugin/reload-all.png)
+![Reload](./media/udo-in-appengine-plugin/reload-all.webp)
 
-5. All newly created files should be now included in our project. 
+5. All newly created files should be now included in our project.
 
-![Newly Created Files](./media/udo-in-appengine-plugin/newly-created-files.png)
+![Newly Created Files](./media/udo-in-appengine-plugin/newly-created-files.webp)
 
 6. We need to add Microsoft.AspNet.OData lib to CompuTec.AppEngine.FirstPlugin.Models. We can do this using NuGet Manager as in previous examples.
 
 7. CompuTec.AppEngine.FirstPlugin.Serializer uses Models and API so we need to add references to these projects.
 
-![References](./media/udo-in-appengine-plugin/references.png)
+![References](./media/udo-in-appengine-plugin/references.webp)
 
 8. After that, we can rebuild our solution.
 
@@ -1058,7 +1056,7 @@ It is important to add to set correct assemblies in manifest.json. Below you can
       "CompuTec.AppEngine.FirstPlugin.Serializer",
       "CompuTec.AppEngine.FirstPlugin.API",
       "CompuTec.AppEngine.FirstPlugin.Setup"
-    ],  
+    ],
     "dependencies": {
     }
   },
@@ -1092,14 +1090,14 @@ It is important to add to set correct assemblies in manifest.json. Below you can
 
 To check if our API is exposed, we can open WebAPI:
 
-![Web API](./media/udo-in-appengine-plugin/web-api.png)
+![Web API](./media/udo-in-appengine-plugin/web-api.webp)
 
 In the swagger we can see API and OData ToDo controllers exposed:
 
-![Swagger To-Do](./media/udo-in-appengine-plugin/swagger-odata-todo-post.png)
+![Swagger To-Do](./media/udo-in-appengine-plugin/swagger-odata-todo-post.webp)
 
-![Swagger To-Do](./media/udo-in-appengine-plugin/swagger-odata-todo-post.png)
+![Swagger To-Do](./media/udo-in-appengine-plugin/swagger-odata-todo-post.webp)
 
 There are also oData metadata provided of our ToDo object.
 
-![To Do](./media/udo-in-appengine-plugin/todo-metadata.png)
+![To Do](./media/udo-in-appengine-plugin/todo-metadata.webp)

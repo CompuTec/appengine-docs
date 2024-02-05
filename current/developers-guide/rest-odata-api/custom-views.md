@@ -16,19 +16,18 @@ CompuTc AppEngine provides a mechanism for encapsulating complex database querie
 
 - The CustomViews folder is available in the AE installation directory, and ProgramData/CompuTec/AppEngine.
 
-![Custom View](./media/custom-views/core-odata.png)
+![Custom View](./media/custom-views/core-odata.webp)
 
 :::note
 Note that the Custom View ID will be extended with the plugin ID during plugin initialization
-```<plugin identifier>:<view identifier>```
+`<plugin identifier>:<view identifier>`
 :::
 
 ## Custom View Definition from Plugin Dir
 
-```<file name>.customview.json```
+`<file name>.customview.json`
 
 ```json
-
 {
   "Id": "<view identifier>",
   "Description": "<view description>",
@@ -37,7 +36,6 @@ Note that the Custom View ID will be extended with the plugin ID during plugin i
     "MsSql": "<MsSQL query>"
   }
 }
-
 ```
 
 ## Request
@@ -154,8 +152,6 @@ Response Body
 ```json
 {
   "@odata.context": "http://localhost:54000/odata/$metadata#Custom",
-  "value": [
-    {}
-  ]
+  "value": [{}]
 }
 ```

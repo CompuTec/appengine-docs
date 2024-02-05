@@ -12,11 +12,11 @@ In the following tutorial, we will show you how to create an AppEngine Job. We w
 
 1. AppEngine Jobs requires CompuTec.AppEngine.EventBus so we need to add it to our Plugin project.
 
-![Nuget Event](./media/appengine-jobs/nuget-event-bus.png)
+![Nuget Event](./media/appengine-jobs/nuget-event-bus.webp)
 
 2. In Plugin, project create a new folder named Jobs and new class in it named SalesOrderToApproveEventJob.cs
 
-![Sales](./media/appengine-jobs/sales-order-to-approve-event-job-new-file.png)
+![Sales](./media/appengine-jobs/sales-order-to-approve-event-job-new-file.webp)
 
 3. This class needs to inherit from CompuTec.AppEngine.Base.Infrastructure.Jobs.EventBusSecureJob.
 
@@ -29,7 +29,7 @@ using CompuTec.AppEngine.Base.Infrastructure.Jobs;
 using CompuTec.AppEngine.Base.Infrastructure.Security;
 using NLog;
 using StructureMap;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.Jobs
 {
     public class SalesOrderToApproveEventJob : EventBusSecureJob
@@ -39,9 +39,9 @@ namespace CompuTec.AppEngine.FirstPlugin.Jobs
         {
             _logger = container.GetInstance<Logger>();
         }
- 
+
         public override void Call()
-        {          
+        {
         }
     }
 }
@@ -53,19 +53,19 @@ namespace CompuTec.AppEngine.FirstPlugin.Jobs
 
 7. Let us add an annotation to our job
 
- - JobId - Id of this job that will be used by AppEngine. It is visible in AppEngine Administration Panel
+- JobId - Id of this job that will be used by AppEngine. It is visible in AppEngine Administration Panel
 
- - Description - Description of the job. Visible in AppEngine Administration Panel
+- Description - Description of the job. Visible in AppEngine Administration Panel
 
- - ContentType - ObjectType that we want to react on. This is the same object that is used in variable object_type in SBO_SP_TransactionNotification and SBO_SP_PostTransactionNotice.
+- ContentType - ObjectType that we want to react on. This is the same object that is used in variable object_type in SBO_SP_TransactionNotification and SBO_SP_PostTransactionNotice.
 
- - ActionType - action type of event for example: A - Add, U - Update, D - Delete
+- ActionType - action type of event for example: A - Add, U - Update, D - Delete
 
- - In our example, we want to react to adding Sales Order hence we set ContentType to "17" and ActionType to "A".
+- In our example, we want to react to adding Sales Order hence we set ContentType to "17" and ActionType to "A".
 
- ```
- [EventBusJob(JobId = "SalesOrderToApproveEventJob", Description = "Crate new To Do Job for Added Sales Orders that are unapproved", ContentType = "17", ActionType = "A")]
- ```
+```
+[EventBusJob(JobId = "SalesOrderToApproveEventJob", Description = "Crate new To Do Job for Added Sales Orders that are unapproved", ContentType = "17", ActionType = "A")]
+```
 
 ```
 SalesOrderToApproveEventJob.cs
@@ -77,7 +77,7 @@ using CompuTec.AppEngine.Base.Infrastructure.Jobs.Annotations;
 using CompuTec.AppEngine.Base.Infrastructure.Security;
 using NLog;
 using StructureMap;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.Jobs
 {
     [EventBusJob(JobId = "SalesOrderToApproveEventJob", Description = "Crate new To Do Job for Added Sales Orders that are unapproved", ContentType = "17", ActionType = "A")]
@@ -88,9 +88,9 @@ namespace CompuTec.AppEngine.FirstPlugin.Jobs
         {
             _logger = container.GetInstance<Logger>();
         }
- 
+
         public override void Call()
-        {          
+        {
         }
     }
 }
@@ -98,7 +98,7 @@ namespace CompuTec.AppEngine.FirstPlugin.Jobs
 
 8. Now after rebuilding, our action is already available in background processing in Administration Panel, and we can activate it. (If you don;t know how to do it then please check Configuration and Administration#Backgroundprocessing) When you open Job configuration you can see ale details from our annotation and also plugin id - from plugin manifest.
 
-![Event Job](./media/appengine-jobs/event-job-activation.png)
+![Event Job](./media/appengine-jobs/event-job-activation.webp)
 
 9. Now lets add logic to our Job.
 
@@ -120,7 +120,7 @@ private CTRecordset GetSalesOrderDetails(int DocEntry)
     qm.SetSimpleResultFields("DocEntry", "DocNum", "CardCode", "Confirmed");
     qm.SimpleTableName = "ORDR";
     qm.SetSimpleWhereFields("DocEntry");
- 
+
     return qm.ExecuteSimpleParameters(Session.Token, DocEntry);
 }
 ```
@@ -156,7 +156,7 @@ using Newtonsoft.Json;
 using NLog;
 using StructureMap;
 using System;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.Jobs
 {
     [EventBusJob(JobId = "SalesOrderToApproveEventJob", Description = "Crate new To Do Job for Added Sales Orders that are unapproved", ContentType = "17", ActionType = "A")]
@@ -167,7 +167,7 @@ namespace CompuTec.AppEngine.FirstPlugin.Jobs
         {
             _logger = container.GetInstance<Logger>();
         }
- 
+
         public override void Call()
         {
             try
@@ -175,7 +175,7 @@ namespace CompuTec.AppEngine.FirstPlugin.Jobs
                 _logger.Trace($"Job :SalesOrderToApproveEventJob Started for :{Message.Body}");
                 dynamic json = JsonConvert.DeserializeObject(Message.Body);
                 int DocEntry = json.DocEntry;
- 
+
                 bool approved;
                 int DocNum;
                 using (CTRecordset rs = this.GetSalesOrderDetails(DocEntry))
@@ -184,7 +184,7 @@ namespace CompuTec.AppEngine.FirstPlugin.Jobs
                     string Confirmed = rs.Fields.Item("Confirmed").Value;
                     approved = Confirmed == "Y" ? true : false;
                 }
- 
+
                 if (!approved)
                 {
                     AddNewToDoTask(DocNum);
@@ -200,11 +200,11 @@ namespace CompuTec.AppEngine.FirstPlugin.Jobs
                 _logger.Error(e, $"Job :SalesOrderToApproveEventJob failed:{e.Message}");
                 throw;
             }
- 
+
         }
         private void AddNewToDoTask(int DocNum)
         {
- 
+
             IToDo toDoTask = CompuTec.Core2.CoreManager.GetUDO(Session.Token, "SAMPLE_TO_DO");
             toDoTask.U_TaskName = $"Confirmation";
             toDoTask.U_Description = $"Review Sales Order number {DocNum}";
@@ -212,14 +212,14 @@ namespace CompuTec.AppEngine.FirstPlugin.Jobs
             if (toDoTask.Add() != 0)
                 throw new Exception($"Exception while adding ToDo task: {Session.Company.GetLastErrorDescription()}");
         }
- 
+
         private CTRecordset GetSalesOrderDetails(int DocEntry)
         {
             var qm = new QueryManager();
             qm.SetSimpleResultFields("DocEntry", "DocNum", "CardCode", "Confirmed");
             qm.SimpleTableName = "ORDR";
             qm.SetSimpleWhereFields("DocEntry");
- 
+
             return qm.ExecuteSimpleParameters(Session.Token, DocEntry);
         }
     }
@@ -232,20 +232,20 @@ To test it we will need to add new Sales Order that is not approved.
 
 ### Optional
 
-There is setting in SAP that define if newly added Sales Order should be approved or not. You can find it here: 
+There is setting in SAP that define if newly added Sales Order should be approved or not. You can find it here:
 
-![SAP Settings](./media/appengine-jobs/sap-settings-document-sales-order-unapproved.png)
+![SAP Settings](./media/appengine-jobs/sap-settings-document-sales-order-unapproved.webp)
 
 1. Create new Sales Order and make user it is unapproved
 
-![SO](./media/appengine-jobs/so-add-unapproved-items.png)
+![SO](./media/appengine-jobs/so-add-unapproved-items.webp)
 
-![SO](./media/appengine-jobs/so-add-unapproved-logistic.png)
+![SO](./media/appengine-jobs/so-add-unapproved-logistic.webp)
 
 2. This will trigger our Job. We can see current status of job in Recent calls in AppEngine Administration Panel
 
-![Recent Call](./media/appengine-jobs/recent-calls.png)
+![Recent Call](./media/appengine-jobs/recent-calls.webp)
 
 3. After job complete we should have new To Do task added to list.
 
-![To-Do](./media/appengine-jobs/todo-so-added-list.png)
+![To-Do](./media/appengine-jobs/todo-so-added-list.webp)

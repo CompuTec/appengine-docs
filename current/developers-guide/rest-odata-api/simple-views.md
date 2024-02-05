@@ -12,7 +12,7 @@ Odata v4-based tool providing a unified data consumption method (directly from t
 
 - supports SAP HANA and Microsoft SQL Server.
 
-![Custom Views](./media/simple-views/custom-views.png)
+![Custom Views](./media/simple-views/custom-views.webp)
 
 ### Request
 
@@ -41,5 +41,15 @@ http://localhost:54000/odata/CustomViews/Views.Simple(DataSource='OITM')?$select
 Response body
 
 ```json
-{ "@odata.context": "http://localhost:54000/odata/$metadata#Simple", "value": [ { "No": 1, "ItemCode": "Active-Item-03", "ItemName": "Active-Item-03", "OnHand": 950 } ] }
+{
+  "@odata.context": "http://localhost:54000/odata/$metadata#Simple",
+  "value": [
+    {
+      "No": 1,
+      "ItemCode": "Active-Item-03",
+      "ItemName": "Active-Item-03",
+      "OnHand": 950
+    }
+  ]
+}
 ```

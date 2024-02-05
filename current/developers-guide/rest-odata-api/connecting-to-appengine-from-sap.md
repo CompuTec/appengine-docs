@@ -18,47 +18,47 @@ The token is generated after a successful login operation and has a limited life
 
 We will use the HTTA atom configured as shown below:
 
-![Atom Configuration](./media/connecting-to-appengine-from-sap/htta-atom-configuration.png)
+![Atom Configuration](./media/connecting-to-appengine-from-sap/htta-atom-configuration.webp)
 
-Login data are prepared in the XSL transformation atom. The most crucial part that prepares the structure for API is marked on the screenshot: 
+Login data are prepared in the XSL transformation atom. The most crucial part that prepares the structure for API is marked on the screenshot:
 
-![Atom XML](./media/connecting-to-appengine-from-sap/atom-xml.png)
+![Atom XML](./media/connecting-to-appengine-from-sap/atom-xml.webp)
 
 ## Storing Token
 
 The generated token can be saved using the Persit atom:
 
-![Persit Atom](./media/connecting-to-appengine-from-sap/persit-atom.png)
+![Persit Atom](./media/connecting-to-appengine-from-sap/persit-atom.webp)
 
 Data (token) that are selected by XPath expression can be prepared in transformation atom:
 
-![Transformation-atom](./media/connecting-to-appengine-from-sap/transformation-atom.png)
+![Transformation-atom](./media/connecting-to-appengine-from-sap/transformation-atom.webp)
 
 After that, we can save it to BizStore with parameters:
 
- - Operation Type: store_op
+- Operation Type: store_op
 
- - Document: Name of a document in BizStore where we want to save the token.
+- Document: Name of a document in BizStore where we want to save the token.
 
 ## Using token in an integration scenario
 
 Below is an example of sending data to AppEngine. Authentication is done using the token saved in the previous steps.
 
-![Transformation-atom](./media/connecting-to-appengine-from-sap/step-modeler.png)
+![Transformation-atom](./media/connecting-to-appengine-from-sap/step-modeler.webp)
 
 1. GetLux – an atom that prepares data that will be sent to AppEngine.
 
 2. GetToken – an atom that gets a saved token (Operation Type: access_op).
 
-![Configuration](./media/connecting-to-appengine-from-sap/configuration.png)
+![Configuration](./media/connecting-to-appengine-from-sap/configuration.webp)
 
-3. ToSendVal - prepares JSON structure (according to documentation for a given object - in our example, this is InspectionReading) that will be sent to AppEngine. Atom prepares data in variables, creates \<token\> section and place JSON structure in \<bfa:io\> section. 
+3. ToSendVal - prepares JSON structure (according to documentation for a given object - in our example, this is InspectionReading) that will be sent to AppEngine. Atom prepares data in variables, creates \<token\> section and place JSON structure in \<bfa:io\> section.
 
-![To send](./media/connecting-to-appengine-from-sap/to-send-al.png)
+![To send](./media/connecting-to-appengine-from-sap/to-send-al.webp)
 
 4. SendValue - HTTA atom sends data to AppEngine.
 
-![Send to AppEngine](./media/connecting-to-appengine-from-sap/send-to-appengine.png)
+![Send to AppEngine](./media/connecting-to-appengine-from-sap/send-to-appengine.webp)
 
 Parameters:
 
@@ -67,10 +67,10 @@ Parameters:
 - XPath Expression points to JSON data.
 
 - Outbound Configuration - in this section, we need to add the following parameters:
-        
-    - httpheader.content-type -  application/x-www-form-urlencoded; charset=UTF-8
 
-    - httpheader.Authorization - points to prepared token
+  - httpheader.content-type - application/x-www-form-urlencoded; charset=UTF-8
+
+  - httpheader.Authorization - points to prepared token
 
 ## Summary
 

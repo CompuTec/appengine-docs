@@ -10,7 +10,7 @@ In this example, we will show how to add a custom controller that uses ProcessFo
 
 2. Create a new class: PF_SchedulingController.cs inside Controllers/Api.
 
-![List](./media/custom-controller-pf-api/cc-pf-api-01.png)
+![List](./media/custom-controller-pf-api/cc-pf-api-01.webp)
 
 3. This controller needs to inherit from CompuTec.AppEngine.Base.Infrastructure.Controllers.API.AppEngineSecureController, because we need to authenticate a user to work on SAP document.
 
@@ -18,12 +18,12 @@ SalesOrderController.cs
 
 ```
 using CompuTec.AppEngine.Base.Infrastructure.Controllers.API;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.Controllers.Api
 {
     public class PF_SchedulingController: AppEngineSecureController
     {
- 
+
     }
 }
 ```
@@ -34,15 +34,15 @@ GetSalesOrder
 
 ```
 [HttpPost]
- 
+
         [Route("SchduleMor")]
         public IHttpActionResult SchduleMor([FromBody] List<int> AllRelatedMorsDocEntries)
         {
             bool saving = false;
             //iF YOU NEED pf COMPANY PLEASE USE THIS
             var pfCompany = Session.GetCompany<IProcessForceCompany>();
-     
- 
+
+
             // you are already connected
             List<IManufacturingOrder> listOfMorsToBeAdded = BulkUdoConverter.GetBulkObjects<IManufacturingOrder, int>(Session.Token, ObjectTypes.ManufacturingOrder, AllRelatedMorsDocEntries);
             //GetListOfMors
@@ -53,16 +53,16 @@ GetSalesOrder
                 item.U_PlannedStartDate = DateTime.Today.AddDays(1);
                 item.U_PlannedStartTime = item.U_PlannedStartDate;
             }
- 
+
             // AllRelatedMorsDocEntries this is a list that contains docentry of MORS to be scheduled on one run
             var sm = new CompuTec.ProcessForce.API.Scheduling.ScheduleManager(Session.Token);
- 
+
             MultiScheduleParameters param =
                        Activator.CreateInstance(typeof(MultiScheduleParameters),
                        System.Reflection.BindingFlags.NonPublic |
                          System.Reflection.BindingFlags.Instance,
                        null, new object[] { Session.Token }, null) as MultiScheduleParameters;
- 
+
             listOfMorsToBeAdded.ForEach(m => param.Add(m));
             param.UpdateParents();
             var scheduledMors = sm.Schedule(param);
@@ -74,14 +74,14 @@ GetSalesOrder
                     item.Update();
                 }
             }
- 
+
             return Ok("");
         }
 ```
 
 5. Now you can see the method in Swagger.
 
-![List](./media/custom-controller-pf-api/cc-pf-api-02.png)
+![List](./media/custom-controller-pf-api/cc-pf-api-02.webp)
 
 6. Calling Controller:
 
@@ -100,5 +100,5 @@ GetSalesOrder
 :::note
 If you want to use the IProcessForceCompany object, get it from the session object.
 
-```var pfCompany = Session.GetCompany<IProcessForceCompany>();```
+`var pfCompany = Session.GetCompany<IProcessForceCompany>();`
 :::

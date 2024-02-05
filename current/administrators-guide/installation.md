@@ -6,10 +6,10 @@
 
 3. Now, the new service should be running:
 
-  ![Services](./media/installation/appengine-service.png)
+![Services](./media/installation/appengine-service.webp)
 
-4. Now you can run the platform by using the following web address: ```http://{host}:54000 in a browser```.
+4. Now you can run the platform by using the following web address: `http://{host}:54000 in a browser`.
 
-  :::warning
-  After upgrading from any 1.00 version to any 2.00, please use the Empty Cache and Hard Reload option in the browser on which you use AppEngine.
-  :::
+:::warning
+After upgrading from any 1.00 version to any 2.00, please use the Empty Cache and Hard Reload option in the browser on which you use AppEngine.
+:::

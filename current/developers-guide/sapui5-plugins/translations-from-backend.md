@@ -2,7 +2,7 @@
 
 ## Description
 
-When using AppEngine, you can define your translation resource files directly in your project plugin. If you created a plugin with CompuTecthe  AppEngine Plugin Template, the translation file is already added and registered. Translations require the following to work:
+When using AppEngine, you can define your translation resource files directly in your project plugin. If you created a plugin with CompuTecthe AppEngine Plugin Template, the translation file is already added and registered. Translations require the following to work:
 
 1. The translations file is an XML file with the following structure:
 
@@ -11,17 +11,17 @@ Translations file structure
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <messageTranslations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
- 
+
   <Message id="[translationID]" param="0">
     <translation lang="[language]" Date="[Translation Adding date]">[Translated text for given Language]</translation>
     <translation lang="[language2]" Date="[YYYY-MM-DDThh:mm:ss]">[Translated text for given Language]</translation>
   </Message>
- 
+
   <Message id="[translationID2]" param="0">
     <translation lang="[language]" Date="[Translation Adding date]">[Translated text for given Language]</translation>
     <translation lang="[language2]" Date="[Translation Adding date]">[Translated text for given Language]</translation>
   </Message>
- 
+
 </messageTranslations>
 ```
 
@@ -69,7 +69,7 @@ ln_Ukrainian
 
 2. Definition of TranslationStreamDelegate in PluginInitializer.
 
-![Translation](./media/translations-from-backend/translationstreamdelegate-definition.png)
+![Translation](./media/translations-from-backend/translationstreamdelegate-definition.webp)
 
 3. Pointing to backend translation in Plugin manifest.json by adding an i18n element to the sap.app.
 
@@ -79,11 +79,11 @@ ln_Ukrainian
 
 - Plugin Route - The Plugin Route is defined when creating a Plugin from the wizard. You can find this value in the AppEngine plugin manifest.json.
 
-![Plugin Route](./media/translations-from-backend/plugin-route.png)
+![Plugin Route](./media/translations-from-backend/plugin-route.webp)
 
 - Example
 
-![Plugin](./media/translations-from-backend/plugin-route-example.png)
+![Plugin](./media/translations-from-backend/plugin-route-example.webp)
 
 ## Using internationalization in UI5 applications
 
@@ -93,7 +93,7 @@ If you created a Plugin Project from the, you can already check translations on 
 
 - Translations IDs (todoTileHeader, todoTileSubheader) can be found in messages.xml. Based on the selected language (English in this example), the correct text is returned by AppEngine.
 
-![Translation](./media/translations-from-backend/translation-ids.png)
+![Translation](./media/translations-from-backend/translation-ids.webp)
 
 ### Example of adding a translation to the Sales Orders list.
 
@@ -103,16 +103,15 @@ In this example, we will add translations to our example from Creating a Custom 
 
 2. Now we will change Table Title text and column Texts to use translations:
 
-![Title Text](./media/translations-from-backend/title-text.png)
+![Title Text](./media/translations-from-backend/title-text.webp)
 
-3. 
-To do this we just need to bind this properties to i18n and provide id. We will change
+3.  To do this we just need to bind this properties to i18n and provide id. We will change
 
 - `<Title text="Sales Orders List"/>` to `<Title text="{i18n>salesOrderTableTitle}"/>`
 - `<Text text="Document Number"/>` to `<Text text="{i18n>salesOrderDocumentNumberColumnLabel}"/>`
 - `<Text text="Busines Partner"/>` to `<Text text="{i18n>salesOrderBusinessPartnerColumnLabel}"/>`
 
-![Bind Properties](./media/translations-from-backend/bind-properties.png)
+![Bind Properties](./media/translations-from-backend/bind-properties.webp)
 
 4. Now, we need to add translations for the added translations ID to the messages.xml file.
 
@@ -138,4 +137,4 @@ messages.xml
 
 5. Now, we need to rebuild the plugin project. Start AppEngine and refresh the plugin to see the changes. (Restart is needed only to refresh messages.xml file).
 
-![Translation](./media/translations-from-backend/translation-change.png)
+![Translation](./media/translations-from-backend/translation-change.webp)

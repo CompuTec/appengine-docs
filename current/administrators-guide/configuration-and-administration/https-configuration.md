@@ -14,17 +14,17 @@ Import a certificate used in the HTTPS communication to the Local Machine store 
 
 The certificate must be placed in the Personal → Certificates store:
 
-![Certificate](./media/https-configuration/certificate-local-computer.png)
+![Certificate](./media/https-configuration/certificate-local-computer.webp)
 
 After importing, copy its Thumbprint property from the certificate Details tab, as it must be entered into the configuration file:
 
-![Certificate](./media/https-configuration/certificate-thumbprint.png)
+![Certificate](./media/https-configuration/certificate-thumbprint.webp)
 
 ## Configuration
 
 CompuTec AppEngine port and certificate thumbprint can be defined in the CompuTec AppEngine Administration Panel → Settings → General → Hosting → HttpsPorts:
 
-![Setting](./media/https-configuration/appengine-https-settings.png)
+![Setting](./media/https-configuration/appengine-https-settings.webp)
 
 In the configuration, set the port and enter your copied thumbprint into the CertThumbprint field.
 
@@ -34,4 +34,4 @@ After making this change, restart the CompuTec AppEngine service.
 
 You can open this URL in a web browser and see if the login screen is displayed:
 
-```https://<your_server>:<your_port_from_the_configuration>```
+`https://<your_server>:<your_port_from_the_configuration>`

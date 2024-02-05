@@ -10,7 +10,7 @@ In this example, we will show how to add a custom controller. Example in this tu
 
 2. Create a new class SalesOrderController.cs inside Controllers/Api.
 
-![Solution](./media/custom-controller/sales-order-custom-controller.png)
+![Solution](./media/custom-controller/sales-order-custom-controller.webp)
 
 3. This controller needs to inherit from CompuTec.AppEngine.Base.Infrastructure.Controllers.API.AppEngineSecureController, because we need to authenticate a user to work on SAP document.
 
@@ -18,12 +18,12 @@ SalesOrderController.cs
 
 ```
 using CompuTec.AppEngine.Base.Infrastructure.Controllers.API;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.Controllers.Api
 {
     public class SalesOrderController : AppEngineSecureController
     {
- 
+
     }
 }
 ```
@@ -32,7 +32,7 @@ namespace CompuTec.AppEngine.FirstPlugin.Controllers.Api
 
 5. Inside add new file SalesOrderAttachment.cs defined as below:
 
-![Sales Order](./media/custom-controller/sales-order-attachement-model.png)
+![Sales Order](./media/custom-controller/sales-order-attachement-model.webp)
 
 SalesOrderAttachment.cs
 
@@ -44,12 +44,12 @@ namespace CompuTec.AppEngine.FirstPlugin.Models.Models.SalesOrder
         public int DocEntry { get; set; }
         public string FileName { get; set; }
         public string FileExtension { get; set; }
- 
+
     }
 }
 ```
 
-6. We will need two methods to retrieve Objects from SAP. 
+6. We will need two methods to retrieve Objects from SAP.
 
 - GetSalesOrder – this metod will load SalesOrder.
 
@@ -61,8 +61,8 @@ private Documents GetSalesOrder(int DocEntry)
             Documents SalesOrder = Company.GetBusinessObject(BaseLayer.DI.BoObjectTypes.oOrders);
             if (!SalesOrder.GetByKey(DocEntry))
                 throw new System.Exception($"Couldn't load Sales Order with DocEntry: {DocEntry}");
- 
-            return SalesOrder;         
+
+            return SalesOrder;
         }
 ```
 
@@ -93,26 +93,26 @@ GetAttachmentsPath
 public string GetAttachmentsPath()
         {
             var result = "";
- 
+
             var qm = new QueryManager();
             qm.CommandText = "select \"AttachPath\" from \"OADP\" ";
- 
+
             using (var rs = qm.Execute(Session.Token))
             {
                 result = rs.Fields.Item("AttachPath").Value.ToString();
             }
- 
+
             return result;
         }
 ```
 
 - AddAttachment – this is controller method that will add attachment information to Sales Order
 
- - HttpPost annotation stands for POST method
+- HttpPost annotation stands for POST method
 
- - the route is defining the path to our method
+- the route is defining the path to our method
 
- - As the input parameter, we are using a simple model created earlier – SalesOrderAttachment
+- As the input parameter, we are using a simple model created earlier – SalesOrderAttachment
 
 AddAttachment
 
@@ -123,30 +123,30 @@ public IHttpActionResult AddAttachment([FromBody] SalesOrderAttachment attachmen
 {
     Documents so = GetSalesOrder(attachment.DocEntry);
     Attachments2 atc = GetAttachment(so.AttachmentEntry);
- 
+
     bool firstAttachment = false;
- 
+
     if (atc.AbsoluteEntry == 0)
         firstAttachment = true;
- 
+
     string AtcPath = GetAttachmentsPath();
- 
+
     atc.Lines.SetCurrentLine(atc.Lines.Count - 1);
     if (!string.IsNullOrWhiteSpace(atc.Lines.FileName))
         atc.Lines.Add();
     atc.Lines.SourcePath = AtcPath.TrimEnd('\\');
     atc.Lines.FileName = attachment.FileName;
     atc.Lines.FileExtension = attachment.FileExtension;
- 
+
     int res;
     if (firstAttachment)
         res = atc.Add();
     else
         res = atc.Update();
- 
+
     if (res != 0)
         throw new Exception($"Adding attachment failed: {Company.GetLastErrorDescription()}");
- 
+
     if (firstAttachment)
     {
         so.AttachmentEntry = Int32.Parse(Company.GetNewObjectKey());
@@ -169,43 +169,43 @@ using CompuTec.BaseLayer.DI;
 using CompuTec.Core2.DI.Database;
 using System;
 using System.Web.Http;
- 
+
 namespace CompuTec.AppEngine.FirstPlugin.Controllers.Api
 {
     public class SalesOrderController : AppEngineSecureController
     {
- 
-         
+
+
         [HttpPost]
         [Route("AddAttachment")]
         public IHttpActionResult AddAttachment([FromBody] SalesOrderAttachment attachment)
         {
             Documents so = GetSalesOrder(attachment.DocEntry);
             Attachments2 atc = GetAttachment(so.AttachmentEntry);
- 
+
             bool firstAttachment = false;
- 
+
             if (atc.AbsoluteEntry == 0)
                 firstAttachment = true;
- 
+
             string AtcPath = GetAttachmentsPath();
-         
+
             atc.Lines.SetCurrentLine(atc.Lines.Count - 1);
             if (!string.IsNullOrWhiteSpace(atc.Lines.FileName))
                 atc.Lines.Add();
             atc.Lines.SourcePath = AtcPath.TrimEnd('\\');
             atc.Lines.FileName = attachment.FileName;
             atc.Lines.FileExtension = attachment.FileExtension;
- 
+
             int res;
             if (firstAttachment)
                 res = atc.Add();
             else
                 res = atc.Update();
- 
+
             if (res != 0)
                 throw new Exception($"Adding attachment failed: {Company.GetLastErrorDescription()}");
- 
+
             if (firstAttachment)
             {
                 so.AttachmentEntry = Int32.Parse(Company.GetNewObjectKey());
@@ -214,8 +214,8 @@ namespace CompuTec.AppEngine.FirstPlugin.Controllers.Api
             }
             return Ok("");
         }
- 
- 
+
+
         private Attachments2 GetAttachment(int AtcEntry)
         {
             Attachments2 atc = Company.GetBusinessObject(BaseLayer.DI.BoObjectTypes.oAttachments2);
@@ -228,28 +228,28 @@ namespace CompuTec.AppEngine.FirstPlugin.Controllers.Api
             }
             return atc;
         }
-         
+
         private Documents GetSalesOrder(int DocEntry)
         {
             Documents SalesOrder = Company.GetBusinessObject(BaseLayer.DI.BoObjectTypes.oOrders);
             if (!SalesOrder.GetByKey(DocEntry))
                 throw new System.Exception($"Couldn't load Sales Order with DocEntry: {DocEntry}");
- 
-            return SalesOrder;         
+
+            return SalesOrder;
         }
- 
+
         public string GetAttachmentsPath()
         {
             var result = "";
- 
+
             var qm = new QueryManager();
             qm.CommandText = "select \"AttachPath\" from \"OADP\" ";
- 
+
             using (var rs = qm.Execute(Session.Token))
             {
                 result = rs.Fields.Item("AttachPath").Value.ToString();
             }
- 
+
             return result;
         }
     }
@@ -258,7 +258,7 @@ namespace CompuTec.AppEngine.FirstPlugin.Controllers.Api
 
 7. Now we should see our method in swagger.
 
-![Swagger](./media/custom-controller/swagger-add-attachment.png)
+![Swagger](./media/custom-controller/swagger-add-attachment.webp)
 
 ## Using custom controller on frontend
 
@@ -266,11 +266,11 @@ Having our custom controller in place we cannot use it in our UI5 application. A
 
 1. First, we will modify our AttachmentsDialog view to include SalesOrder DocEntry and AtcEntry that we will use later. Open SalesOrder.controller.js and change method onAttachmentsButtonPress:
 
-    - DocEntry is retrieved from GenericTag
+   - DocEntry is retrieved from GenericTag
 
-    - Model for our view is changed to include AtcEntry, DocEntry
+   - Model for our view is changed to include AtcEntry, DocEntry
 
-    - Attachments array is now in Attachments field.
+   - Attachments array is now in Attachments field.
 
 onAttachmentsButtonPress
 
@@ -278,11 +278,11 @@ onAttachmentsButtonPress
 onAttachmentsButtonPress: async function (oEvent) {
     /** @type {sap.m.GenericTag} */
     const oGenericTag = oEvent.getSource();
- 
+
     const nAtcEntry = this.getCustomDataForElement(oGenericTag, "AtcEntry");
     const nDocEntry = this.getCustomDataForElement(oGenericTag, "DocEntry");
- 
- 
+
+
     const result = await this.getAttachmentsByDocEntry(nAtcEntry);
     const data = {
         Attachmnets: result.value,
@@ -371,7 +371,7 @@ SalesOrder.view.xml
 </mvc:View>
 ```
 
-3. Because we changed our Attachmnets Dialog model, we need to fix binding in SalesOrderAttachmentsDialog.fragment.xml. We only need to change Table items binding from ```"{AT>/}" to "{AT>/Attachmnets}"```.
+3. Because we changed our Attachmnets Dialog model, we need to fix binding in SalesOrderAttachmentsDialog.fragment.xml. We only need to change Table items binding from `"{AT>/}" to "{AT>/Attachmnets}"`.
 
 SalesOrderAttachmentsDialog.fragment.xml
 
@@ -429,9 +429,9 @@ SalesOrderAttachmentsDialog.fragment.xml
 
 4. Lastly, Add logic to SalesOrder.controller.js
 
-- _post function will allow as to run REST POST method
+- \_post function will allow as to run REST POST method
 
-_post
+\_post
 
 ```
 _post: function (sData, sUrl) {
@@ -448,9 +448,9 @@ _post: function (sData, sUrl) {
 },
 ```
 
-- _addAttachmentToSalesOrder – this function adds information about uploaded attachment to the given Sales Order. Here, we need to provide Sales Order DocEntry and uploaded afile name. Inside, prepare parameters model that match SalesOrderAttachment model on backend. Finaly, we call api/FirstPlugin/SalesOrder/AddAttachment POST method and wait for it completition.
+- \_addAttachmentToSalesOrder – this function adds information about uploaded attachment to the given Sales Order. Here, we need to provide Sales Order DocEntry and uploaded afile name. Inside, prepare parameters model that match SalesOrderAttachment model on backend. Finaly, we call api/FirstPlugin/SalesOrder/AddAttachment POST method and wait for it completition.
 
-_addAttachmentToSalesOrder
+\_addAttachmentToSalesOrder
 
 ```
 _addAttachmentToSalesOrder: async function (nSalesOrderDocEntry, sFileName) {
@@ -459,15 +459,15 @@ _addAttachmentToSalesOrder: async function (nSalesOrderDocEntry, sFileName) {
     let sExtension = null;
     if (aNameParts.length > 1)
         sExtension = aNameParts.pop();
- 
+
     const sName = aNameParts.join(".");
- 
+
     const oParams = {
         "DocEntry": nSalesOrderDocEntry,
         "FileName": sName,
         "FileExtension": sExtension
     };
- 
+
     try {
         const res = await this._post(JSON.stringify(oParams), sUrl);
         return;
@@ -477,17 +477,17 @@ _addAttachmentToSalesOrder: async function (nSalesOrderDocEntry, sFileName) {
 },
 ```
 
-- _refreshAttachments – this function refresh attachments in our dialog. Here we need AtcEntry.
+- \_refreshAttachments – this function refresh attachments in our dialog. Here we need AtcEntry.
 
-_refreshAttachments
+\_refreshAttachments
 
 ```
 _refreshAttachments: async function () {
     const oATModel = this._attachmentsDialog.getModel("AT");
     const nAtcEntry = oATModel.getProperty("/AtcEntry");
- 
+
     const result = await this.getAttachmentsByDocEntry(nAtcEntry);
- 
+
     oATModel.setProperty("/Attachmnets", result.value);
     oATModel.refresh();
 },
@@ -527,7 +527,7 @@ this.onSalesOrderRefresh();
 
 ```
 
-As you can see we are retrieveing DocEntry from Attachment Dialog model and using it to call _addAttachmentToSalesOrder. After this is done we run _refreshAttachments() and onSalesOrderRefresh() to refresh data inside dialog and table.
+As you can see we are retrieveing DocEntry from Attachment Dialog model and using it to call \_addAttachmentToSalesOrder. After this is done we run \_refreshAttachments() and onSalesOrderRefresh() to refresh data inside dialog and table.
 
 - SalesOrder.controller.js implementation after changes:
 
@@ -550,7 +550,7 @@ sap.ui.define([
      */
     function (BaseController, Fragment, JSONModel, Http) {
         "use strict";
- 
+
         return BaseController.extend("computec.appengine.firstPlugin.controller.SalesOrder", {
             _attachmentsAddDialog: null,
             onInit: function () {
@@ -560,11 +560,11 @@ sap.ui.define([
             onAttachmentsButtonPress: async function (oEvent) {
                 /** @type {sap.m.GenericTag} */
                 const oGenericTag = oEvent.getSource();
- 
+
                 const nAtcEntry = this.getCustomDataForElement(oGenericTag, "AtcEntry");
                 const nDocEntry = this.getCustomDataForElement(oGenericTag, "DocEntry");
- 
- 
+
+
                 const result = await this.getAttachmentsByDocEntry(nAtcEntry);
                 const data = {
                     Attachmnets: result.value,
@@ -573,14 +573,14 @@ sap.ui.define([
                 };
                 this.onOpenDialog(data);
             },
- 
+
             onSalesOrderRefresh: function () {
                 this.byId('salesOrdersTable').getModel("AE").refresh();
             },
- 
+
             onOpenDialog: async function (data) {
                 const oView = this.getView();
- 
+
                 if (!this._attachmentsDialog) {
                     this._attachmentsDialog = await Fragment.load({
                         id: oView.getId(),
@@ -589,7 +589,7 @@ sap.ui.define([
                     });
                     oView.addDependent(this._attachmentsDialog);
                 }
- 
+
                 this._attachmentsDialog.setModel(new JSONModel(data), "AT");
                 this._attachmentsDialog.open();
             },
@@ -603,9 +603,9 @@ sap.ui.define([
                 const sUrl = `${window.location.origin}/api/Attachments/GetAttachmentByCustomKey/ORDR/DocEntry/${AbsEntry}/null/${Line}`;
                 window.open(sUrl, '_blank');
             },
- 
- 
- 
+
+
+
             //#region ADD ATTACHMENTS DIALOG
             onAttachmentDialogAddAttachment: async function (oEvent) {
                 await this.onOpenAddAttachmentDialog();
@@ -634,7 +634,7 @@ sap.ui.define([
                 const fromData = new FormData();
                 fromData.append("file", file);
                 const sUrl = `${window.location.origin}/api/Attachments/SetAttachment/false/false`;
- 
+
                 try {
                     const response = await fetch(sUrl, {
                         method: 'POST',
@@ -656,7 +656,7 @@ sap.ui.define([
                 this._attachmentsAddDialog.close();
             },
             //#endregion
- 
+
             // #region INTERNAL
             getCustomDataForElement: function (oElement, sCustomDataCode) {
                 let oCustomData = oElement.getCustomData().find(x => x.getKey() === sCustomDataCode);
@@ -677,32 +677,32 @@ sap.ui.define([
                 const sUrl = encodeURIComponent(`odata/CustomViews/Views.CustomWithParameters(Id='FirstPlugin:Attachments',Parameters=["AbsEntry=${sDocNum}"],paramType=Default.ParamType'Custom')`);
                 return this._get(sUrl);
             },
- 
+
             _refreshAttachments: async function () {
                 const oATModel = this._attachmentsDialog.getModel("AT");
                 const nAtcEntry = oATModel.getProperty("/AtcEntry");
- 
+
                 const result = await this.getAttachmentsByDocEntry(nAtcEntry);
- 
+
                 oATModel.setProperty("/Attachmnets", result.value);
                 oATModel.refresh();
             },
- 
+
             _addAttachmentToSalesOrder: async function (nSalesOrderDocEntry, sFileName) {
                 const sUrl = `api/FirstPlugin/SalesOrder/AddAttachment`;
                 const aNameParts = sFileName.split(".");
                 let sExtension = null;
                 if (aNameParts.length > 1)
                     sExtension = aNameParts.pop();
- 
+
                 const sName = aNameParts.join(".");
- 
+
                 const oParams = {
                     "DocEntry": nSalesOrderDocEntry,
                     "FileName": sName,
                     "FileExtension": sExtension
                 };
- 
+
                 try {
                     const res = await this._post(JSON.stringify(oParams), sUrl);
                     return;
@@ -710,7 +710,7 @@ sap.ui.define([
                     throw error;
                 }
             },
- 
+
             _get: function (sUrl) {
                 return new Promise((resolve, reject) => {
                     Http.request({
@@ -722,7 +722,7 @@ sap.ui.define([
                     });
                 });
             },
- 
+
             _post: function (sData, sUrl) {
                 return new Promise((resolve, reject) => {
                     Http.request({
@@ -735,10 +735,10 @@ sap.ui.define([
                     });
                 });
             },
- 
+
             //#endregion
- 
- 
+
+
         });
     });
 ```
@@ -747,16 +747,16 @@ sap.ui.define([
 
 We will test our solution by adding attachment to Sales Order number 4, which has 2 attachments.
 
-![Sales](./media/custom-controller/sales-orders-list-add-attachment.png)
+![Sales](./media/custom-controller/sales-orders-list-add-attachment.webp)
 
 Lets select new Attachmet add cofirm our choice with Add Attachment Button.
 
-![Sales](./media/custom-controller/ds9-add-attachment.png)
+![Sales](./media/custom-controller/ds9-add-attachment.webp)
 
-Afer uploading attachment and attaching it to Sales Order Add Attachment dialog model and Sales Orders list is refreshed. We can see newly added attachment in Attachments dialog and download it. Also number of attachments seen in background is increased. 
+Afer uploading attachment and attaching it to Sales Order Add Attachment dialog model and Sales Orders list is refreshed. We can see newly added attachment in Attachments dialog and download it. Also number of attachments seen in background is increased.
 
-![Sale Order](./media/custom-controller/sales-orders-lilst-after-attachment-add.png)
+![Sale Order](./media/custom-controller/sales-orders-lilst-after-attachment-add.webp)
 
 Lastly we can check Sales Order document directly in SAP. New attachment is visible in Attachments tab.
 
-![Sale Order](./media/custom-controller/sap-sales-orders-after-attachment-add.png)
+![Sale Order](./media/custom-controller/sap-sales-orders-after-attachment-add.webp)
