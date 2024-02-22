@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Simple Views
 
 ## What is CompuTec AppEngine Simple View?
@@ -7,9 +11,7 @@ Odata v4-based tool providing a unified data consumption method (directly from t
 ### Features
 
 - simplified data consumption in Web API client or UI
-
 - supports OData V4
-
 - supports SAP HANA and Microsoft SQL Server.
 
 ![Custom Views](./media/simple-views/custom-views.webp)
@@ -18,7 +20,7 @@ Odata v4-based tool providing a unified data consumption method (directly from t
 
 Request URL
 
-```json
+```text
 http://{ae_url}/odata/CustomViews/Views.Custom(Id='<plugin identifier>:<view identifier>')
 ```
 
@@ -28,13 +30,13 @@ http://{ae_url}/odata/CustomViews/Views.Custom(Id='<plugin identifier>:<view ide
 
 Curl
 
-```json
+```bash
 curl -X GET --header 'Accept: application/json' 'http://localhost:54000/odata/CustomViews/Views.Simple(DataSource='OITM')?$select=ItemCode%2C%20ItemName%2C%20OnHand&$top=1'
 ```
 
 Request URL
 
-```json
+```bash
 http://localhost:54000/odata/CustomViews/Views.Simple(DataSource='OITM')?$select=ItemCode%2C%20ItemName%2C%20OnHand&$top=1
 ```
 

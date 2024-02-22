@@ -1,9 +1,11 @@
-# Configuration and Administration
+---
+sidebar_position: 1
+---
+
+# Overview
 
 :::note
-
-After upgrade from any 1.00 version to any 2.00, please use the Empty Cache and Hard Reload option in the browser on which you use AppEngine.
-
+    After upgrade from any 1.00 version to any 2.00, please use the Empty Cache and Hard Reload option in the browser on which you use AppEngine.
 :::
 
 Here you can find the description of the Administration section of AppEngine along with instruction on how to configure the application to start to work with it.
@@ -78,17 +80,17 @@ Perform the procedure described in the message.
 
 For HANA
 
-    Go to HANA Studio.
-    Choose the required database.
-    Find the SBO_SP_POSTTRANSACTIONNOTICE procedure (right-click on the Procedures under the database, choose Filters... and put SBO_SP_POSTTRANSACTIONNOTICE there).
-    Right-click on the found procedure and choose Open Definition.
-    In the right window go to the Create Statement tab.
-    Copy to clipboard the whole content of the tab.
-    Click the 'Open SQL console for selected system' icon in the left window.
-    Paste the content from the clipboard.
-    Change CREATE to ALTER and add the code under the – ADD YOUR CODE HERE line (if there are other pieces of code there, please put this piece at the end of the section).
-    Click the Execute icon in the right window (or click F8).
-    Click OK in the message window.
+- Go to HANA Studio.
+- Choose the required database.
+- Find the SBO_SP_POSTTRANSACTIONNOTICE procedure (right-click on the Procedures under the database, choose- Filters... and put SBO_SP_POSTTRANSACTIONNOTICE there).
+- Right-click on the found procedure and choose Open Definition.
+- In the right window go to the Create Statement tab.
+- Copy to clipboard the whole content of the tab.
+- Click the 'Open SQL console for selected system' icon in the left window.
+- Paste the content from the clipboard.
+- Change CREATE to ALTER and add the code under the – ADD YOUR CODE HERE line (if there are other pieces of- code there, please put this piece at the end of the section).
+- Click the Execute icon in the right window (or click F8).
+- Click OK in the message window.
 
 Click the Close button and Switch the Background Processing State switch to ON on the required database again.
 
@@ -103,7 +105,6 @@ Send Events Job – this job is always present, it is installed with AppEngine (
 Clicking a job tile leads to its details. Here you can check:
 
 - information on the recent calls: start/end date and time, company and user, exceptions (if there are any). Jobs other than SEventJob have an additional column: EventBus message. It holds information on what was sent to the specific job (what event).
-
 - companies: databases for which the job is active with a user (by default it is the user set in the SLD Servers tab <!-- TODO: Link -->, it can be changed here just for the specific job)
 - logs: log files, also available in the Trace tab <!-- TODO: Link -->.
 
@@ -166,9 +167,7 @@ Now the plugin is available in the Launchpad:
 ### SAP Business One settings
 
 :::note
-
-SAP Business One (with ProcessForce installed) main menu → Administration → System Initialization → General Settings → ProcessForce tab → AE tab
-
+    SAP Business One (with ProcessForce installed) main menu → Administration → System Initialization → General Settings → ProcessForce tab → AE tab
 :::
 
 ![SAP B1 Settings](./media/configuration-and-administration/appengine-sapb1-settings.webp)
@@ -222,9 +221,7 @@ Here you can set other then the default error logging level. The levels are as f
 Here you can find the exceptions log. You can filter it by a time range and by type:
 
 - AppEngine – general events, also related to plugins
-
 - Plugin – events related to plugins' initializations
-
 - BackgroundProcessing – events related to jobs.
 
 Click a required log file to check its content. Then you can filter it by message type – Errors, Warnings, or Info – (1) and download the log file (2):

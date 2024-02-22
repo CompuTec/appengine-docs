@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # HTTPS Configuration
 
 Here, you can find information on configuring CompuTec AppEngine for HTTPS communication.

@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Working with SAP Business One Web Client
 
 Here, you can find information about configuration for using AppEngine plugins within SAP Business One Web Client.
@@ -9,9 +13,7 @@ Here, you can find information about configuration for using AppEngine plugins w
 ### External Host Address
 
 :::note
-
-Administration Panel → Settings → General → Hosting → HttpsPorts
-
+    Administration Panel → Settings → General → Hosting → HttpsPorts
 :::
 
 This address points from the Web Client to the AppEngine installation. It has to be an HTTPS address. By default, the address is set to localhost with the default port. If the address differs from the local host, it must be changed accordingly.

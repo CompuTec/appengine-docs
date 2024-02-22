@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Custom Views
 
 ## What is CompuTec AppEngine Custom View?
@@ -7,20 +11,16 @@ CompuTc AppEngine provides a mechanism for encapsulating complex database querie
 ### Features
 
 - simplified data consumption in Web API client or UI
-
 - supports OData V4
-
 - supports SAP HANA and Microsoft SQL Server
-
 - supports CompuTec AppEngine Plugins
-
 - The CustomViews folder is available in the AE installation directory, and ProgramData/CompuTec/AppEngine.
 
 ![Custom View](./media/custom-views/core-odata.webp)
 
 :::note
-Note that the Custom View ID will be extended with the plugin ID during plugin initialization
-`<plugin identifier>:<view identifier>`
+    Note that the Custom View ID will be extended with the plugin ID during plugin initialization
+    `<plugin identifier>:<view identifier>`
 :::
 
 ## Custom View Definition from Plugin Dir
@@ -42,7 +42,7 @@ Note that the Custom View ID will be extended with the plugin ID during plugin i
 
 Request URL
 
-```json
+```text
 http://{ae_url}/odata/CustomViews/Views.Custom(Id='<plugin identifier>:<view identifier>')
 
 ```
@@ -78,13 +78,13 @@ File: BusinessPartnerPaymentTerms.customview.json
 
 Curl
 
-```json
+```bash
 curl -X GET --header 'Accept: application/json' 'http://localhost:54000/odata/CustomViews/Views.Custom(Id='MYPLUGIN:BusinessPartnerPaymentTerms')'
 ```
 
 Request URL
 
-```json
+```text
 http://localhost:54000/odata/CustomViews/Views.Custom(Id='MYPLUGIN:BusinessPartnerPaymentTerms')
 ```
 
@@ -137,13 +137,13 @@ File: request.customview.json
 
 Curl
 
-```json
+```bash
 curl -X GET --header 'Accept: application/json' 'http://localhost:54000/odata/CustomViews/Views.CustomWithParameters(Id='CTLabel%3ARequestView',Parameters=[%22RequestId%3D61%22],paramType=Default.ParamType'Custom')'
 ```
 
 Request URL
 
-```json
+```bash
 http://localhost:54000/odata/CustomViews/Views.CustomWithParameters(Id='CTLabel%3ARequestView',Parameters=[%22RequestId%3D61%22],paramType=Default.ParamType'Custom')
 ```
 
