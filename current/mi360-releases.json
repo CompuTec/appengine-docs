@@ -1,0 +1,30 @@
+[
+  {
+    "version": "1.10.2",
+    "build": "1.10.2.3",
+    "release_date": "25 October 2023",
+    "requirements": [
+      "ProcessForce 10.0 Release 22 (R22)",
+      "AppEngine 2.10.15.1"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mi360/releases/CompuTec_MI360_1.10.2.3.zip"
+  },
+  {
+    "version": "1.10.1",
+    "build": "1.10.1.71",
+    "release_date": "29 October 2021",
+    "requirements": [
+      "ProcessForce 10.0 Release 11 (R11)"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mi360/releases/CompuTec_MI360_1.10.1.71.zip"
+  },
+  {
+    "version": "1.93.1",
+    "build": "1.93.1.71",
+    "release_date": "29 October 2021",
+    "requirements": [
+      "ProcessForce 9.3 PL14 Release 7 (R7)"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mi360/releases/CompuTec_MI360_1.93.1.71.zip"
+  }
+]

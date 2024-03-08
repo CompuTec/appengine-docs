@@ -1,0 +1,126 @@
+[
+  {
+    "version": "2.10.7",
+    "build": "2.10.7.1",
+    "release_date": "6 February 2024",
+    "minimal_ae_version": "2.10.16.6",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce API 10.0 Release 15 (R15)HotFix1 (HF1)",
+      "ProcessForce plugin 10.0 Release 15 (R15) HotFix1 (HF1)"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bt360/releases/CompuTec_BT360_2.10.7.1.zip"
+  },
+  {
+    "version": "2.10.6 R1",
+    "build": "2.10.6.11",
+    "release_date": "13 June 2023",
+    "minimal_ae_version": "2.10.10.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce API 10.0 Release 12 (R12) HotFix1 (HF1)",
+      "ProcessForce plugin 10.0 Release9 Release 12 (R12) HotFix1 (HF1) or newer "
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bt360/releases/CompuTec_BT360_2.10.6.11.zip"
+  },
+  {
+    "version": "2.10.5 R1",
+    "build": "2.10.5.6",
+    "release_date": "26 January 2022",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce API 10.0 Release 12 (R12) HotFix1 (HF1)",
+      "ProcessForce plugin 10.0 Release9 Release 12 (R12) HotFix1 (HF1) or newer "
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bt360/releases/CompuTec_BT360_2.10.5.6.zip"
+  },
+  {
+    "version": "1.93.5 R1",
+    "build": "1.93.5.6",
+    "release_date": "26 January 2022",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API 9.3 PL14 Release 8 (R8) HotFix 1 (HF1)",
+      "ProcessForcePlugin 9.3 PL14 Release8 (R8) HotFix1 (HF1) or newer "
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bt360/releases/CompuTec_BT360_1.93.5.6.zip"
+  },
+  {
+    "version": "1.93.4.0 R1",
+    "build": "1.93.4.3",
+    "release_date": "3 November 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API 9.3 PL14 Release 8 (R8) HotFix 1 (HF1)",
+      "ProcessForcePlugin 9.3 PL14 Release8 (R8) HotFix1 (HF1) or newer "
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bt360/releases/CompuTec_BT360_1.93.4.3.zip"
+  },
+  {
+    "version": "2.10.4.0 R1",
+    "build": "2.10.4.3",
+    "release_date": "3 November 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce API 10.0 Release 12 (R12) HotFix1 (HF1)",
+      "ProcessForce plugin 10.0 Release9 Release 12 (R12) HotFix1 (HF1) or newer "
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bt360/releases/CompuTec_BT360_2.10.4.3.zip"
+  },
+  {
+    "version": "1.93.2.0 R2",
+    "build": "1.93.2.121",
+    "release_date": "25 May 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R6",
+      "ProcessForcePlugin 9.3 PL14 Release6 (R6) or newer ",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bt360/releases/CompuTec_BT360_1.93.2.121.zip"
+  },
+  {
+    "version": "1.10.2.0 R2",
+    "build": "1.10.2.121",
+    "release_date": "25 May 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R9",
+      "ProcessForcePlugin 10.0 Release9 (R9)or newer",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bt360/releases/CompuTec_BT360_1.10.2.121.zip"
+  },
+  {
+    "version": "1.93.2.0 R1",
+    "build": "1.93.2.66",
+    "release_date": "20 Apr 2020",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL12",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL12 R2",
+      "ProcessForcePlugin 9.3 PL12 Release2 (R2) or newer ",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bt360/releases/CompuTec_BT360_1.93.2.66.zip"
+  },
+  {
+    "version": "1.10.2.0 R1",
+    "build": "1.10.2.66",
+    "release_date": "20 Apr 2020",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R2",
+      "ProcessForcePlugin 10.0 Release2 (R2)or newer",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bt360/releases/CompuTec_BT360_1.10.2.66.zip"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "version": "1.10.6.0 R3",
+    "build": "1.10.6.16",
+    "release_date": "5 September 2023",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "related_version": "CompuTec Gateway Setup 1.2.0.11",
+    "download_url": "https://download.computec.one/software/appengine/plugins/gateway/releases/CompuTec_Gateway_1.10.6.16.zip"
+  },
+  {
+    "version": "1.93.6.0 R3 (64-bit version)",
+    "build": "1.93.6.16",
+    "release_date": "5 September 2023",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "related_version": "CompuTec Gateway Setup 1.2.0.11",
+    "download_url": "https://download.computec.one/software/appengine/plugins/gateway/releases/CompuTec_Gateway_1.93.6.16.zip"
+  },
+  {
+    "version": "1.10.6.0 R2",
+    "build": "1.10.6.15",
+    "release_date": "3 November 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "related_version": "CompuTec Gateway Setup 1.2.0.11",
+    "download_url": "https://download.computec.one/software/appengine/plugins/gateway/releases/CompuTec_Gateway_1.10.6.15.zip"
+  },
+  {
+    "version": "1.93.6.0 R2 (64-bit version)",
+    "build": "1.93.6.15",
+    "release_date": "3 November 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "related_version": "CompuTec Gateway Setup 1.2.0.11",
+    "download_url": "https://download.computec.one/software/appengine/plugins/gateway/releases/CompuTec_Gateway_1.93.6.15.zip"
+  },
+  {
+    "version": "1.10.6.0 R1",
+    "build": "1.10.6.3",
+    "release_date": "20 April 2020",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "related_version": "CompuTec Gateway Setup 1.2.0.0",
+    "download_url": "https://download.computec.one/software/appengine/plugins/gateway/releases/CompuTec_Gateway_1.10.6.3.zip"
+  },
+  {
+    "version": "1.93.6.0 R1 (64-bit version)",
+    "build": "1.93.6.3",
+    "release_date": "20 April 2020",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "related_version": "CompuTec Gateway Setup 1.2.0.0",
+    "download_url": "https://download.computec.one/software/appengine/plugins/gateway/releases/CompuTec_Gateway_1.93.6.3.zip"
+  }
+]

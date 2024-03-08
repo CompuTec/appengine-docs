@@ -1,0 +1,79 @@
+[
+  {
+    "version": "2.10.16.6 HF1",
+    "build": "2.10.16.7",
+    "release_date": "30.01.2024",
+    "pf_version": "10.0 R14 HF1",
+    "license_server_version": "5.11.0.3"
+  },
+  {
+    "version": "2.10.16.4",
+    "build": "2.10.16.4",
+    "release_date": "24.01.2024",
+    "pf_version": "10.0 R14 HF1",
+    "license_server_version": "5.11.0.3"
+  },
+  {
+    "version": "2.10.15.2",
+    "build": "2.10.15.2",
+    "release_date": "17.10.2023",
+    "pf_version": "10.0 R14 HF1",
+    "license_server_version": "5.11.0.3"
+  },
+  {
+    "version": "2.10.14.3",
+    "build": "2.10.14.3",
+    "release_date": "27.09.2023",
+    "pf_version": "10.0 R14 HF1",
+    "license_server_version": "5.11.0.3"
+  },
+  {
+    "version": "2.10.13.1",
+    "build": "2.10.13.1",
+    "release_date": "10.08.2023",
+    "pf_version": "10.0 R14 HF1",
+    "license_server_version": "5.11.0.3"
+  },
+  {
+    "version": "2.10.12.1",
+    "build": "2.10.12.1",
+    "release_date": "26.07.2023",
+    "pf_version": "10.0 R14 HF1",
+    "license_server_version": "5.11.0.3"
+  },
+  {
+    "version": "2.10.11.5",
+    "build": "2.10.11.5",
+    "release_date": "24.05.2023",
+    "pf_version": "10.0 R14 HF1",
+    "license_server_version": "5.11.0.3"
+  },
+  {
+    "version": "2.10.10.1",
+    "build": "2.10.10.1",
+    "release_date": "19.04.2023",
+    "pf_version": "10.0 R14 HF1",
+    "license_server_version": "5.11.0.3"
+  },
+  {
+    "version": "2.10.9.8",
+    "build": "2.10.9.8",
+    "release_date": "1.02.2023",
+    "pf_version": "10.0 R14 HF1",
+    "license_server_version": "5.11.0.3"
+  },
+  {
+    "version": "2.10.8.2",
+    "build": "2.10.8.2",
+    "release_date": "19.09.2022",
+    "pf_version": "10.0 R14 HF1",
+    "license_server_version": "5.11.0.3"
+  },
+  {
+    "version": "2.10.7.5",
+    "build": "2.10.7.5",
+    "release_date": "13.06.2022",
+    "pf_version": "10.0 R14 HF1",
+    "license_server_version": "5.11.0.3"
+  }
+]

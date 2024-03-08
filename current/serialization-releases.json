@@ -1,0 +1,13 @@
+[
+  {
+    "version": "1.10.2",
+    "build": "1.10.2.110",
+    "release_date": "12 July 2022",
+    "requirements": [
+      "AppEngine 2.10.7.5",
+      "Stock Counting plugin 2.10.16 R1",
+      "CompuTec WMS 2.10.16 R1"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/serialization/releases/CompuTec_Serialization_1.10.2.110.zip"
+  }
+]

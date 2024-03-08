@@ -1,0 +1,601 @@
+[
+  {
+    "version": "ProcessForce 10.0 Release 23 (R23)",
+    "build": "10.0.23.8",
+    "release_date": "29 January 2024",
+    "minimal_ae_version": "2.10.10.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce API 10.0 RL23"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.23.8.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 22 (R22) HotFix1 (HF1)",
+    "build": "10.0.22.11",
+    "release_date": "22 November 2023",
+    "minimal_ae_version": "2.10.10.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce API 10.0 R22"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.22.11.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 22 (R22)",
+    "build": "10.0.22.8",
+    "release_date": "17 October 2023",
+    "minimal_ae_version": "2.10.10.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce API 10.0 R22"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.22.8.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 21 (R21) HotFix1 (HF1)",
+    "build": "10.0.21.9",
+    "release_date": "7 August 2023",
+    "minimal_ae_version": "2.10.10.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R21"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.21.9.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 21 (R21)",
+    "build": "10.0.21.7",
+    "release_date": "1 August 2023",
+    "minimal_ae_version": "2.10.10.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R21"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.21.7.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 20 (R20) HotFix 2 (HF2)",
+    "build": "10.0.20.15",
+    "release_date": "27 April 2023",
+    "minimal_ae_version": "2.10.10.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R20"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.20.15.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 20 (R20) HotFix 1 (HF1)",
+    "build": "10.0.20.13",
+    "release_date": "25 April 2023",
+    "minimal_ae_version": "2.10.10.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R20"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.20.13.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 20 (R20)",
+    "build": "10.0.20.6",
+    "release_date": "19 April 2023",
+    "minimal_ae_version": "2.10.10.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R20"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.20.6.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 19 (R19) HotFix 1 (HF1)",
+    "build": "10.0.19.7",
+    "release_date": "16 March 2023",
+    "minimal_ae_version": "2.10.8.2",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R19"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.19.7.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 19 (R19) ",
+    "build": "10.0.19.6",
+    "release_date": "14 March 2023",
+    "minimal_ae_version": "2.10.8.2",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R19"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.19.6.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 18 (R18) ",
+    "build": "10.0.18.6",
+    "release_date": "30 January 2023",
+    "minimal_ae_version": "2.10.8.2",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R18 "
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.18.6.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 17 (R17) ",
+    "build": "10.0.17.7",
+    "release_date": "22 November2022",
+    "minimal_ae_version": "2.10.8.2",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R17"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.17.7.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 16 (R16) ",
+    "build": "10.0.16.6",
+    "release_date": "19 September 2022",
+    "minimal_ae_version": "2.10.8.2",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R16  HF1"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.16.6.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 15 (R15) HotFix1 (HF1)",
+    "build": "10.0.15.34",
+    "release_date": "2 August 2022",
+    "minimal_ae_version": "2.10.3.1 - 2.10.5.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R15  HF1",
+      "This version requires CompuTec License Server 5.11.0.3 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.15.34.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 15 (R15) ",
+    "build": "10.0.15.17",
+    "release_date": "4 July 2022",
+    "minimal_ae_version": "2.10.3.1 - 2.10.5.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R15",
+      "This version requires CompuTec License Server 5.11.0.3 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.15.17.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 14 (R14) HotFix 1 (HF1)",
+    "build": "10.0.14.26",
+    "release_date": "16 March 2022",
+    "minimal_ae_version": "2.10.3.1 - 2.10.5.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R14  HF1",
+      "This version requires CompuTec License Server 5.11.0.3 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.14.26.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 10 (R10) HotFix 1 (HF1)",
+    "build": "930.240.23.26",
+    "release_date": "16 March 2022",
+    "minimal_ae_version": "2.93.3.1 - 2.93.5.1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R10 HF1",
+      "This version requires CompuTec License Server 5.11.0.3 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.23.26.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 10 (R10)",
+    "build": "390.240.23.09",
+    "release_date": "28 February 2022",
+    "minimal_ae_version": "2.93.3.1 - 2.93.5.1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R10",
+      "This version requires CompuTec License Server 5.11.0.3 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_390.240.23.09.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 14 (R14)",
+    "build": "10.0.14.9",
+    "release_date": "28 February 2022",
+    "minimal_ae_version": "2.10.3.1 - 2.10.5.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R14",
+      "This version requires CompuTec License Server 5.11.0.3 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.14.9.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 9 (R9)",
+    "build": "930.240.22.04",
+    "release_date": "13 December 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R9",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.22.04.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 13 (R13)",
+    "build": "10.0.13.4",
+    "release_date": "13 December 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R13",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.13.4.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 8 (R8) HotFix 1 (HF1)",
+    "build": "930.240.21.15",
+    "release_date": "27 October 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R8 HF1",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.21.15.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 12 (R12)  HotFix 1 (HF1)",
+    "build": "10.0.12.15",
+    "release_date": "27 October 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R12 HF1",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.12.15.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 8 (R8)",
+    "build": "930.240.21.09",
+    "release_date": "6 October 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R8",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.21.09.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 12 (R12) ",
+    "build": "10.0.12.9",
+    "release_date": "6 October 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R12",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.12.9.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 7 (R7) HotFix1 (HF1)",
+    "build": "930.240.20.07",
+    "release_date": "11 August 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R7 HF1",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.20.07.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 11 (R11) HotFix1 (HF1)",
+    "build": "10.0.11.7",
+    "release_date": "11 August 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R11 HF1",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.11.7.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 7 (R7)",
+    "build": "930.240.20.04",
+    "release_date": "5 August 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R7",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.20.04.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 11 (R11)",
+    "build": "10.0.11.4",
+    "release_date": "5 August 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R11",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.11.4.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 6 (R6)",
+    "build": "930.240.19.78",
+    "release_date": "31 May 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R6",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.19.78.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 10 (R10)",
+    "build": "10.0.10.3",
+    "release_date": "31 May 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R10",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.10.3.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 5 (R5)",
+    "build": "930.240.18.06",
+    "release_date": "7 April 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R5",
+      "CompuTec License Server 5.10.2.1 and later"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.18.06.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 9 (R9)",
+    "build": "10.0.9.6",
+    "release_date": "7 April 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R9",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.9.6.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 4 (R4)",
+    "build": "930.240.17.20",
+    "release_date": "26 March 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R4",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.17.20.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 8 (R8)",
+    "build": "10.0.8.20",
+    "release_date": "26 March 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R8",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.8.20.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 3 (R3)",
+    "build": "930.240.16.14",
+    "release_date": "26 March 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R3",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.16.14.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 3 (R3)",
+    "build": "930.240.16.11",
+    "release_date": "27 January 2021",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R3",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.16.11.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 7 (R7)",
+    "build": "10.0.7.14",
+    "release_date": "26 March 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R7",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.7.14.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 7 (R7) ",
+    "build": "10.0.7.11",
+    "release_date": "27 January 2021",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R7",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.7.11.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 2 (R2) HotFix1 (HF1)",
+    "build": "930.240.15.23",
+    "release_date": "22 December 2020",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R2 HF1",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.15.23.zip"
+  },
+  {
+    "version": "ProcessForce 10.0 Release 6 (R6) HotFix1 (HF1)",
+    "build": "10.0.6.23",
+    "release_date": "22 December 2020",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R6 HF1",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.6.23.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 2 (R2) ",
+    "build": "930.240.15.14",
+    "release_date": "7 December 2020",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R2",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.15.14.zip"
+  },
+  {
+    "version": "CompuTec ProcessForce 10.0 Release 6 (R6)",
+    "build": "10.0.6.14",
+    "release_date": "7 December 2020",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R6",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.6.14.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL14 Release 1 (R1) HotFix (HF1)",
+    "build": "930.240.14.25",
+    "release_date": "6 Nov 2020",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL14",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL14 R1 HF1",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.240.14.25.zip"
+  },
+  {
+    "version": "CompuTec ProcessForce 10.0 Release 5 (R5) HotFix (HF1)",
+    "build": "10.0.5.25",
+    "release_date": "6 Nov 2020",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R5 HF1",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.5.25.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL13 Release 2 (R2)",
+    "build": "930.230.13.69",
+    "release_date": "3 Sep 2020",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL13",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL13 R2",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.230.13.69.zip"
+  },
+  {
+    "version": "CompuTec ProcessForce 10.0 Release 4 (R4)",
+    "build": "10.0.4.4",
+    "release_date": "3 Sep 2020",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce andProcessForce ProcessForce API 10.0 R4",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.4.4.zip"
+  },
+  {
+    "version": "ProcessForce 9.3 PL13 Release1 (R1)",
+    "build": "930.230.13.62",
+    "release_date": "2 Jul 2020",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL13",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL13 R1",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.230.13.62.zip"
+  },
+  {
+    "version": "CompuTec ProcessForce 10.0 Release 3 (R3)",
+    "build": "10.0.3.62",
+    "release_date": "2 Jul 2020",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R3",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.3.62.zip"
+  },
+  {
+    "version": "ProcessForcePlugin 9.3 PL12 Release 2 (R2)",
+    "build": "930.220.12.88",
+    "release_date": "14 Apr 2020",
+    "minimal_ae_version": "1.92.6.0 R1",
+    "requirements": [
+      "SAP Business One 9.3 PL12",
+      "ProcessForce and ProcessForce API (x64) 9.3 PL12 R2",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_930.220.12.88.zip"
+  },
+  {
+    "version": "ProcessForcePlugin  10.0 Release 2 (R2)",
+    "build": "1000.000.002.088",
+    "release_date": "14 Apr 2020",
+    "minimal_ae_version": "1.10.6.0 R1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce and ProcessForce ProcessForce API 10.0 R2",
+      "This version requires CompuTec License Server 5.10.2.1 and later."
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_1000.000.002.088.zip"
+  }
+]

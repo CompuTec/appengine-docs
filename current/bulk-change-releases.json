@@ -1,0 +1,32 @@
+[
+  {
+    "version": "1.10.2",
+    "build": "1.10.2.9",
+    "release_date": "4 August 2022",
+    "minimal_ae_version": "1.10.7.102 Release1 (R1)",
+    "requirements": [
+      "ProcessForcePlugin 10.0 Release1 (R1)"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bulkchange/releases/CompuTec_BulkChange_1.10.2.9.zip"
+  },
+  {
+    "version": "1.10.1",
+    "build": "1.10.1.48",
+    "release_date": "9 November 2020",
+    "minimal_ae_version": "1.10.7.102 Release1 (R1)",
+    "requirements": [
+      "ProcessForcePlugin 10.0 Release1 (R1)"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bulkchange/releases/CompuTec_BulkChange_1.10.1.48.zip"
+  },
+  {
+    "version": "1.93.1",
+    "build": "1.93.1.48",
+    "release_date": "9 November 2020",
+    "minimal_ae_version": "1.93.7.102 Release1 (R1)",
+    "requirements": [
+      "ProcessForcePlugin 9.3 PL13 Release1 (R1)"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/bulkchange/releases/CompuTec_BulkChange_1.93.1.48.zip"
+  }
+]

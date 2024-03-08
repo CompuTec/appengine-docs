@@ -1,0 +1,82 @@
+[
+  {
+    "version": "1.10.11",
+    "build": "1.10.11.101",
+    "release_date": "17 October 2023",
+    "minimal_pf_version": "ProcessForce 10.0 R22",
+    "minimal_ae_version": "2.10.15.1",
+    "download_url": "https://download.computec.one/software/appengine/plugins/mowizard/releases/CompuTec_MOWizard_1.10.11.101.zip"
+  },
+  {
+    "version": "1.10.9",
+    "build": "1.10.9.2",
+    "release_date": "28 April 2023",
+    "minimal_pf_version": "ProcessForce 10.0 R20 HF2",
+    "minimal_ae_version": "",
+    "download_url": "https://download.computec.one/software/appengine/plugins/mowizard/releases/CompuTec_MOWizard_1.10.9.2.zip"
+  },
+  {
+    "version": "1.10.6",
+    "build": "1.10.6.5",
+    "release_date": "26 April 2022",
+    "minimal_pf_version": "ProcessForce 10.0 Release 11 (R11)",
+    "minimal_ae_version": "",
+    "download_url": "https://download.computec.one/software/appengine/plugins/mowizard/releases/CompuTec_MOWizard_1.10.6.5.zip"
+  },
+  {
+    "version": "1.93.6",
+    "build": "1.93.6.5",
+    "release_date": "26 April 2022",
+    "minimal_pf_version": "ProcessForce 9.3 PL14 Release 7 (R7)",
+    "minimal_ae_version": "",
+    "download_url": "https://download.computec.one/software/appengine/plugins/mowizard/releases/CompuTec_MOWizard_1.93.6.5.zip"
+  },
+  {
+    "version": "1.10.5",
+    "build": "1.10.5.2",
+    "release_date": "28 February 2022",
+    "minimal_pf_version": "ProcessForce 10.0 Release 11 (R11)",
+    "minimal_ae_version": "",
+    "download_url": "https://download.computec.one/software/appengine/plugins/mowizard/releases/CompuTec_MOWizard_1.10.5.2.zip"
+  },
+  {
+    "version": "1.93.5",
+    "build": "1.93.5.2",
+    "release_date": "28 February 2022",
+    "minimal_pf_version": "ProcessForce 9.3 PL14 Release 7 (R7)",
+    "minimal_ae_version": "",
+    "download_url": "https://download.computec.one/software/appengine/plugins/mowizard/releases/CompuTec_MOWizard_1.93.5.2.zip"
+  },
+  {
+    "version": "1.10.3",
+    "build": "1.10.3.1",
+    "release_date": "28 February 2022",
+    "minimal_pf_version": "ProcessForce 10.0 Release 11 (R11)",
+    "minimal_ae_version": "",
+    "download_url": "https://download.computec.one/software/appengine/plugins/mowizard/releases/CompuTec_MOWizard_1.10.3.1.zip"
+  },
+  {
+    "version": "1.93.3",
+    "build": "1.93.3.1",
+    "release_date": "28 February 2022",
+    "minimal_pf_version": "ProcessForce 9.3 PL14 Release 7 (R7)",
+    "minimal_ae_version": "",
+    "download_url": "https://download.computec.one/software/appengine/plugins/mowizard/releases/CompuTec_MOWizard_1.93.3.1.zip"
+  },
+  {
+    "version": "1.10.1",
+    "build": "1.10.1.310",
+    "release_date": "3 November 2021",
+    "minimal_pf_version": "ProcessForce 10.0 Release 11 (R11)",
+    "minimal_ae_version": "",
+    "download_url": "https://download.computec.one/software/appengine/plugins/mowizard/releases/CompuTec_MOWizard_1.10.1.310.zip"
+  },
+  {
+    "version": "1.93.1",
+    "build": "1.93.1.310",
+    "release_date": "3 November 2021",
+    "minimal_pf_version": "ProcessForce 9.3 PL14 Release 7 (R7)",
+    "minimal_ae_version": "",
+    "download_url": "https://download.computec.one/software/appengine/plugins/mowizard/releases/CompuTec_MOWizard_1.93.1.310.zip"
+  }
+]

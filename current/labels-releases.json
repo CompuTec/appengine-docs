@@ -1,0 +1,44 @@
+[
+  {
+    "version": "1.5.7",
+    "build": "1.10.5.7",
+    "release_date": "26 June 2023",
+    "minimal_ae_version": "1.10.6.0",
+    "download_url": "https://download.computec.one/software/appengine/plugins/labels/releases/CompuTec_Labels_1.10.5.7.zip"
+  },
+  {
+    "version": "1.4.2",
+    "build": "1.10.4.2",
+    "release_date": "19 April 2023",
+    "minimal_ae_version": "1.10.6.0",
+    "download_url": "https://download.computec.one/software/appengine/plugins/labels/releases/CompuTec_Labels_1.10.4.2.zip"
+  },
+  {
+    "version": "1.4.0",
+    "build": "1.10.4.1",
+    "release_date": "13 April 2023",
+    "minimal_ae_version": "1.10.6.0",
+    "download_url": "https://download.computec.one/software/appengine/plugins/labels/releases/CompuTec_Labels_1.10.4.1.zip"
+  },
+  {
+    "version": "1.3",
+    "build": "1.10.3.2",
+    "release_date": "23 March 2023",
+    "minimal_ae_version": "1.10.6.0",
+    "download_url": "https://download.computec.one/software/appengine/plugins/labels/releases/CompuTec_Labels_1.10.3.2.zip"
+  },
+  {
+    "version": "1.2",
+    "build": "1.10.2.1",
+    "release_date": "6 April 2021",
+    "minimal_ae_version": "1.93.6.0",
+    "download_url": "https://download.computec.one/software/appengine/plugins/labels/releases/CompuTec_Labels_1.10.2.1.zip"
+  },
+  {
+    "version": "1.2",
+    "build": "1.93.2.1",
+    "release_date": "6 April 2021",
+    "minimal_ae_version": "1.10.6.0",
+    "download_url": "https://download.computec.one/software/appengine/plugins/labels/releases/CompuTec_Labels_1.93.2.1.zip"
+  }
+]

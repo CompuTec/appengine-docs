@@ -1,0 +1,145 @@
+[
+  {
+    "version": "1.10.11",
+    "build": "1.10.11.1",
+    "release_date": "6 February 2024",
+    "requirements": [
+      "AppEngine 2.10.16.9",
+      "CompuTec ProcessForce 10.0 Release 23 (R23)",
+      "Production Process Flow Plugin 1.10.9"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.10.11.1.zip"
+  },
+  {
+    "version": "1.10.10",
+    "build": "1.10.10.4",
+    "release_date": "3 August 2023",
+    "requirements": [
+      "AppEngine 2.10.12.1",
+      "CompuTec ProcessForce 10.0 Release 21 (R21)",
+      "Production Process Flow Plugin 1.10.8"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.10.10.4.zip"
+  },
+  {
+    "version": "1.10.9",
+    "build": "1.10.9.1",
+    "release_date": "11 May 2023",
+    "requirements": [
+      "AppEngine 2.10.10.1",
+      "CompuTec ProcessForce 10.0 Release 18 (R18)",
+      "Production Process Flow Plugin 1.10.8"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.10.9.1.zip"
+  },
+  {
+    "version": "1.10.8",
+    "build": "1.10.8.1",
+    "release_date": "1 February 2023",
+    "requirements": [
+      "AppEngine 2.10.9.7",
+      "CompuTec ProcessForce 10.0 Release 18 (R18)",
+      "Production Process Flow Plugin 1.10.8"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.10.8.1.zip"
+  },
+  {
+    "version": "1.10.7",
+    "build": "1.10.7.1",
+    "release_date": "28 September 2022",
+    "requirements": [
+      "AppEngine 2.10.8.2",
+      "CompuTec ProcessForce 10.0 Release 16 (R16)",
+      "Production Process Flow Plugin 1.10.5"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.10.7.1.zip"
+  },
+  {
+    "version": "1.10.6",
+    "build": "1.10.6.7",
+    "release_date": "28 March 2022",
+    "requirements": [
+      "AppEngine 2.10.6.1",
+      "CompuTec ProcessForce 10.0 Release 14 (R14) HotFix1 (HF1)",
+      "Production Process Flow Plugin 1.10.5"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.10.6.7.zip"
+  },
+  {
+    "version": "1.93.6",
+    "build": "1.93.6.7",
+    "release_date": "28 March 2022",
+    "requirements": [
+      "AppEngine 2.93.6.1",
+      "CompuTec ProcessForce 9.3 PL14 Release 10 (R10) HotFix1 (HF1) ",
+      "Production Process Flow Plugin 1.93.5"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.93.6.7.zip"
+  },
+  {
+    "version": "1.10.5",
+    "build": "1.10.5.1",
+    "release_date": "28 February 2022",
+    "requirements": [
+      "AppEngine 2.10.5.4",
+      "CompuTec ProcessForce 10.0 Release 14 (R14)",
+      "Production Process Flow Plugin 1.10.5"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.10.5.1.zip"
+  },
+  {
+    "version": "1.93.5",
+    "build": "1.93.5.1",
+    "release_date": "28 February 2022",
+    "requirements": [
+      "AppEngine 2.93.5.4",
+      "ProcessForce 9.3 PL14 Release 10 (R10)",
+      "Production Process Flow Plugin 1.93.5"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.93.5.1.zip"
+  },
+  {
+    "version": "1.10.3",
+    "build": "1.10.3.1",
+    "release_date": "28 February 2022",
+    "requirements": [
+      "AppEngine 2.10.2.80 R1",
+      "CompuTec ProcessForce 10.0 Release 14 (R14)",
+      "Production Process Flow Plugin 1.10.3"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.10.3.1.zip"
+  },
+  {
+    "version": "1.93.3",
+    "build": "1.93.3.1",
+    "release_date": "28 February 2022",
+    "requirements": [
+      "AppEngine 2.93.2.80 R1 ",
+      "ProcessForce 9.3 PL14 Release 10 (R10)",
+      "Production Process Flow Plugin 1.93.3"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.93.3.1.zip"
+  },
+  {
+    "version": "1.10.1",
+    "build": "1.10.1.1",
+    "release_date": "22 December 2021",
+    "requirements": [
+      "AppEngine 2.10.2.80 R1 ",
+      "ProcessForce 10.0 Release 13 (R13)",
+      "Production Process Flow Plugin 1.10.2"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.10.1.1.zip"
+  },
+  {
+    "version": "1.93.1",
+    "build": "1.93.1.1",
+    "release_date": "22 December 2021",
+    "requirements": [
+      "AppEngine 2.93.2.80 R1 ",
+      "ProcessForce 9.3 PL14 Release 9 (R9)",
+      "Production Process Flow Plugin 1.93.2"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/mrp/releases/CompuTec_MRP_1.93.1.1.zip"
+  }
+]
