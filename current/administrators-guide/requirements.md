@@ -18,6 +18,8 @@ sidebar_position: 1
 
 1. Install SAP Business One DI API 64-bit on the client machine.
 2. Install CompuTec ProcessForce API 64-bit, which selected plugins may require.
+3. Microsoft ODBC Driver 17 for SQL Server (installed with SAP Business One Client).
+4. Microsoft SQL Server Native Client 11.0 (installed with SAP Business One Client).
 
 ## Working with SAP B1 on the HANA database
 
