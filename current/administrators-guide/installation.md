@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Installation
 
-1. Run the installation file (CompuTec ProcessForce AppEngine) from the Download section <!-- TODO: Link --> and click Install in the opened installation Wizard.
+1. Run the installation file (CompuTec ProcessForce AppEngine) from the Download section and click Install in the opened installation Wizard.
 2. Click Close after getting Installation Successfully Completed.
 3. Now, the new service should be running:
 
