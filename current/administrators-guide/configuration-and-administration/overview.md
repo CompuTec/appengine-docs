@@ -90,7 +90,7 @@ AppEngine plugins are designed to be used on users' actions: e.g. a user opens i
 
 ### Activation
 
-Switch the switch in the Background Processing State column in the [SLD Servers tab](/docs/appengine/administrators-guide/configuration-and-administration/overview#sldservers) (please check the previous screenshot on this page) and log in using SAP Business One credentials. The following message will be displayed upon the first activation:
+Switch the switch in the Background Processing State column in the [SLD Servers tab](/docs/appengine/administrators-guide/configuration-and-administration/overview#sld-servers) (please check the previous screenshot on this page) and log in using SAP Business One credentials. The following message will be displayed upon the first activation:
 
 ![Background](./media/configuration-and-administration/background-processing-message.webp)
 
@@ -127,7 +127,7 @@ Send Events Job – this job is always present, it is installed with AppEngine (
 Clicking a job tile leads to its details. Here you can check:
 
 - information on the recent calls: start/end date and time, company and user, exceptions (if there are any). Jobs other than SEventJob have an additional column: EventBus message. It holds information on what was sent to the specific job (what event).
-- companies: databases for which the job is active with a user (by default it is the user set in the [SLD Servers tab](/docs/appengine/administrators-guide/configuration-and-administration/overview#sldservers), it can be changed here just for the specific job)
+- companies: databases for which the job is active with a user (by default it is the user set in the [SLD Servers tab](/docs/appengine/administrators-guide/configuration-and-administration/overview#sld-servers), it can be changed here just for the specific job)
 - logs: log files, also available in the [Trace tab](/docs/appengine/administrators-guide/configuration-and-administration/overview#trace-1).
 
 ![Send Events Job](./media/configuration-and-administration/send-events-job.webp)
