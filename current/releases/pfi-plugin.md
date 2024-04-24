@@ -8,6 +8,15 @@ sidebar_position: 8
 The latest Installer is available to download from [here](/docs/appengine/download/pfi/).
 :::
 
+## PFI 1.10.6 - 22 April 2024
+
+| Issue Type | Release Note | Related issue/s |
+| --- | --- | --- |
+| Bug | After loading sample data from SAP for Bill of Materials there were empty lines in scraps and coproducts in some cases. | - |
+| Bug | Error during BOM import through PFI in some cases | - |
+| Bug | PFI - issues with refreshing data after import from file | - |
+| Improvement | Validating imported data types | - |
+
 ## PFI 1.10.5 - 5 June 2023
 
 | Issue Type | Release Note | Related issue/s |
