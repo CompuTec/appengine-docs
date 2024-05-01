@@ -24,11 +24,11 @@ For Plug-in installation please follow this link: [Configuration and Administrat
 
 As an option you can call Serialization plug-in from inside the Process Force:
 
-![Screenshot](./media/overview/image2020-4-1_12-29-5.png)
+![Batch Traceability 360](./media/overview/batch-traceability-360.png)
 
 To do this, check the following checkbox:
 
-image
+![Batch Traceability 360](./media/overview/bt360-image2020-1-18-8-33-41-720.png)
 
 Enter AppEngine url, e.g. `http://{host}:54000`, click Update and restart SAP Business One.
 
@@ -44,19 +44,19 @@ You can reach ProcessForce Batch Traceability 360 by:
 :::
 
 - Transaction tab on Complaint form:
-![Screenshot](./media/overview/image2020-4-1_12-52-49.png)
+![Complaint Form](./media/overview/complaint-form.png)
 
 Click [here](/docs/processforce/user-guide/complaint-management/complaint/) to find out more about Complaint function.
 
 - Batch Master Data form context menu
-![Screenshot](./media/overview/image2020-4-1_12-35-27.png)
+![Batch Master Data](./media/overview/batch-master-data.png)
 
 Click [here](/docs/processforce/user-guide/inventory/batch-control/batch-master-data/overview/) to find out more about Batch Master Data.
 
 ## Batch List
 
 You can compose filter using Adapt Filters:
-![Screenshot](./media/overview/image2020-4-1_15-45-10.png)
+![Batch List Adapt Filters](./media/overview/adapt-filters.png)
 
 Select a Batch line and you will be redirected to its Overview.
 
@@ -64,43 +64,43 @@ Select a Batch line and you will be redirected to its Overview.
 
 On this screen you can find some tiles that bring you analytical information. The Selected Batch is a start point for analysis. Prepared information is related to the Batch and products (Batches) affected by the Batch. That means, information is prepared for all nodes on the right from selected node in the trace graph.
 
-![Screenshot](./media/overview/new-overview.jpg)
+![Batch Traceability 360 Overview](./media/overview/new-overview.jpg)
 
 **Note**: If you open Batch Traceability from SAP Business One, you will be able to use yellow arrow functionality as in SAP Business One.
 
-To see extended view of header please select ![Screenshot](./media/overview/down-arrow.png)
+To see extended view of header please select ![Down Arrow](./media/overview/down-arrow.png)
 
-![Screenshot](./media/overview/image2020-4-2-14-30-17.png)
+![Header](./media/overview/image2020-4-2-14-30-17.png)
 
-Select button ![Screenshot](./media/overview/image2020-4-1_17-26-2.png) and you will be redirected to Batch Trace graph.
+Select button ![Trace Button](./media/overview/trace-button.png) and you will be redirected to Batch Trace graph.
 
 ## Batch Trace Graph
 
-![Screenshot](./media/overview/batch-trace-graph.png)
+![Batch Trace Graph](./media/overview/batch-trace-graph.png)
 
-On this graph specific Batches are represented by boxes (nodes) with its details. You can zoom in or zoom out the view by using a mouse roll or ![Screenshot](./media/overview/zoom%20in.png) and ![Screenshot](./media/overview/zoom-out.png). You can show or hide legend by using ![Screenshot](./media/overview/hide-legend.png). You can expand view by using ![Screenshot](./media/overview/expand-legend.png).
+On this graph specific Batches are represented by boxes (nodes) with its details. You can zoom in or zoom out the view by using a mouse roll or ![Zoom In](./media/overview/zoom%20in.png) and ![Zoom Out](./media/overview/zoom-out.png). You can show or hide legend by using ![Hide Legend](./media/overview/hide-legend.png). You can expand view by using ![Expand Legend](./media/overview/expand-legend.png).
 
 ### Going forward and backward
 
 The Batch Trace visualization form shows what a specific Item was made of. It looks back on every Batch that was used in production process to the point of a chosen Batch.
 
-![Screenshot](./media/overview/going-backward-and-forward.png)
+![Batch Trace visualization form](./media/overview/going-backward-and-forward.png)
 You can also choose a Batch and go forward to see where the Items from a specific Batch were used. To do that, hold Shift and left-click on a desired Batch:
-![Screenshot](./media/overview/going-backward-and-forward-01.png)
+![Going Backward and Forward](./media/overview/going-backward-and-forward-01.png)
 
 In history list you can find your tracing history.You can switch to another batch from the list at any time in any form: Overview, Trace, Action.
 
 ### Transactions
 
-Left-click on a specific box to select it and than select ![Screenshot](./media/overview/image2020-4-2-15-52-7.png) button to see all activities and transactions connected to the Batch:
+Left-click on a specific box to select it and than select ![BT 360 Transactions](./media/overview/image2020-4-2-15-52-7.png) button to see all activities and transactions connected to the Batch:
 
-![Screenshot](./media/overview/image2020-4-2-15-51-4.png)
-![Screenshot](./media/overview/image2020-4-2-15-52-43.png)
+![Batch Traceability 360 Transactions](./media/overview/image2020-4-2-15-51-4.png)
+![Batch Traceability 360 Transactions](./media/overview/image2020-4-2-15-52-43.png)
 
 Click the yellow arrow in a specific document row to get more information about it.
 
 ## Action
 
-To navigate to Action view, please select ![Screenshot](./media/overview/image2020-4-2-4-42-54.png) button. In Action view you can manage Batches' statuses. To change batch status chose the line in the list and than select checkbox in the first column and finally select button ![Screenshot](./media/overview/image2020-4-2-14-39-9.png)
+To navigate to Action view, please select ![Action Button](./media/overview/action-button.png) button. In Action view you can manage Batches' statuses. To change batch status chose the line in the list and than select checkbox in the first column and finally select button ![Change Status Button](./media/overview/change-status-button.png)
 
-![Screenshot](./media/overview/image2020-4-2-14-43-46.png)
+![Batch Traceability 360 Change Status](./media/overview/change-status.png)

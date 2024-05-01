@@ -24,11 +24,11 @@ Click [here](/docs/appengine/administrators-guide/configuration-and-administrati
 
 Once the plugin is installed, its tile is available in the [Launchpad](/docs/appengine/appengine-users-guide/launchpad/) Upon opening the plugin you can see a the ProcessForce objects represented by tiles. Choose the one you want to work with (scroll to get to other objects):
 
-    ![Screenshot](./media/pfi/pfi-main.png)
+    ![PFI](./media/pfi/pfi-main.png)
 
 The example view (Bill of Materials in this case):
 
-![Screenshot](./media/pfi/pfi-bill-of-materials.png)
+![PFI](./media/pfi/pfi-bill-of-materials.png)
 
 ### Header
 
@@ -38,7 +38,7 @@ Here you can see the object's name (upper-left corner). On the right from it you
 
 <u>Download with advanced settings</u> – option available from the arrow down next to Download Excel option:
 
-    ![Screenshot](./media/pfi/pfi-advanced-download.png)
+    ![PFI](./media/pfi/pfi-advanced-download.png)
 
 <u>Include Error Messages</u> – after importing entries, system returns results. With this setting user can download import results and see error description.
 
@@ -56,7 +56,7 @@ Here you can see the object's name (upper-left corner). On the right from it you
 
 You can filter the result table by putting values in specific fields. You can also adapt the filters section: choose which fields are displayed to be used.
 
-<u>Read-only fields</u> – If it is not checked, only fields that can be updated will be displayed. If checkbox is checked, you can see all the objects. Read-only objects are marked with a padlock icon then. Example: ![Screenshot](./media/pfi/pfi-padlock.png)
+<u>Read-only fields</u> – If it is not checked, only fields that can be updated will be displayed. If checkbox is checked, you can see all the objects. Read-only objects are marked with a padlock icon then. Example: ![PFI](./media/pfi/pfi-padlock.png)
 
 ### Table
 

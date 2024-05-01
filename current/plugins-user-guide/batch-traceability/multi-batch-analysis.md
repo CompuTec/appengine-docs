@@ -40,11 +40,11 @@ You can select many Batches directly from the list of Batches or you can first s
 
 ### To narrow down Batches please select the button Select Documents
 
-![Screenshot](./media/multi-batch-analysis/narrowed-down-documents.png)
+![Narrowed Down Documents](./media/multi-batch-analysis/narrowed-down-documents.png)
 
 ### Batch selection and run of Trace Analysis
 
-![Screenshot](./media/multi-batch-analysis/batch-selection.png)
+![Batch selection and Run of Trace Analysis](./media/multi-batch-analysis/batch-selection.png)
 
 ## Trace Analysis
 
@@ -57,10 +57,10 @@ On a graph, you can:
 - Go to a single Batch analysis (is opened in a new tab of the browser)
 - view only related nodes.
 
-![Screenshot](./media/multi-batch-analysis/trace-analysis.png)
+![Trace Analysis](./media/multi-batch-analysis/trace-analysis.png)
 
 ### Export data
 
 In each grid (Batches, Transactions, Links, Derived Data) you can sort data. All grids are exported to the same file. Each kind of data is exported to a separate sheet.
 
-![Screenshot](./media/multi-batch-analysis/export-data.png)
+![Export Data](./media/multi-batch-analysis/export-data.png)

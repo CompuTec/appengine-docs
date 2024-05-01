@@ -24,7 +24,7 @@ AppEngine → Administration Panel → Plugins → CompuTec BulkChange Plugin �
 
 There are additional settings that allow to filter which related Manufacturing Order are to be updated. Set a true or false value to activate or deactivate any option. The default values are used when no System values are set by a user.
 
-![Screenshot](./media/bulk-changes-of-bom/bom-to-mor-settings.png)
+![Bulk Changes on Bills of Materials](./media/bulk-changes-of-bom/bom-to-mor-settings.png)
 
 | Option | Description |
 |--- | --- |
@@ -48,7 +48,7 @@ Set the MOR Update Status User-Defined Field to the U - Start Update option:
 the upper menu → View → User-Defined Fields
 :::
 
-![Screenshot](./media/bulk-changes-of-bom/bom-to-mor-udf.png)
+![Bulk Changes on Bills of Materials](./media/bulk-changes-of-bom/bom-to-mor-udf.png)
 
 Click the Update button in the Bill of Materials form. Now the status of the related MOR Update is available in the MOR Update Status UDF:
 

@@ -27,11 +27,11 @@ Go to Plugins → ProcessForce Plugin → Settings to define parameters (that re
     Please note that four checkboxes on the Cost Roll-Up form (from “Use final-goods’s batch[…]” to “Calculate and Save Costed BOM data”) are available to use after checking the Perform the roll-up over structure checkbox. They should be used in the same matter in AppEngine, even though they are available even when the Perform the roll-up over structure checkbox is not checked in AppEngine Settings (due to AppEngine limitations).
 :::
 
-![Screenshot](./media/processforce/pf-jobs.png)
+![ProcessForce](./media/processforce/pf-jobs.png)
 
 You can set up the occurance of the automatic Roll-Up by using [Cron Expressions](https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm) in the job's details: Background Processing → Configuration → [name of a job]:
 
-![Screenshot](./media/processforce/pf-cron.png)
+![ProcessForce](./media/processforce/pf-cron.png)
 
 You can configure three different automation of this kind by using CostRollUpScheduledRecurringJob_01, CostRollUpScheduledRecurringJob_02, and CostRollUpScheduledRecurringJob_03 job.
 

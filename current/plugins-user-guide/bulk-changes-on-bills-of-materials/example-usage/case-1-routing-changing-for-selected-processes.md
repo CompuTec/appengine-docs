@@ -13,7 +13,7 @@ After changing the Routing there should be a possibility to choose whether we ch
 
 | Step | Action | Obilgatory |  |
 | --- | --- | --- | --- |
-| 1 | In B1/PF prepare modified Routing's template (define new Code by adding e.g. Revision ID) with changes in: Operations, Resources, times, etc. It is recommended to put some additional information in Remarks (the scope of changes). | Yes | ![Screenshot](./media/routings.png) |
+| 1 | In B1/PF prepare modified Routing's template (define new Code by adding e.g. Revision ID) with changes in: Operations, Resources, times, etc. It is recommended to put some additional information in Remarks (the scope of changes). | Yes | ![Routing changing for selected processes](./media/routings.png) |
 | 2 | Open Bulk Changes from AppEngine or directly from B1/PF, create new scenario and Select Change Scope = Routings | Yes | <details><summary>Click here to expand</summary></details> |
 | 3 | In Selected BOMs tab select BOMs (processes) for which the routing have to be changed | Yes | <details> <summary>Click here to expand</summary> </details> |
 | 4 | In Routings tab filter and select routing which has to be replaced. Choose mode Replace and select routing (prepared in step 1) as a Replacement. At the end you can unselect some processes. The change will not affect them. | Yes | <details> <summary>Click here to expand</summary> </details> |

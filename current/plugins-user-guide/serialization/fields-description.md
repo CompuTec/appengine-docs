@@ -14,13 +14,13 @@ Here you can find a description of all of the configuration fields that affect t
 
 Only for Items (managed by Batches) with Serialization enabled = Yes are available to be assigned SPT.
 
-![Screenshot](./media/field-description/image2019-7-19-14-48-47.png)
+![Serialization - Fields Description](./media/field-description/image2019-7-19-14-48-47.png)
 
 **Serialization enabled = Yes**, Item with all revisions enabled for serialization, is selectable for Rule definition.
 
 ## WMS - Custom Configuration
 
-![Screenshot](./media/field-description/image2020-1-19-10-16-23.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-19-10-16-23.png)
 
 **Enable Serialization** – allows the use of serialization in WMS
 
@@ -38,7 +38,7 @@ Only for Items (managed by Batches) with Serialization enabled = Yes are availab
 
 Steps for configuring serialization are as follows:
 
-![Screenshot](./media/field-description/serialization.png)
+![Serialization - Fields Description](./media/field-description/serialization.png)
 
 First, define Attributes Template. Then from these templates, you are able to define Serialization Parameters Templates. The next obligatory step is to set up Rules. Step 4 is not required for clustering. It useful if you produce serialized products and you received SN pools from a customer or you have to generate SN pools according to determined schemes.
 
@@ -46,17 +46,17 @@ You can find an example of a clustering case here: [Example usage: clustering](.
 
 ### Attribute Templates
 
-![Screenshot](./media/field-description/image2020-1-13-4-39-6.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-4-39-6.png)
 
 #### Attributes list window
 
 List with all defined attributes. Here you can start adding a new one or modify the existing.
 
-![Screenshot](./media/field-description/list-of-attributes-all.png)
+![Serialization - Fields Description](./media/field-description/list-of-attributes-all.png)
 
 #### Single Attribute window add/view/edit
 
-![Screenshot](./media/field-description/iso-country-code.png)
+![Serialization - Fields Description](./media/field-description/iso-country-code.png)
 
     1. **Code** – attribute's code
     2. **Name** – attribute’s name
@@ -78,7 +78,7 @@ List with all defined attributes. Here you can start adding a new one or modify 
 
 ### Serialization Parameters Templates (SPT)
 
-![Screenshot](./media/field-description/image2020-1-13-14-38-42.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-14-38-42.png)
 
 Here you can pin Attribute Templates in one SPT it accordance with used serialization standard. Each component of SPT you have to assign to a Field from the Track & Trace Table according to attribute type.
 
@@ -86,11 +86,11 @@ Here you can pin Attribute Templates in one SPT it accordance with used serializ
 
 List with all defined SPT. From this place, you can start to add the new one or to modify the existing one.
 
-![Screenshot](./media/field-description/image2020-1-13-14-45-56.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-14-45-56.png)
 
 #### Singe SPT window add/view/edit
 
-![Screenshot](./media/field-description/serialization-parameters-templates.png)
+![Serialization - Fields Description](./media/field-description/serialization-parameters-templates.png)
 
 #### Header
 
@@ -107,15 +107,15 @@ To add Attribute to the list you have to select [+]. In the column Attribute, yo
 
 You can assign a previously defined pool to the SPT (please see chapter Serial Numbers Pulls). One of them you should select as default.
 
-![Screenshot](./media/field-description/image2020-1-13-15-59-7.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-15-59-7.png)
 
 ### Rules
 
-![Screenshot](./media/field-description/image2020-1-13-15-27-14.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-15-27-14.png)
 
 Define rules which will be used to decide which SPT should be used for serialized Item/Revision.
 
-![Screenshot](./media/field-description/image2020-1-13-15-39-38.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-15-39-38.png)
 
 1. **Priority** – information managed by the system. Inform you about the rules hierarchy.
 2. **Rule Code** – Rule's code
@@ -136,21 +136,21 @@ When you define a rule for a particular Item/Revision, it will be as a first cho
 
 ### Serialization Number Pool Definition
 
-![Screenshot](./media/field-description/image2020-1-13-15-45-44.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-15-45-44.png)
 
 ### Serialization Numbers Pools window
 
 This is a list of all defined Pools. From here you can start to add a new one or modify the existing.
 
-![Screenshot](./media/field-description/image2020-1-13-16-18-33.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-16-18-33.png)
 
 #### Serialization Numbers Pool definition
 
 Type Allocated – Serial Numbers from CSV file
 
-![Screenshot](./media/field-description/image2020-1-13-16-6-58.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-16-6-58.png)
 
-![Screenshot](./media/field-description/image2020-1-13-16-3-30.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-16-3-30.png)
 
     1. **Pool Code** – Pool's Code
     2. **Pool Name** – Pool's Name
@@ -168,21 +168,21 @@ Type Allocated – Serial Numbers from CSV file
 
 You can create an SQL formula that defines the generation algorithm which will be used to generate SN Pool during the production process:
 
-![Screenshot](./media/field-description/image2020-1-13-16-12-1.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-16-12-1.png)
 
 ## Serialization results
 
-![Screenshot](./media/field-description/image2020-1-13-16-9-27.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-16-9-27.png)
 
 ### Track and Trace Reports
 
 By definition of Serial Number Parameters, you are able to filter Serial Numbers.
 
-![Screenshot](./media/field-description/image2020-1-13-16-19-49.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-16-19-49.png)
 
 It is possible to analyze Track & Trace Report for each Serial Number:
 
-![Screenshot](./media/field-description/image2020-1-13-16-23-7.png)
+![Serialization - Fields Description](./media/field-description/image2020-1-13-16-23-7.png)
 
 ### WMS’s Packing Hierarchy
 

@@ -12,7 +12,7 @@ Get the installation file from [here](/docs/appengine/download/appengine/).
 Follow the plugin installation instructions from [here](/docs/appengine/administrators-guide/configuration-and-administration/overview#plugins).
 
 After completing the installation, go to Launchpad and choose the MOWizard plugin to start working with it:
-![Screenshot](./media/mowizard/mowizard.png)
+![MOWizard](./media/mowizard/mowizard.png)
 
 If the right option is chosen, the plugin is available from the SAP Business One main menu: Production → MOWizard.
 
@@ -20,24 +20,24 @@ If the right option is chosen, the plugin is available from the SAP Business One
 
 Click the plus icon to add a new Job. You can create many of these.
 
-![Screenshot](./media/mowizard/mowizard-add-job.png)
+![MOWizard](./media/mowizard/mowizard-add-job.png)
 
     1. Job Description: choose any name (mandatory) and description (optional) and click the Step 2 icon:
-    ![Screenshot](./media/mowizard/mowizard-job-description.png)
+    ![MOWizard](./media/mowizard/mowizard-job-description.png)
 
     2. Sales Orders lines selection. Filter the list by desired values (you can skip this step) and choose the required lines from the list:
-    ![Screenshot](./media/mowizard/mowizard-sale-orders-selection.png)
+    ![MOWizard](./media/mowizard/mowizard-sale-orders-selection.png)
 
     The Available Sales Orders Positions table holds Sales Orders lines that can be filtered by many conditions (the Filter Available Sales Orders Positions section).
 
     Checking the required checkboxes and clicking Add Selected Positions moves them to the Selected Sales Orders Positions table (click the checkbox in the first row to mark all of the lines in the list). These Sales Orders' lines will be further processed.
     Here you can still change quantity:
-    ![Screenshot](./media/mowizard/mowizard-selected-quantity.png)
+    ![MOWizard](./media/mowizard/mowizard-selected-quantity.png)
     After this, Click Step 3. 
 
     3. Manufacturing Orders.
     Here click Generate Manufacturing Orders. Click Yes in the system message form:
-    ![Screenshot](./media/mowizard/mowizard-generating-orders.png)
+    ![MOWizard](./media/mowizard/mowizard-generating-orders.png)
 
     Click the Yes button to continue. The creation is not immediate and some time is needed to complete it, depends on number of Manufacturing Orders and their structure. Started Jobs are displayed in the Running tab (please check the second screenshot on this page).
 

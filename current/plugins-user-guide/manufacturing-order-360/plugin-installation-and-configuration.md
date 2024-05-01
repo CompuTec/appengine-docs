@@ -19,10 +19,10 @@ Two plugins need to be installed: **MO360** and **PPF**.
 
 Optionally, you can reach MO 360 plugin the Process Force level:
 
-![Screenshot](../manufacturing-order-360/media/image2020-9-14-23-18-44.png)
+![Manufacturing Order 360](../manufacturing-order-360/media/image2020-9-14-23-18-44.png)
 
 To do this, check the following checkbox:
 
-![Screenshot](../manufacturing-order-360/media/general-settings-enableappengine.png)
+![Manufacturing Order 360](../manufacturing-order-360/media/general-settings-enableappengine.png)
 
 Enter the AppEngine URL, e.g. `http://{host}:54000`, click Update and restart SAP Business One.

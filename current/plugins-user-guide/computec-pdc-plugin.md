@@ -16,9 +16,9 @@ PDC on AppEngine gives you more speed and makes work-time record more effective.
 
 ## Prerequisites
 
-ProcessForce and CompuTec Licence Server is installed and configured. For more information click here.
+ProcessForce and CompuTec Licence Server is installed and configured. For more information click [here](/docs/processforce/administrator-guide/licensing/license-server/overview/).
 
-CompuTec PDC requirements have been fulfilled, for more information click here.
+CompuTec PDC requirements have been fulfilled, for more information click [here](/docs/pdc/administrator-guide/installation/requirements/).
 
 :::caution
 CompuTec PDC plugin works only with CompuTec PDC, 64bit version.
@@ -42,22 +42,22 @@ ProcessForce API needs to be installed on the same server as AppEngine.
 
 After a successful installation choose the AppEngine console which database would you like to bind in :
 
-![Screenshot](./media/computec-pdc-plugin/computec-pdc-plugin-database.png)
+![Computec PDC Plugin Database](./media/computec-pdc-plugin/computec-pdc-plugin-database.png)
 
 Then open the CompuTec PDC application and fill in Settings with data (default AppEngine server is `https://localhost:54000`. It is required to fill in the fields in the order marked on the following screenshot to refresh the application and download the data.
 
 Filling in the fields marked with the red arrows automatically fills in the fields marked with the purple arrows (then, choose one option from the drop-down list).
 
-![Screenshot](./media/computec-pdc-plugin/computec-pdc-plugin-settings.png)
+![Computec PDC Plugin Settings](./media/computec-pdc-plugin/computec-pdc-plugin-settings.png)
 
 ## Upgrade of the application
 
 To successfully upgrade the application please follow the steps:
 
     1. Update plugin in the AppEngine console (you can do it by choosing the plugin package) and restart the plugin.
-    ![Screenshot](./media/computec-pdc-plugin/computec-pdc-plugin-3-update.png)
-    ![Screenshot](./media/computec-pdc-plugin/computec-pdc-plugin-4-update.png)
-    ![Screenshot](./media/computec-pdc-plugin/computec-pdc-plugin-5-restart.png)
+    ![Computec PDC Plugin Update](./media/computec-pdc-plugin/computec-pdc-plugin-3-update.png)
+    ![Computec PDC Plugin Update](./media/computec-pdc-plugin/computec-pdc-plugin-4-update.png)
+    ![Computec PDC Plugin Update](./media/computec-pdc-plugin/computec-pdc-plugin-5-restart.png)
 
     2. Install the corresponding CompuTec PDC application (before that you have to remove the already installed CompuTec PDC application)
 
@@ -73,9 +73,9 @@ Check if you need to upgrade CompuTec ProcessForce API too (if yes, remove the e
 2. AppEngine for CompuTec PDC is only available from web address, no reference in SAP Business One or ProcessForce functional objects.
 3.Relevant CompuTec PDC installer to installed CompuTec PDC Plugin can be reached from AppEngine Console level. Instruction below:
     a. Open Launchpad in Appengine Console:
-    ![Screenshot](./media/computec-pdc-plugin/computec-pdc-plugin-launchpad.png)
+    ![Computec PDC Plugin Launchpad](./media/computec-pdc-plugin/computec-pdc-plugin-launchpad.png)
     b. Fill the login data (remember that here the user ID and password are the same as your SAP Business One login).
-    ![Screenshot](./media/computec-pdc-plugin/computec-pdc-plugin-user-id.png)
+    ![Computec PDC Plugin User ID](./media/computec-pdc-plugin/computec-pdc-plugin-user-id.png)
     c. Open CompuTec PDC, download the file and go through the installation.
-    ![Screenshot](./media/computec-pdc-plugin/computec-pdc-plugin-opening.png)
-    ![Screenshot](./media/computec-pdc-plugin/computec-pdc-plugin.png)
+    ![Computec PDC Plugin](./media/computec-pdc-plugin/computec-pdc-plugin-opening.png)
+    ![Computec PDC Plugin](./media/computec-pdc-plugin/computec-pdc-plugin.png)

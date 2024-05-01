@@ -20,10 +20,10 @@ For plug-in installation please follow this link: [Configuration and Administrat
 
 As an option you can call Bulk Change plug-in from inside the Process Force:
 
-![Screenshot](./media/bulk-changes-of-bom/image2020-3-25-16-40-30.png)
+![Bulk Change Plugin](./media/bulk-changes-of-bom/image2020-3-25-16-40-30.png)
 
 To do this, check the following checkbox:
 
-![Screenshot](./media/bulk-changes-of-bom/image2020-1-18-8-33-41.png)
+![Bulk Change](./media/bulk-changes-of-bom/image2020-1-18-8-33-41.png)
 
 Enter AppEngine url, e.g. `http://{host}:54000`, click Update and restart SAP Business One.

@@ -18,11 +18,11 @@ Click [**here**](https://www.youtube.com/watch?v=qXK2dS_9z3g) for a video demons
 
 After logging in to AppEngine, you can reach the option by clicking the icon in the upper-right corner of the window:
 
-![Screenshot](./media/overview/analytical-page.png)
+![Access](./media/overview/analytical-page.png)
 
 You can also reach the option from the MO360 view:
 
-![Screenshot](./media/overview/analytical-page-mo360.png)
+![Access](./media/overview/analytical-page-mo360.png)
 
 ## Usage
 
@@ -30,7 +30,7 @@ You can also reach the option from the MO360 view:
 
 Variants are preset reports. By installing the plugin, you get one standard Variant set as default. You can create and customize the Variants. To create your Variant, open the standard and use the Save As option:
 
-![Screenshot](./media/overview/saving-variant.png)
+![Variants](./media/overview/saving-variant.png)
 
 You can set the Variant name, set your Variant as default, and set availability (either Public or Private - available for other users or just for the currently logged-in).
 
@@ -38,7 +38,7 @@ You can set the Variant name, set your Variant as default, and set availability 
 
 Choose one of the variants to open a report. The report view is divided into two sections: filter (1.) and report (2.):
 
-![Screenshot](./media/overview/analytical-page-report-modes.png)
+![Report](./media/overview/analytical-page-report-modes.png)
 
 #### Filter
 
@@ -54,13 +54,13 @@ You can adjust fields that are displayed in the filter by clicking the Adapt Fil
 
 The chosen filters can be displayed in the form of micro charts:
 
-![Screenshot](./media/overview/micro-charts.png)
+![Filters](./media/overview/micro-charts.png)
 
 #### Report
 
 The report can be displayed in one of three forms: as a chart, as a table, and both at the same time. This option is shown in the following screenshot:
 
-![Screenshot](./media/overview/analytical-page-report-modes.png)
+![Report](./media/overview/analytical-page-report-modes.png)
 
 #### Chart options
 
@@ -82,4 +82,4 @@ The Table settings:
 
 - Column Grouping - choose a column by which rows will be grouped. If you choose more than one, the grouping will be performed in levels. In the example below, there are two levels.
 
-![Screenshot](./media/overview/table-options.png)
+![Table Options](./media/overview/table-options.png)
