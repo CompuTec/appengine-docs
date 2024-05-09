@@ -1,10 +1,10 @@
 ---
-sidebar_position: 11
+sidebar_position: 2
 ---
 
-import Releases from "../mowizard-releases.json";
+import Releases from "../../../mrp-releases.json";
 
-# CompuTec MOWizard Plugin
+# Download
 
 :::caution
     In order to use this plugin, you have to install the CompuTec ProcessForce plugin first.
@@ -16,8 +16,7 @@ import Releases from "../mowizard-releases.json";
     <th>Build</th>
     <th>Release Date</th>
     <th>Package</th>
-    <th>Minimal ProcessForce Version</th>
-    <th>Minimal AppEngine Version</th>
+    <th>Minimal Requirements</th>
   </tr>
   {Releases.map((data) => (
     <tr>
@@ -25,8 +24,13 @@ import Releases from "../mowizard-releases.json";
       <td>{data.build}</td>
       <td>{data.release_date}</td>
       <td><a href={data.download_url}>Download</a></td>
-      <td>{data.minimal_pf_version}</td>
-      <td>{data.minimal_ae_version}</td>
+      <td>
+        <ul>
+            {data.requirements.map((requirement) => (
+                <li>{requirement}</li>
+            ))}
+        </ul>
+      </td>
     </tr>
   ))}
 </table>

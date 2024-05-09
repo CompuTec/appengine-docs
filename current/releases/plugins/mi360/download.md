@@ -1,10 +1,10 @@
 ---
-sidebar_position: 10
+sidebar_position: 2
 ---
 
-import Releases from "../mo360-releases.json";
+import Releases from "../../../mi360-releases.json";
 
-# CompuTec MO360 Plugin
+# Download
 
 :::caution
     In order to use this plugin, you have to install the CompuTec ProcessForce plugin first.

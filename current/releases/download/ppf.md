@@ -1,10 +1,10 @@
 ---
-sidebar_position: 12
+sidebar_position: 14
 ---
 
-import Releases from "../mrp-releases.json";
+import Releases from "../../ppf-releases.json";
 
-# CompuTec MRP Plugin
+# CompuTec Production Process Flow Plugin
 
 :::caution
     In order to use this plugin, you have to install the CompuTec ProcessForce plugin first.
@@ -16,7 +16,7 @@ import Releases from "../mrp-releases.json";
     <th>Build</th>
     <th>Release Date</th>
     <th>Package</th>
-    <th>Minimal Requirements</th>
+    <th>Minimal ProcessForce version</th>
   </tr>
   {Releases.map((data) => (
     <tr>
@@ -24,13 +24,7 @@ import Releases from "../mrp-releases.json";
       <td>{data.build}</td>
       <td>{data.release_date}</td>
       <td><a href={data.download_url}>Download</a></td>
-      <td>
-        <ul>
-            {data.requirements.map((requirement) => (
-                <li>{requirement}</li>
-            ))}
-        </ul>
-      </td>
+      <td>{data.minimal_pf_version}</td>
     </tr>
   ))}
 </table>

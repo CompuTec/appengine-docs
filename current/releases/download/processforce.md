@@ -1,14 +1,10 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
-import Releases from "../bulk-change-releases.json";
+import Releases from "../../processforce-releases.json";
 
-# CompuTec Bulk Change Plugin
-
-:::caution
-    In order to use this plugin, you have to install the CompuTec ProcessForce plugin first.
-:::
+# CompuTec ProcessForce Plugin
 
 <table>
   <tr>

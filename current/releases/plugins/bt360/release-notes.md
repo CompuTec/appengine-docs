@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 ---
 
-# BT360
+# Release Notes
 
 :::info
 The latest Installer is available to download from [here](/docs/appengine/download/bt360/).

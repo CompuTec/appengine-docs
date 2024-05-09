@@ -1,8 +1,8 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 ---
 
-# MO360 Plugin
+# Release Notes
 
 :::info
 The latest Installer is available to download from [here](/docs/appengine/download/mo360/).

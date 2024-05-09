@@ -1,8 +1,8 @@
 ---
-sidebar_position: 7
+sidebar_position: 1
 ---
 
-# MRP Plugin
+# Release Notes
 
 :::info
 The latest Installer is available to download from [here](/docs/appengine/download/mrp/).

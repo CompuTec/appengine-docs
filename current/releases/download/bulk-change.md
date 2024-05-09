@@ -1,10 +1,10 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
-import Releases from "../bt360-releases.json";
+import Releases from "../../bulk-change-releases.json";
 
-# CompuTec BT360 Plugin
+# CompuTec Bulk Change Plugin
 
 :::caution
     In order to use this plugin, you have to install the CompuTec ProcessForce plugin first.

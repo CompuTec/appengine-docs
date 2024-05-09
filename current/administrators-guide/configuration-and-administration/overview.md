@@ -11,7 +11,7 @@ sidebar_position: 1
     <summary>Click here to find out more</summary>
         <div>
         **Here is an example for Google Chrome or Microsoft Edge (Chromium)** <br/>Open Google Chrome or Microsoft Edge (Chromium) browser and click F12 to open Developers Tools (1.). Right-click on the refresh button (2.) and choose the Empty Cach and Hard Reload option (3.):
-        ![Screenshot](../media/overview/empty-cache-and-hard-reload.png)
+        ![Configuration and Administration](../media/overview/empty-cache-and-hard-reload.png)
     </div>
 </details>
 Here you can find the description of the Administration section of AppEngine along with instruction on how to configure the application to start to work with it.

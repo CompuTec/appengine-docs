@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 1
 ---
 
-# MI360 Plugin
+# Release Notes
 
 :::info
 The latest Installer is available to download from [here](/docs/appengine/download/mi360/).

@@ -1,8 +1,8 @@
 ---
-sidebar_position: 8
+sidebar_position: 1
 ---
 
-# PFI Plugin
+# Release Notes
 
 :::info
 The latest Installer is available to download from [here](/docs/appengine/download/pfi/).

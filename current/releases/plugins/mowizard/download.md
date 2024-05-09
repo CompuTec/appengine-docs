@@ -1,10 +1,10 @@
 ---
-sidebar_position: 13
+sidebar_position: 2
 ---
 
-import Releases from "../pfi-releases.json";
+import Releases from "../../../mowizard-releases.json";
 
-# CompuTec PFI Plugin
+# Download
 
 :::caution
     In order to use this plugin, you have to install the CompuTec ProcessForce plugin first.
@@ -16,8 +16,8 @@ import Releases from "../pfi-releases.json";
     <th>Build</th>
     <th>Release Date</th>
     <th>Package</th>
-    <th>Minimal ProcessForce version</th>
-    <th>Minimal AppEngine version</th>
+    <th>Minimal ProcessForce Version</th>
+    <th>Minimal AppEngine Version</th>
   </tr>
   {Releases.map((data) => (
     <tr>

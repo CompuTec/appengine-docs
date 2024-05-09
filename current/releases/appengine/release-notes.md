@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-# AppEngine
+# Release Notes
 
 :::info
 The latest installer is available to download fom [here](/docs/appengine/download/appengine/)

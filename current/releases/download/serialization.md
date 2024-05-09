@@ -1,10 +1,10 @@
 ---
-sidebar_position: 14
+sidebar_position: 15
 ---
 
-import Releases from "../ppf-releases.json";
+import Releases from "../../serialization-releases.json";
 
-# CompuTec Production Process Flow Plugin
+# CompuTec Serialization Plugin
 
 :::caution
     In order to use this plugin, you have to install the CompuTec ProcessForce plugin first.
@@ -16,7 +16,7 @@ import Releases from "../ppf-releases.json";
     <th>Build</th>
     <th>Release Date</th>
     <th>Package</th>
-    <th>Minimal ProcessForce version</th>
+    <th>Minimal Requirements</th>
   </tr>
   {Releases.map((data) => (
     <tr>
@@ -24,7 +24,13 @@ import Releases from "../ppf-releases.json";
       <td>{data.build}</td>
       <td>{data.release_date}</td>
       <td><a href={data.download_url}>Download</a></td>
-      <td>{data.minimal_pf_version}</td>
+      <td>
+        <ul>
+            {data.requirements.map((requirement) => (
+                <li>{requirement}</li>
+            ))}
+        </ul>
+      </td>
     </tr>
   ))}
 </table>

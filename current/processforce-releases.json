@@ -1,5 +1,16 @@
 [
   {
+    "version": "ProcessForce 10.0 Release 24 (R24)",
+    "build": "10.0.24.15",
+    "release_date": "30 April 2024",
+    "minimal_ae_version": "2.10.10.1",
+    "requirements": [
+      "SAP Business One 10.0",
+      "ProcessForce API 10.0 RL24"
+    ],
+    "download_url": "https://download.computec.one/software/appengine/plugins/processforce/releases/CompuTec_ProcessForce_10.0.24.15.zip"
+  },
+  {
     "version": "ProcessForce 10.0 Release 23 (R23)",
     "build": "10.0.23.8",
     "release_date": "29 January 2024",

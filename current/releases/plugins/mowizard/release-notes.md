@@ -1,8 +1,8 @@
 ---
-sidebar_position: 6
+sidebar_position: 1
 ---
 
-# MOWizard Plugin
+# Release Notes
 
 ## MOWizard 1.10.11 - 17 October 2023
 

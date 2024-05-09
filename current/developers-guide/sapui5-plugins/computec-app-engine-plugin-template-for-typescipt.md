@@ -22,9 +22,9 @@ Go to the following address: [https://www.nuget.org/packages?q=computec](https:/
 
 To install the package, go to Windows Terminal and run the following command:
 
-```bash
+    ```bash
 dotnet new --install CompuTec.AppEngine.Templates::2.0.0
-```
+    ```
 
 You will get a message about successful installation, along with the list of installed elements. For now, five of them are ready plugin solution templates (tagged 'Add-In', 'Add-In/Web/Javascript', you can also recognize them by the word 'plugin' in their names and short names) and seven plugin items (tagged "Visual C# Items'):
 
@@ -32,9 +32,9 @@ You will get a message about successful installation, along with the list of ins
 
 Once the package is installed you can check the list again using the following command:
 
-```bash
+    ```bash
 dotnet new --list AE
-```
+    ```
 
 Create a new folder – named FirstPlugin in this example (mkdir FirstPlugin).
 
@@ -42,9 +42,9 @@ Go to the folder (cd .\FirstPlugin).
 
 Use the following command to create a new template to work on it later (ctaepluginjs in this example). It has to be created along with two mandatory parameters: RoutePrefix (testPlugin in this example) and PluginID (Compu:Tec.AppEngine.Plugin.Test in this example:
 
-```bash
+    ```bash
 dotnet new ctaeplugints --RoutePrefix testPlugin --PluginId CompuTec.AppEngine.Plugin.Test
-```
+    ```
 
 ## Visual Studio – Configure project build and debug
 

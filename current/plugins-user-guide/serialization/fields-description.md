@@ -190,10 +190,10 @@ From this place, you can check, modify, and finally accept clustering and aggreg
 
 #### List of documents window
 
-![Screenshot](./media/field-description/image2020-1-14-17-33-6.png)
+![Field Description](./media/field-description/image2020-1-14-17-33-6.png)
 
 #### Single document add/view/edit window
 
-![Screenshot](./media/field-description/image2020-1-14-17-34-31.png)
+![Field Description](./media/field-description/image2020-1-14-17-34-31.png)
 
 In this window, you can filter information according to CompuTec WMS’s document structure.

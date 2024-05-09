@@ -1,10 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-import Releases from "../releases.json";
+import Releases from "../../releases.json";
 
-# CompuTec AppEngine
+# Download
 
 :::caution
     After upgrade from any 1.00 version to any 2.00, please use the Empty Cache and Hard Reload option in the browser on which you use AppEngine.

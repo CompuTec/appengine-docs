@@ -150,7 +150,7 @@ After scanning the data of the first serial number you will be redirected to sca
 
 (You can also choose the New Goods Receipt option to receipt goods serialized Items without a Purchase Order)
 
-If you want to cancel scanning, select ![Screenshot](./media/clustering/tick.png), and then ![Clustering](./media/clustering/cross.png) . You will be able to return to this document.
+If you want to cancel scanning, select [Clustering](./media/clustering/tick.png), and then ![Clustering](./media/clustering/cross.png) . You will be able to return to this document.
 
 ![Clustering](./media/clustering/image2020-1-9-15-20-38.png)
 ![Clustering](./media/clustering/image2020-1-9-15-24-52.png)
@@ -288,7 +288,7 @@ Warehouse selection
 
 #### Warehouse selection
 
-![Clustering - Warehouse Selection](./media/clustering/delivery.png)![Screenshot](./media/clustering/delivery-1.png)
+![Clustering - Warehouse Selection](./media/clustering/delivery.png)![Clustering](./media/clustering/delivery-1.png)
 ![Clustering - Warehouse Selection](./media/clustering/warehouse.png)
 
 #### Customer selection
@@ -311,4 +311,4 @@ Warehouse selection
 
 #### Delivery document confirmation
 
-![Clustering - Delivery Document Confirmation](./media/clustering/document-details-3.png)![Screenshot](./media/clustering/image2020-1-13-12-27-46.png)
+![Clustering - Delivery Document Confirmation](./media/clustering/document-details-3.png)![Clustering - Delivery Document Confirmation](./media/clustering/image2020-1-13-12-27-46.png)
