@@ -1,14 +1,17 @@
 ---
 sidebar_position: 1
+toc_max_heading_level: 2
 ---
 
 # Release Notes
 
 :::info
-The latest Installer is available to download from [here](/docs/appengine/download/mrp/).
+The latest Installer is available to download from [here](/docs/appengine/releases/plugins/mrp/download).
 :::
 
-## MRP 1.10.11 - 6 February 2024
+## MRP 1.10.11
+
+### *Release Date - 6 February 2024*
 
 | Issue Type | Release Note | Related issue/s |
 | --- | --- | --- |
@@ -24,7 +27,9 @@ The latest Installer is available to download from [here](/docs/appengine/downlo
 
 ---
 
-## MRP 1.10.10 - 3 August 2023
+## MRP 1.10.10
+
+### *Release Date - 3 August 2023*
 
 | Issue Type | Release Note | Related issue/s |
 | --- | --- | --- |
@@ -40,7 +45,7 @@ The latest Installer is available to download from [here](/docs/appengine/downlo
 
 ## MRP 1.10.9
 
-11 May 2023
+### *Release Date - 11 May 2023*
 
 | Issue Type | Custom field (Release Note) | Related issue/s |
 | --- | --- | --- |
@@ -60,7 +65,7 @@ The latest Installer is available to download from [here](/docs/appengine/downlo
 
 ## MRP 1.10.7
 
-28 September 2022
+### *Release Date - 28 September 2022*
 
 | Issue Type | Release Note | Related issue/s |
 | --- | --- | --- |
@@ -77,7 +82,7 @@ The latest Installer is available to download from [here](/docs/appengine/downlo
 
 ## MRP 1.10.6, 1.93.6
 
-28 March 2022
+### *Release Date - 28 March 2022*
 
 | Issue Type | Release Note | Related issue/s |
 | --- | --- | --- |

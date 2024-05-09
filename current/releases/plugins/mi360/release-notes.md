@@ -1,14 +1,17 @@
 ---
 sidebar_position: 1
+toc_max_heading_level: 2
 ---
 
 # Release Notes
 
 :::info
-The latest Installer is available to download from [here](/docs/appengine/download/mi360/).
+The latest Installer is available to download from [here](/docs/appengine/releases/plugins/mi360/download).
 :::
 
-## MI360 1.2.0 - 25 October 2023
+## MI360 1.2.0
+
+### *Release Date - 25 October 2023*
 
 | Issue Type | Release Note |
 | --- | --- |

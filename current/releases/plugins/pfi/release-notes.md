@@ -1,14 +1,17 @@
 ---
 sidebar_position: 1
+toc_max_heading_level: 2
 ---
 
 # Release Notes
 
 :::info
-The latest Installer is available to download from [here](/docs/appengine/download/pfi/).
+The latest Installer is available to download from [here](/docs/appengine/releases/plugins/pfi/download).
 :::
 
-## PFI 1.10.6 - 22 April 2024
+## PFI 1.10.6
+
+### *Release Date - 22 April 2024*
 
 | Issue Type | Release Note | Related issue/s |
 | --- | --- | --- |
@@ -17,7 +20,9 @@ The latest Installer is available to download from [here](/docs/appengine/downlo
 | Bug | PFI - issues with refreshing data after import from file | - |
 | Improvement | Validating imported data types | - |
 
-## PFI 1.10.5 - 5 June 2023
+## PFI 1.10.5
+
+### *Release Date - 5 June 2023*
 
 | Issue Type | Release Note | Related issue/s |
 | --- | --- | --- |
@@ -25,7 +30,9 @@ The latest Installer is available to download from [here](/docs/appengine/downlo
 
 ---
 
-## PFI 1.10.4 - 15 December 2022
+## PFI 1.10.4
+
+### *Release Date - 15 December 2022*
 
 | Issue Type | Release Note | Related issue/s |
 | --- | --- | --- |
@@ -37,7 +44,9 @@ The latest Installer is available to download from [here](/docs/appengine/downlo
 
 ---
 
-## PFI 1.10.3 - 10 October 2022
+## PFI 1.10.3
+
+### *Release Date - 10 October 2022*
 
 | Issue Type | Release Note | Related issue/s |
 | --- | --- | --- |
@@ -48,7 +57,9 @@ The latest Installer is available to download from [here](/docs/appengine/downlo
 
 ---
 
-## PFI 1.10.2, 1.93.2 - 4 July 2022
+## PFI 1.10.2, 1.93.2
+
+### *Release Date - 4 July 2022*
 
 | Issue Type | Release Note | Related issue/s |
 | --- | --- | --- |

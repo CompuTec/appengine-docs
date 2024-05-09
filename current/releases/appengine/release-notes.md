@@ -1,14 +1,17 @@
 ---
 sidebar_position: 1
+toc_max_heading_level: 2
 ---
 
 # Release Notes
 
 :::info
-The latest installer is available to download fom [here](/docs/appengine/download/appengine/)
+The latest installer is available to download fom [here](/docs/appengine/releases/appengine/download)
 :::
 
-## AppEngine 2.10.16.6 HF1 - 30 January 2024
+## AppEngine 2.10.16.6 HF1
+
+### *Release Date - 30 January 2024*
 
 | Issue Type | Component/s | Release Note | Related issue/s |
 | - | - | - | - |
@@ -16,7 +19,9 @@ The latest installer is available to download fom [here](/docs/appengine/downloa
 
 ---
 
-## AppEngine 2.10.16.4 - 24 January 2024
+## AppEngine 2.10.16.4
+
+### *Release Date - 24 January 2024*
 
 | Issue Type | Component/s | Release Note | Related issue/s |
 | - | - | - | - |
@@ -29,7 +34,9 @@ The latest installer is available to download fom [here](/docs/appengine/downloa
 
 ---
 
-## AppEngine 2.10.15.2 - 17 October 2023
+## AppEngine 2.10.15.2
+
+### *Release Date - 17 October 2023*
 
 | Issue Type | Component/s | Release Note | Related issue/s |
 | - | - | - | - |
@@ -40,7 +47,9 @@ The latest installer is available to download fom [here](/docs/appengine/downloa
 
 ---
 
-## AppEngine 2.10.14.3 - 27 September 2023
+## AppEngine 2.10.14.3
+
+### *Release Date - 27 September 2023*
 
 | Issue Type | Component/s | Release Note | Related issue/s |
 | - | - | - | - |
@@ -51,7 +60,9 @@ The latest installer is available to download fom [here](/docs/appengine/downloa
 
 ---
 
-## AppEngine 2.10.13.1 - 10 August 2023
+## AppEngine 2.10.13.1
+
+### *Release Date - 10 August 2023*
 
 | Issue Type | Component/s | Release Note | Related issue/s |
 | - | - | - | - |
@@ -62,7 +73,9 @@ The latest installer is available to download fom [here](/docs/appengine/downloa
 
 ---
 
-## AppEngine 2.10.12.1 - 26 June 2023
+## AppEngine 2.10.12.1
+
+### *Release Date - 26 June 2023*
 
 | Issue Type | Component/s | Release Note |
 | - | - | - |
@@ -75,7 +88,9 @@ The latest installer is available to download fom [here](/docs/appengine/downloa
 
 ---
 
-## AppEngine 2.10.11.5 - 24 May 2023
+## AppEngine 2.10.11.5
+
+### *Release Date - 24 May 2023*
 
 | Issue Type | Component/s | Release Note | Related issue/s |
 | - | - | - | - |
@@ -92,7 +107,9 @@ The latest installer is available to download fom [here](/docs/appengine/downloa
 
 ---
 
-## AppEngine 2.10.10.1 - 19 April 2023
+## AppEngine 2.10.10.1
+
+### *Release Date - 19 April 2023*
 
 :::danger
 After upgrading to this version, user credentials for Background Processing need to be re-entered (SLD Server → Servers → Companies).
@@ -110,7 +127,9 @@ After upgrading to this version, user credentials for Background Processing need
 
 ---
 
-## AppEngine 2.10.9.8 - 1 February 2023
+## AppEngine 2.10.9.8
+
+### *Release Date - 1 February 2023*
 
 | Issue Type | Component/s | Release Note | Related issue/s |
 | - | - | - | - |
@@ -124,7 +143,9 @@ After upgrading to this version, user credentials for Background Processing need
 
 ---
 
-## AppEngine 2.10.8.2 - 19 September 2022
+## AppEngine 2.10.8.2
+
+### *Release Date - 19 September 2022*
 
 | Issue Type | Component/s | Release Note | Related issue/s |
 | - | - | - | - |
@@ -146,7 +167,9 @@ After upgrading to this version, user credentials for Background Processing need
 
 ---
 
-## AppEngine 2.10.7.5, 2.93.7.5 - 13 June 2022
+## AppEngine 2.10.7.5, 2.93.7.5
+
+### *Release Date - 13 June 2022*
 
 | Issue Type | Component/s | Release Note | Related issue/s |
 | - | - | - | - |

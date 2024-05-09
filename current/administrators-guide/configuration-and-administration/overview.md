@@ -18,9 +18,9 @@ Here you can find the description of the Administration section of AppEngine alo
 
 ---
 
-Download the installer from [here](/docs/appengine/download/appengine) and run it.
+Download the installer from [here](/docs/appengine/releases/appengine/download) and run it.
 
-Go to any internet browser and go to `localhost:54000` - 54000 is a default port set for connection; it can be changed in the [Settings section](/docs/appengine/administrators-guide/configuration-and-administration/overview#settings).
+Go to any internet browser and go to `localhost:54000` - 54000 is a default port set for connection; it can be changed in the [Settings section](#settings).
 
 After logging in, click the Administration Panel button and log in using the default log in details:
 
@@ -28,7 +28,7 @@ Administrator ID: CTSiteUser
 
 Password: 12qw!@QW
 
-(The default password can be changed in the [System section](/docs/appengine/administrators-guide/configuration-and-administration/overview#system))
+The default password can be changed in the [System section](#system)
 
 ![AppEngine Main View](./media/configuration-and-administration/appengine-main-view.webp)
 
@@ -166,7 +166,7 @@ The preview of all current events from all checked databases.
 
 ![Administration](./media/configuration-and-administration/administration-panel-plugins.webp)
 
-To install a new plugin, click the Install plugin button in the upper-right corner of the form and load a plugin file (e.g. any from the [Plugins page](/docs/appengine/download/appengine/)). Note that the plugin files are always delivered as zip files – load them in this form, do not unzip them before loading.
+To install a new plugin, click the Install plugin button in the upper-right corner of the form and load a plugin file. E.g. any from the [Plugins page](/docs/appengine/releases/appengine/download). Note that the plugin files are always delivered as zip files – load them in this form, do not unzip them before loading.
 
 After loading a file you will get a system message about restarting AppEngine. You can decide whether to do it now or later (note that the loaded plugin will be available after the restart).
 

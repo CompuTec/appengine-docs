@@ -1,11 +1,12 @@
 ---
 sidebar_position: 1
+toc_max_heading_level: 2
 ---
 
 # Release Notes
 
 :::info
-The latest Installer is available to download from [here](/docs/appengine/download/bt360/).
+The latest Installer is available to download from [here](/docs/appengine/releases/plugins/bt360/download).
 :::
 
 ## BT360 2.10.7
@@ -20,7 +21,7 @@ The latest Installer is available to download from [here](/docs/appengine/downlo
 
 ## BT360 2.10.6 R1
 
-13 June 2023
+### *Release Date - 13 June 2023*
 
 | Issue Type | Release Note | Related Support Ticket/s |
 | --- | --- | --- |
